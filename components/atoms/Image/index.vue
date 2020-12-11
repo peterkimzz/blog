@@ -30,7 +30,7 @@ export default {
   @apply relative;
   @apply w-full;
   @apply rounded-md overflow-hidden;
-  @apply shadow-md;
+  @apply shadow-sm;
 }
 .img-wrapper {
   @apply relative;
