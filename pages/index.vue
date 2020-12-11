@@ -1,17 +1,17 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
-    <ul>
-      <li v-for="article of articles" :key="article.slug">
-        <n-link :to="{ name: 'slug', params: { slug: article.slug } }">
-          <img :src="article.img" />
-          <div>
-            <h2>{{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
-            <p>{{ article.description }}</p>
-          </div>
-        </n-link>
-      </li>
+    <ul class="article-wrapper">
+      <vue-article-preview
+        v-for="article of articles"
+        :key="article.slug"
+        :slug="article.slug"
+        :category="article.category"
+        :title="article.title"
+        :description="article.description"
+        :thumbnail="article.thumbnail"
+        :updated-at="article.updatedAt"
+        class="w-1/2 pb-10 px-1 md:w-1/4 md:px-1.5"
+      />
     </ul>
   </div>
 </template>
@@ -20,14 +20,23 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
-      .only(['title', 'description', 'img', 'slug', 'author'])
-      .sortBy('createdAt', 'asc')
+      // .only(['title', 'description', 'img', 'slug', 'author'])
+      .sortBy('createdAt', 'desc')
       .fetch()
-    console.log({ articles })
 
     return {
-      articles,
+      articles
     }
-  },
+  }
 }
 </script>
+
+<style lang="postcss" scoped>
+.article-wrapper {
+  @apply flex flex-wrap;
+}
+.article {
+  @apply w-1/4;
+  @apply p-2;
+}
+</style>

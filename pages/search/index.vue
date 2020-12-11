@@ -1,3 +1,3 @@
 <template>
-  <AppSearchInput />
+  <Search />
 </template>

@@ -1,8 +1,8 @@
 ---
-category: life
-title: Second article
+category: tech
+title: Fourth article aosif qwfoqiwmf oq fqowifmq owi qwpfomoqiw foqw foqiwmfo iqmw ofimqwoi 
 description: Learning how to use @nuxt/content to create a blog
-thumbnail: https://images.unsplash.com/photo-1607473128679-dd6b10e227e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80
+thumbnail: https://images.unsplash.com/photo-1607615859113-444d01cdd09e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80
 author:
   name: Benjamin
   bio: All about Benjamin

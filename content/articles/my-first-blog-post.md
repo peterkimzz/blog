@@ -1,8 +1,8 @@
 ---
-title: My first Blog Post
+category: tech
+title: First article
 description: Learning how to use @nuxt/content to create a blog
-img: first-blog-post.jpg
-alt: my first blog post
+thumbnail: https://images.unsplash.com/photo-1607623427917-fecea7c7959e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1258&q=80
 author:
   name: Benjamin
   bio: All about Benjamin
@@ -29,11 +29,10 @@ This is some more info
 
 This is some more info
 
-<div class="bg-blue-500 text-white p-4 mb-4">
-  This is HTML inside markdown that has a class of note
-</div>
+> This is highlighted text box qwfmq wfoqi wfoiqm fiq wofqm oi
+qowi fqiwfoqwmfoqimwfoqimwoqwif 
 
-```js{1,4}[server.js]
+```js{0,0}[server.js]
 const http = require('http')
 const bodyParser = require('body-parser')
 

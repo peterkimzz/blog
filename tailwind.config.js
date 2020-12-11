@@ -1,5 +1,5 @@
-const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
+// const plugin = require('tailwindcss/plugin')
 // const colors = require('tailwindcss/colors')
 
 const preset = {
@@ -21,18 +21,18 @@ const preset = {
       sans: ['-apple-system', ...defaultTheme.fontFamily.sans]
     }
   },
-  plugins: [
-    plugin(function ({ addBase }) {
-      addBase({
-        html: {
-          '-webkit-font-smoothing': 'antialiased',
-          '-moz-osx-font-smoothing': 'grayscale',
-          'word-break': 'break-word',
-          'color': defaultTheme.colors.gray[800],
-        }
-      })
-    })
-  ]
+  // plugins: [
+  //   plugin(function ({ addBase }) {
+  //     addBase({
+  //       html: {
+  //         '-webkit-font-smoothing': 'antialiased',
+  //         '-moz-osx-font-smoothing': 'grayscale',
+  //         'word-break': 'break-word',
+  //         'color': defaultTheme.colors.gray[800],
+  //       }
+  //     })
+  //   })
+  // ]
 }
 
 module.exports = {

@@ -13,20 +13,20 @@
     </nav>
 
     <article>
-      <info-box>
+      <vue-info-box>
         <template #info-box>
           This is a vue component inside markdown using slots
         </template>
-      </info-box>
+      </vue-info-box>
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <img :src="article.img" :alt="article.alt" />
+      <img :src="article.thumbnail" :alt="article.alt" />
       <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-      <author :author="article.author"></author>
+      <vue-author :author="article.author"></vue-author>
 
       <nuxt-content :document="article" />
 
-      <prev-next :prev="prev" :next="next" />
+      <vue-prev-next :prev="prev" :next="next" />
     </article>
   </main>
 </template>
@@ -35,13 +35,12 @@
 export default {
   head() {
     return {
-      title: this.article.title,
+      title: this.article.title
     }
   },
   nuxt: 'is the best',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
-    console.log(article)
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
@@ -55,8 +54,8 @@ export default {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -76,11 +75,20 @@ export default {
 ::v-deep .nuxt-content p {
   margin-bottom: 20px;
 }
-::v-deep .icon.icon-link {
+/* ::v-deep .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
+} */
+
+::v-deep .nuxt-content blockquote {
+  @apply p-4;
+  @apply bg-gray-500;
+
+  & p {
+    margin: 0;
+  }
 }
 </style>
