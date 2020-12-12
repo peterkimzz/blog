@@ -22,6 +22,18 @@ const CreateSitemapRoutes = async () => {
 
 module.exports = {
   // target: 'static',
+  head: {
+    meta: [
+      { 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
+      { name: 'robots', content: 'index, follow' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
+      },
+    ]
+  },
   components: [
     { path: '~/components', prefix: 'vue' },
   ],

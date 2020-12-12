@@ -1,6 +1,10 @@
 <template>
   <footer class="footer">
     <vue-container>
+      <div class="mb-6">
+        <vue-icon icon="Logo" class="w-36" />
+      </div>
+
       <vue-copyright />
     </vue-container>
   </footer>

@@ -1,12 +1,10 @@
 <template>
   <div id="default__layout">
-    <vue-navigation-bar />
-
     <vue-container>
-      <div class="py-10">
-        <nuxt-child />
-      </div>
+      <vue-navigation-bar />
     </vue-container>
+
+    <nuxt-child />
 
     <vue-footer-bar />
   </div>

@@ -7,6 +7,7 @@
   html {
     word-break: keep-all;
     @apply antialiased;
+    @apply leading-7;
     
     @apply bg-white;
     @apply text-gray-800;
@@ -16,9 +17,3 @@
   }
 }
 
-.nuxt-content-highlight {
-  @apply relative;
-}
-.nuxt-content-highlight .filename {
-  @apply absolute right-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
-}

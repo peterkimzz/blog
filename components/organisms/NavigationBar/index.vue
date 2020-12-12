@@ -1,7 +1,9 @@
 <template>
   <nav class="nav">
     <vue-container>
-      <n-link to="/">Home</n-link>
+      <vue-link href="/">
+        <vue-icon icon="Logo" class="w-36 py-5" />
+      </vue-link>
     </vue-container>
   </nav>
 </template>

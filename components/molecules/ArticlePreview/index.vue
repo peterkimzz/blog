@@ -10,7 +10,9 @@
         class="post-preview--thumbnail"
       />
       <div class="flex-1">
-        <h2 class="post-preview--title">{{ title }}</h2>
+        <vue-heading as="h3" class="post-preview--title">{{
+          title
+        }}</vue-heading>
         <p v-if="description" class="post-preview--desc">{{ description }}</p>
       </div>
       <div class="mt-2">
@@ -77,12 +79,12 @@ export default {
   @apply mb-1.5;
 }
 .post-preview--title {
-  @apply text-sm;
   @apply font-bold;
   @apply leading-snug;
 }
 .post-preview--desc {
-  @apply text-sm;
+  @apply text-xs;
+
   @apply text-gray-500;
   @apply truncate;
 }

@@ -9,9 +9,11 @@ author:
   image: https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg&w=400&fit=max
 ---
 
-Learn how to use @nuxt/content.
-<!--more-->
-Full amount of content beyond the more divider.
+작년 말에 이직했으니 이제 곧 입사한지 1년이 다 되어간다. 
+
+근데 체감상 나에게 올 한 해는 **"나 뭐 했지"** 인 것 같다.
+
+분명 기술적으로는 굉장히 많은 성장을 한 것 같다.
 
 ## This is a heading
 
@@ -29,9 +31,6 @@ This is some more info
 
 This is some more info
 
-<div class="bg-blue-500 text-white p-4 mb-4">
-  This is HTML inside markdown that has a class of note
-</div>
 
 ```js{1,4}[server.js]
 const http = require('http')

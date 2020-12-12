@@ -1,6 +1,6 @@
 <template>
   <div class="img-container">
-    <div class="img-wrapper">
+    <div class="img-wrapper" :style="{ paddingTop }">
       <span class="img">
         <img :src="src" :alt="alt" />
       </span>
@@ -19,6 +19,10 @@ export default {
     alt: {
       type: String,
       default: ''
+    },
+    paddingTop: {
+      type: String,
+      default: '75%'
     }
   }
 }
@@ -35,7 +39,6 @@ export default {
 .img-wrapper {
   @apply relative;
   @apply overflow-hidden;
-  padding-top: 75%;
 }
 .img {
   @apply block;
