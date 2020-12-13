@@ -113,7 +113,7 @@ export default {
           href: this.seoFavicon
         },
         {
-          rel: 'shortcut',
+          rel: 'shortcut icon',
           href: this.seoFavicon
         },
         {
