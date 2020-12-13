@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "deploy": "yarn generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
