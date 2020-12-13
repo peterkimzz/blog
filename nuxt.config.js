@@ -32,6 +32,14 @@ module.exports = {
         content:
           'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
       },
+      {
+        name: 'google-site-verification',
+        content: '4UxOeSKrw8W8YzFcrj7uL5G8n88ZFWKa0VHSHiDzyqg'
+      },
+      {
+        name: 'naver-site-verification',
+        content: '20f0641c5f175949097b208b23b65f9f0d6e561e'
+      },
     ]
   },
   components: [
