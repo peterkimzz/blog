@@ -1,5 +1,5 @@
 const { $content } = require('@nuxt/content')
-const BASE_URL = 'https://peterkimzz.github.io'
+const BASE_URL = 'https://www.peterkimzz.com'
 
 const CreateSitemapRoutes = async () => {
   try {
@@ -45,9 +45,9 @@ module.exports = {
   components: [
     { path: '~/components', prefix: 'vue' },
   ],
-  router: {
-    base: '/blog/'
-  },
+  // router: {
+  //   base: '/blog/'
+  // },
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   buildModules: ['@nuxtjs/tailwindcss'],
   content: {
@@ -59,7 +59,7 @@ module.exports = {
   },
   sitemap: {
     hostname: BASE_URL,
-    gzip: true,
+    // gzip: true,
     routes: CreateSitemapRoutes
   }
 }
