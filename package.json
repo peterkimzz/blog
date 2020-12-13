@@ -21,7 +21,7 @@
     "vue-gtag": "^1.10.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.3.3",
+    "@nuxtjs/tailwindcss": "^3.3.4",
     "autoprefixer": "^9",
     "postcss": "^7",
     "push-dir": "^0.4.1",

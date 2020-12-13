@@ -107,6 +107,18 @@ export default {
         {
           rel: 'canonical',
           href: this.seoURL
+        },
+        {
+          rel: 'icon',
+          href: this.seoFavicon
+        },
+        {
+          rel: 'shortcut',
+          href: this.seoFavicon
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: this.seoFavicon
         }
       ]
     }
@@ -136,6 +148,9 @@ export default {
     },
     seoImage() {
       return this.thumbnailUrl || '/thumbnail.png'
+    },
+    seoFavicon() {
+      return '/favicon1.png'
     }
   }
 }

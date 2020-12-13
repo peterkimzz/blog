@@ -12,7 +12,7 @@
   @apply py-1 px-2;
   @apply text-xs;
 
-  @apply bg-gray-600;
+  @apply bg-gray-700;
   @apply text-gray-50;
 }
 </style>

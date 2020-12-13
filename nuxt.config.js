@@ -30,12 +30,7 @@ module.exports = {
       },
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href:
-          '/favicon1.png'
-      }
+
     ]
   },
   loading: { color: '#000', height: '3px' },

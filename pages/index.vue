@@ -3,7 +3,7 @@
     <vue-seo :title-template-visible="false" />
 
     <vue-container>
-      <ul class="article-wrapper">
+      <ul class="article-wrapper -mx-1 md:-mx-1.5">
         <vue-article-preview
           v-for="article of articles"
           :key="article.slug"

@@ -2,13 +2,16 @@
   <li>
     <n-link
       :to="{ name: 'slug', params: { slug } }"
-      class="flex flex-col h-full"
+      class="flex flex-col h-full relative"
     >
       <vue-image
         :src="thumbnail"
         :alt="title"
         class="post-preview--thumbnail"
       />
+      <vue-tag :class="['absolute top-2 right-2', TagColor]">{{
+        category
+      }}</vue-tag>
       <div class="flex-1">
         <vue-heading as="h3" class="post-preview--title">{{
           title
@@ -17,9 +20,6 @@
       </div>
       <div class="mt-2">
         <vue-date class="post-preview--date">{{ updatedAt }}</vue-date>
-        <div v-if="category" class="mt-1">
-          <vue-tag :class="TagColor">{{ category }}</vue-tag>
-        </div>
       </div>
     </n-link>
   </li>
