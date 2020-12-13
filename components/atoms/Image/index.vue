@@ -1,5 +1,5 @@
 <template>
-  <div class="img-container">
+  <div :class="['img-container', { round }]">
     <div class="img-wrapper" :style="{ paddingTop }">
       <span class="img">
         <img :src="src" :alt="alt" />
@@ -23,6 +23,10 @@ export default {
     paddingTop: {
       type: String,
       default: '75%'
+    },
+    round: {
+      type: Boolean,
+      default: true
     }
   }
 }
@@ -33,9 +37,12 @@ export default {
   @apply block;
   @apply relative;
   @apply w-full;
-  @apply rounded-md overflow-hidden;
   @apply shadow-sm;
 }
+.img-container.round {
+  @apply rounded-md overflow-hidden;
+}
+
 .img-wrapper {
   @apply relative;
   @apply overflow-hidden;

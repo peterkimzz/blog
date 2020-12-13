@@ -1,24 +1,11 @@
-const { $content } = require('@nuxt/content')
 const BASE_URL = 'https://www.peterkimzz.com'
 
-const CreateSitemapRoutes = async () => {
-  try {
-    let routes = []
-    let posts = []
+const GetSitemap = async () => {
+  const { $content } = require("@nuxt/content");
+  const files = await $content({ deep: true }).only(["path"]).fetch();
 
-    if (posts === null || posts.length === 0) {
-      posts = await $content('articles').only(['slug']).fetch();
-    }
-
-    for (const post of posts) {
-      routes.push(`/${post.slug}`);
-    }
-
-    return routes;
-  } catch (err) {
-    return []
-  }
-}
+  return files.map((file) => (file.path === "/index" ? "/" : file.path));
+};
 
 module.exports = {
   // target: 'static',
@@ -27,6 +14,7 @@ module.exports = {
       { 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
       { name: 'robots', content: 'index, follow' },
+      { name: 'Referrer', content: 'origin' },
       {
         name: 'viewport',
         content:
@@ -38,16 +26,26 @@ module.exports = {
       },
       {
         name: 'naver-site-verification',
-        content: '20f0641c5f175949097b208b23b65f9f0d6e561e'
+        content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
       },
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href:
+          '/favicon1.png'
+      }
     ]
   },
+  loading: { color: '#000', height: '3px' },
   components: [
     { path: '~/components', prefix: 'vue' },
   ],
-  // router: {
-  //   base: '/blog/'
-  // },
+  plugins: [
+    { src: '~/plugins/cheerio' },
+    { src: '~/plugins/vue-gtag', mode: 'client' },
+  ],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   buildModules: ['@nuxtjs/tailwindcss'],
   content: {
@@ -59,7 +57,9 @@ module.exports = {
   },
   sitemap: {
     hostname: BASE_URL,
-    // gzip: true,
-    routes: CreateSitemapRoutes
+    gzip: true,
+    routes: () => {
+      return GetSitemap()
+    }
   }
 }

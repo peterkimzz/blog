@@ -10,13 +10,15 @@
     "start": "nuxt start",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "yarn generate && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/sitemap": "^2.4.0",
+    "cheerio": "^1.0.0-rc.3",
     "nuxt": "^2.14.11",
-    "prism-themes": "^1.5.0"
+    "prism-themes": "^1.5.0",
+    "vue-gtag": "^1.10.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.3.3",

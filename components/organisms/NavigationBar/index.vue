@@ -1,10 +1,6 @@
 <template>
   <nav class="nav">
-    <vue-container>
-      <vue-link href="/">
-        <vue-icon icon="Logo" class="w-36 py-5" />
-      </vue-link>
-    </vue-container>
+    <vue-brand class="py-5" />
   </nav>
 </template>
 

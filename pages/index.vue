@@ -1,5 +1,7 @@
 <template>
   <div>
+    <vue-seo :title-template-visible="false" />
+
     <vue-container>
       <ul class="article-wrapper">
         <vue-article-preview

@@ -1,20 +1,17 @@
 <template>
   <footer class="footer">
-    <vue-container>
-      <div class="mb-6">
-        <vue-icon icon="Logo" class="w-36" />
-      </div>
+    <div class="mb-10">
+      <vue-brand />
+      <p class="mt-1"><b>기술</b>과 <b>예술</b>을 담다</p>
+    </div>
 
-      <vue-copyright />
-    </vue-container>
+    <vue-copyright />
   </footer>
 </template>
 
 <style lang="postcss" scoped>
 .footer {
-  @apply pt-10 pb-10;
-  @apply text-sm;
-  @apply text-gray-500;
-  @apply bg-gray-100;
+  @apply py-6 md:py-10;
+  @apply text-xs md:text-sm;
 }
 </style>

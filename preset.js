@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin')
-const resolveConfig = require('tailwindcss/resolveConfig')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
@@ -10,14 +8,6 @@ module.exports = {
     colors: {
       ...defaultTheme.colors,
       gray: colors.gray
-    },
-    screens: {
-      xs: '500px',
-      ...defaultTheme.screens
-    },
-    fontSize: {
-      '2xs': '0.65rem',
-      ...defaultTheme.fontSize
     },
     fontFamily: {
       sans: ['-apple-system', ...defaultTheme.fontFamily.sans]
@@ -56,30 +46,5 @@ module.exports = {
     tableLayout: false,
     whitespace: false,
     wordBreak: false
-  },
-  plugins: [
-    plugin(function ({ addBase, addUtilities, config }) {
-      addBase({
-        html: {
-          '-webkit-font-smoothing': 'antialiased',
-          '-moz-osx-font-smoothing': 'grayscale',
-          'word-break': 'break-word',
-          // 'color': config('theme.colors.gray.800')
-        }
-      })
-
-      const input = {
-        '.input': {
-
-        }
-      }
-      addUtilities({ ...input })
-    })
-  ],
-  variants: {
-    extend: {
-      display: ['dark'],
-      backgroundOpacity: ['dark']
-    }
   }
 }

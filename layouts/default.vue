@@ -1,3 +1,5 @@
+
+
 <template>
   <div id="default__layout">
     <vue-container>
@@ -6,6 +8,10 @@
 
     <nuxt-child />
 
-    <vue-footer-bar />
+    <div class="text-gray-500 bg-gray-50">
+      <vue-container>
+        <vue-footer-bar />
+      </vue-container>
+    </div>
   </div>
 </template>
