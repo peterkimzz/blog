@@ -7,6 +7,7 @@
         :src="article.thumbnail"
         :alt="article.alt"
         class="rounded-none md:rounded-md"
+        padding-top="50%"
       />
     </div>
 
@@ -100,6 +101,13 @@ export default {
 ::v-deep .nuxt-content a {
   @apply underline;
 }
+
+::v-deep .nuxt-content ul {
+  @apply pl-5;
+}
+::v-deep .nuxt-content li {
+  @apply list-disc;
+}
 /* ::v-deep .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
@@ -110,7 +118,6 @@ export default {
 
 ::v-deep .nuxt-content-highlight {
   @apply relative;
-  @apply mb-6 md:mb-8;
   @apply text-sm md:text-base;
   @apply leading-6 md:leading-7;
 }
@@ -119,6 +126,7 @@ export default {
   @apply pointer-events-none;
 }
 ::v-deep .nuxt-content-highlight .line-numbers {
+  @apply mb-6 md:mb-8;
   @apply rounded-md;
 }
 

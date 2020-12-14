@@ -57,5 +57,6 @@ export default {
 img {
   @apply w-full h-full;
   @apply object-cover;
+  @apply bg-center;
 }
 </style>
