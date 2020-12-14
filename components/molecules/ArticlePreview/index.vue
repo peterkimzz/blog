@@ -18,7 +18,7 @@
         }}</vue-heading>
         <p v-if="description" class="post-preview--desc">{{ description }}</p>
       </div>
-      <div class="mt-2">
+      <div class="mt-1">
         <vue-date class="post-preview--date">{{ updatedAt }}</vue-date>
       </div>
     </n-link>
@@ -80,9 +80,10 @@ export default {
 }
 .post-preview--title {
   @apply font-bold;
-  @apply leading-snug;
+  @apply leading-snug !important;
 }
 .post-preview--desc {
+  @apply mt-1.5;
   @apply text-xs;
 
   @apply text-gray-500;

@@ -17,9 +17,7 @@ Supabase 팀은 이 프로젝트를 이렇게 소개한다.
 
 >  Create a backend in less than 2 minutes. Start your project with a Postgres Database, Authentication, instant APIs, and realtime subscriptions.
 
-2분 안에 Postgres, 인증과 API, 실시간 구독을 구현할 수 있다는 얘기이다.
-
-사실이라면 엄청나게 편리할 것 같다.
+2분 안에 Postgres, 인증과 API, 실시간 구독을 구현할 수 있다는 얘기이다. 사실이라면 엄청나게 편리할 것 같다.
 
 현재 회원가입은 Github OAuth로만 가능하고, 올해 12월까지 가입하는 유저들은 자동으로 2년 가량의 Base Tier 크레딧을 받을 수 있다.
 

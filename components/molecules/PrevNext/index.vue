@@ -1,23 +1,24 @@
 <template>
-  <div class="flex justify-between">
-    <div v-if="prev">
-      <n-link
-        :to="{ name: 'slug', params: { slug: prev.slug } }"
-        class="text-primary font-bold hover:underline"
-      >
+  <div class="flex justify-between text-xs md:text-sm font-medium">
+    <div v-if="prev" class="flex-1 mr-0.5">
+      <div class="label">
+        <span class="align-middle">이전 글</span>
+      </div>
+      <n-link :to="{ name: 'slug', params: { slug: prev.slug } }" class="link">
         {{ prev.title }}
       </n-link>
-      <span>&nbsp;</span>
     </div>
-    <div v-else>
+    <div v-if="next" class="flex-1 ml-0.5 text-right">
+      <div class="label">
+        <span class="align-middle">다음 글</span>
+      </div>
       <n-link
-        v-if="next"
         :to="{ name: 'slug', params: { slug: next.slug } }"
-        class="font-bold hover:underline"
+        class="link"
+        style="word-break: keep-all"
       >
         {{ next.title }}
       </n-link>
-      <span v-else>&nbsp;</span>
     </div>
   </div>
 </template>
@@ -36,3 +37,16 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.link {
+  @apply leading-snug;
+  @apply hover:underline;
+}
+
+.label {
+  @apply font-semibold;
+  @apply text-gray-400;
+  @apply mb-0.5;
+}
+</style>

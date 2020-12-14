@@ -19,12 +19,12 @@
         </vue-info-box> -->
       <div class="my-3">
         <vue-heading>{{ article.title }}</vue-heading>
-        <p class="text-gray-500 mt-1 text-xs">
+        <p class="text-gray-500 mt-1.5 text-xs">
           {{ formatDate(article.updatedAt) }}에 마지막으로 수정됨.
         </p>
       </div>
 
-      <nav
+      <!-- <nav
         class="toc my-4 p-4 text-sm bg-gray-50 border border-gray-200 rounded-lg"
       >
         <ul>
@@ -40,11 +40,12 @@
             <vue-link :href="`#${link.id}`" block>{{ link.text }}</vue-link>
           </li>
         </ul>
-      </nav>
+      </nav> -->
 
       <nuxt-content :document="article" />
 
-      <vue-prev-next :prev="prev" :next="next" class="py-10" />
+      <div class="w-full h-px bg-gray-100 my-10"></div>
+      <vue-prev-next :prev="prev" :next="next" class="mb-14" />
     </article>
   </main>
 </template>
@@ -73,41 +74,58 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+::v-deep .nuxt-content {
+  @apply pt-8;
+
+  & p,
+  & li {
+    @apply text-sm md:text-base;
+    @apply leading-6 md:leading-7;
+  }
+
+  & p,
+  & img {
+    @apply mb-6 md:mb-8;
+  }
+
+  & a {
+    @apply underline;
+  }
+
+  & img {
+    @apply mx-auto;
+  }
+
+  & h1,
+  & h2,
+  & h3 {
+    @apply my-4;
+  }
+
+  & ul {
+    @apply pl-5;
+  }
+
+  & li {
+    @apply list-disc;
+  }
+}
 ::v-deep .nuxt-content h1 {
   @apply my-4;
 }
 ::v-deep .nuxt-content h2 {
   @apply font-bold;
   @apply text-2xl;
-  @apply my-4;
 }
 ::v-deep .nuxt-content h3 {
   @apply font-bold;
   @apply text-xl;
-  @apply my-4;
 }
-::v-deep .nuxt-content p {
-  @apply mb-6 md:mb-8;
-  @apply text-sm md:text-base;
-  @apply leading-6 md:leading-7;
-}
+
 ::v-deep .nuxt-content p code {
   @apply bg-gray-100 text-black py-0.5 px-1.5 rounded-md;
 }
-::v-deep .nuxt-content img {
-  @apply mb-6 md:mb-8;
-  @apply mx-auto;
-}
-::v-deep .nuxt-content a {
-  @apply underline;
-}
 
-::v-deep .nuxt-content ul {
-  @apply pl-5;
-}
-::v-deep .nuxt-content li {
-  @apply list-disc;
-}
 /* ::v-deep .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
@@ -134,7 +152,8 @@ export default {
   @apply p-4;
   @apply mb-6 md:mb-8;
   @apply bg-gray-100;
-  @apply rounded-md;
+  @apply rounded-r-md;
+  @apply border-l-4 border-gray-300;
 
   & p {
     margin: 0 !important;

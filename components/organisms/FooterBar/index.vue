@@ -5,7 +5,7 @@
       <p class="mt-1"><b>기술</b>과 <b>예술</b>을 담다</p>
     </div>
 
-    <vue-copyright />
+    <vue-copyright class="text-gray-500" />
   </footer>
 </template>
 

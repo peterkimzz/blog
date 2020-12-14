@@ -1,5 +1,5 @@
 <template>
-  <component :is="Icon" class="icon" @click="Click" />
+  <component :is="Icon" class="icon fill-current" @click="Click" />
 </template>
 
 <script>
@@ -31,6 +31,6 @@ export default {
 <style lang="postcss" scoped>
 .icon {
   @apply inline-block;
-  @apply w-5;
+  @apply w-4;
 }
 </style>
