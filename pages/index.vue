@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vue-seo :title-template-visible="false" />
+    <vue-seo />
 
     <vue-container>
       <ul class="article-wrapper -mx-1 md:-mx-1.5">

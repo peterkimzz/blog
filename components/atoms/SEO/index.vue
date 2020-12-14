@@ -48,6 +48,11 @@ export default {
           content:
             '개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.'
         },
+        {
+          hid: 'author',
+          name: 'author',
+          content: SITE_NAME
+        },
         // Open Graph
         {
           property: 'og:type',
