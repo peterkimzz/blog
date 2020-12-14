@@ -1,11 +1,11 @@
-const BASE_URL = 'https://www.peterkimzz.com'
+require('dotenv').config()
 
 const GetSitemap = async () => {
   const { $content } = require("@nuxt/content");
   const files = await $content({ deep: true }).only(["path"]).fetch();
 
   return files.map((file) => (file.path === "/index" ? "/" : file.path));
-};
+}
 
 module.exports = {
   // target: 'static',
@@ -14,7 +14,6 @@ module.exports = {
       { 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
       { name: 'robots', content: 'index, follow' },
-      { name: 'Referrer', content: 'origin' },
       {
         name: 'viewport',
         content:
@@ -33,6 +32,7 @@ module.exports = {
 
     ]
   },
+  env: process.env,
   loading: { color: '#000', height: '3px' },
   components: [
     { path: '~/components', prefix: 'vue' },
@@ -51,7 +51,7 @@ module.exports = {
     }
   },
   sitemap: {
-    hostname: BASE_URL,
+    hostname: process.env.BASE_URL,
     gzip: true,
     routes: () => {
       return GetSitemap()

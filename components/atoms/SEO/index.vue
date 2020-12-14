@@ -1,10 +1,10 @@
 <template>
-  <span v-if="false" id="seo" />
+  <span v-if="false" />
 </template>
 
 <script>
+const TITLE = process.env.META_TITLE
 const SITE_NAME = 'peterkimzz'
-const TITLE = 'peterkimzz의 블로그'
 export default {
   props: {
     title: {
@@ -133,7 +133,7 @@ export default {
     },
     seoDescription() {
       if (!this.description) {
-        return `개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.`
+        return process.env.META_DESCRIPTION
       }
 
       const $ = this.$cheerio.load(this.description)
@@ -141,16 +141,16 @@ export default {
       return description.substring(0, 150)
     },
     seoURL() {
-      return `https://www.peterkimzz.com` + this.$route.path
+      return process.env.BASE_URL + this.$route.path
     },
     seoLang() {
       return 'ko'
     },
     seoImage() {
-      return this.thumbnailUrl || '/thumbnail.png'
+      return this.thumbnailUrl || process.env.BASE_URL + '/thumbnail.png'
     },
     seoFavicon() {
-      return '/favicon1.png'
+      return process.env.BASE_URL + '/favicon.png'
     }
   }
 }

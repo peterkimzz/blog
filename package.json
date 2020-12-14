@@ -16,6 +16,7 @@
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
     "nuxt": "^2.14.11",
     "prism-themes": "^1.5.0",
     "vue-gtag": "^1.10.0"
