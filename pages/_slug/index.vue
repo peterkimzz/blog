@@ -94,8 +94,11 @@ export default {
   @apply bg-gray-100 text-black py-0.5 px-1.5 rounded-md;
 }
 ::v-deep .nuxt-content img {
-  @apply my-6;
+  @apply mb-6 md:mb-8;
   @apply mx-auto;
+}
+::v-deep .nuxt-content a {
+  @apply underline;
 }
 /* ::v-deep .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
@@ -107,6 +110,7 @@ export default {
 
 ::v-deep .nuxt-content-highlight {
   @apply relative;
+  @apply mb-6 md:mb-8;
   @apply text-sm md:text-base;
   @apply leading-6 md:leading-7;
 }
