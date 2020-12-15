@@ -3,6 +3,7 @@
     :is="tag"
     :href="href"
     :to="href"
+    :title="title"
     :target="target"
     :class="['link', { block }]"
     ><slot
@@ -24,6 +25,10 @@ export default {
     block: {
       type: Boolean,
       default: false
+    },
+    title: {
+      type: String,
+      default: null
     }
   },
   computed: {

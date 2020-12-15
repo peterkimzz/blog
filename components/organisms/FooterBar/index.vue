@@ -3,9 +3,19 @@
     <div class="mb-10">
       <vue-brand />
       <p class="mt-1"><b>기술</b>과 <b>예술</b>을 담다</p>
+
+      <!-- <div class="mt-10">
+        <p>김동현</p>
+        <p>peterkimzz69@gmail.com</p>
+      </div> -->
     </div>
 
-    <vue-copyright class="text-gray-500" />
+    <vue-divider />
+
+    <div class="flex justify-between text-gray-500">
+      <vue-copyright />
+      <vue-sns />
+    </div>
   </footer>
 </template>
 

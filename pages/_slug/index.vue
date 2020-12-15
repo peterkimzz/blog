@@ -44,7 +44,8 @@
 
       <nuxt-content :document="article" />
 
-      <div class="w-full h-px bg-gray-100 my-10"></div>
+      <vue-divider class="my-10" />
+
       <vue-prev-next :prev="prev" :next="next" class="mb-14" />
     </article>
   </main>

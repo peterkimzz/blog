@@ -1,6 +1,8 @@
 <template>
   <nav class="nav">
-    <vue-brand class="py-5" />
+    <div class="flex justify-between items-center">
+      <vue-brand class="py-5" />
+    </div>
   </nav>
 </template>
 
