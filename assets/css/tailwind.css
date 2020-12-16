@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    word-break: break-word;
+    word-break: keep-all;
     @apply antialiased;
     @apply leading-7;
     

@@ -47,6 +47,12 @@
       <vue-divider class="my-10" />
 
       <vue-prev-next :prev="prev" :next="next" class="mb-14" />
+
+      <vue-divider class="my-10" />
+
+      <client-only>
+        <vue-comment class="mb-8" />
+      </client-only>
     </article>
   </main>
 </template>

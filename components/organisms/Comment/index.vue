@@ -1,0 +1,13 @@
+<template>
+  <div>
+    <script
+      type="application/javascript"
+      src="https://utteranc.es/client.js"
+      repo="peterkimzz/blog"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </div>
+</template>
