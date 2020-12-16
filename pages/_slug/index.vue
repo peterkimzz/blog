@@ -86,17 +86,22 @@ export default {
 
 <style lang="postcss" scoped>
 ::v-deep .nuxt-content {
-  @apply pt-8;
+  & > * {
+    @apply mt-6 md:mt-8;
+  }
 
-  & p,
-  & li {
+  & > em {
+    @apply font-semibold;
+  }
+
+  & > p {
     @apply text-sm md:text-base;
     @apply leading-6 md:leading-7;
   }
 
-  & p,
-  & img {
-    @apply mb-6 md:mb-8;
+  & p code {
+    @apply font-sans;
+    @apply bg-gray-100 text-black py-0.5 px-1.5 rounded-md;
   }
 
   & a {
@@ -107,22 +112,34 @@ export default {
     @apply mx-auto;
   }
 
-  & h1,
-  & h2,
-  & h3 {
-    @apply my-4;
-  }
-
-  & ul {
+  & ul,
+  & ol {
     @apply pl-5;
   }
 
-  & li {
+  & ul li {
     @apply list-disc;
   }
+
+  & ol li {
+    @apply list-decimal;
+  }
 }
+
+::v-deep .nuxt-content blockquote {
+  @apply p-4;
+  @apply mb-6 md:mb-8;
+  @apply bg-gray-100;
+  @apply rounded-r-md;
+  @apply border-l-4 border-gray-300;
+
+  & p {
+    margin: 0 !important;
+  }
+}
+
 ::v-deep .nuxt-content h1 {
-  @apply my-4;
+  @apply font-bold;
 }
 ::v-deep .nuxt-content h2 {
   @apply font-bold;
@@ -131,10 +148,6 @@ export default {
 ::v-deep .nuxt-content h3 {
   @apply font-bold;
   @apply text-xl;
-}
-
-::v-deep .nuxt-content p code {
-  @apply bg-gray-100 text-black py-0.5 px-1.5 rounded-md;
 }
 
 /* ::v-deep .icon.icon-link {
@@ -157,17 +170,5 @@ export default {
 ::v-deep .nuxt-content-highlight .line-numbers {
   @apply mb-6 md:mb-8;
   @apply rounded-md;
-}
-
-::v-deep .nuxt-content blockquote {
-  @apply p-4;
-  @apply mb-6 md:mb-8;
-  @apply bg-gray-100;
-  @apply rounded-r-md;
-  @apply border-l-4 border-gray-300;
-
-  & p {
-    margin: 0 !important;
-  }
 }
 </style>
