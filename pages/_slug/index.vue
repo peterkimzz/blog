@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="pb-10">
     <vue-seo :title="article.title" :description="article.description" />
 
     <div class="-mx-6 md:mx-0">
@@ -20,7 +20,7 @@
       <div class="my-3">
         <vue-heading>{{ article.title }}</vue-heading>
         <p class="text-gray-500 mt-1.5 text-xs">
-          {{ formatDate(article.updatedAt) }}에 마지막으로 수정됨.
+          {{ formatDate(article.updated) }}에 마지막으로 수정됨.
         </p>
       </div>
 
@@ -51,20 +51,12 @@
       <vue-divider class="my-10" />
 
       <client-only>
-        <!-- <div class="mb-8">
-          <script
-            type="application/javascript"
-            src="https://utteranc.es/client.js"
-            repo="peterkimzz/blog"
-            issue-term="title"
-            label="comment"
-            theme="github-light"
-            crossorigin="anonymous"
-            async
-          ></script>
-        </div> -->
-        <vue-comment class="mb-8" />
+        <vue-comment />
       </client-only>
+
+      <vue-divider class="my-10" />
+
+      <vue-sponsor-button />
     </article>
   </main>
 </template>

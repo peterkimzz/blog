@@ -19,7 +19,7 @@
         <p v-if="description" class="post-preview--desc">{{ description }}</p>
       </div>
       <div class="mt-1">
-        <vue-date class="post-preview--date">{{ updatedAt }}</vue-date>
+        <vue-date class="post-preview--date">{{ updated }}</vue-date>
       </div>
     </n-link>
   </li>
@@ -54,7 +54,7 @@ export default {
       type: String,
       default: null
     },
-    updatedAt: {
+    updated: {
       type: String,
       default: null
     }

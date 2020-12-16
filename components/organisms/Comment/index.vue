@@ -5,6 +5,7 @@
       src="https://utteranc.es/client.js"
       repo="peterkimzz/blog"
       issue-term="title"
+      label="Comment"
       theme="github-light"
       crossorigin="anonymous"
       async
