@@ -13,6 +13,10 @@
 <script>
 export default {
   props: {
+    as: {
+      type: String,
+      default: null
+    },
     href: {
       type: String,
       default: '',
@@ -33,9 +37,14 @@ export default {
   },
   computed: {
     tag() {
+      if (this.as) {
+        return this.as
+      }
+
       if (this.target === '_blank') {
         return 'a'
       }
+
       return 'n-link'
     }
   }

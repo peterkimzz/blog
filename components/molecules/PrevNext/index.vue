@@ -4,21 +4,22 @@
       <div class="label">
         <span class="align-middle">이전 글</span>
       </div>
-      <n-link :to="{ name: 'slug', params: { slug: prev.slug } }" class="link">
+      <vue-link as="a" :href="`/${prev.slug}`" class="link">
         {{ prev.title }}
-      </n-link>
+      </vue-link>
     </div>
     <div v-if="next" class="flex-1 ml-0.5 text-right">
       <div class="label">
         <span class="align-middle">다음 글</span>
       </div>
-      <n-link
-        :to="{ name: 'slug', params: { slug: next.slug } }"
+      <vue-link
+        as="a"
+        :href="`/${next.slug}`"
         class="link"
         style="word-break: keep-all"
       >
         {{ next.title }}
-      </n-link>
+      </vue-link>
     </div>
   </div>
 </template>

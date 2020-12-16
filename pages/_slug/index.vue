@@ -51,18 +51,19 @@
       <vue-divider class="my-10" />
 
       <client-only>
-        <div class="mb-8">
+        <!-- <div class="mb-8">
           <script
             type="application/javascript"
             src="https://utteranc.es/client.js"
             repo="peterkimzz/blog"
             issue-term="title"
+            label="comment"
             theme="github-light"
             crossorigin="anonymous"
             async
           ></script>
-        </div>
-        <!-- <vue-comment class="mb-8" /> -->
+        </div> -->
+        <vue-comment class="mb-8" />
       </client-only>
     </article>
   </main>
