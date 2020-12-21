@@ -118,6 +118,6 @@ Save하면 네임 서버를 찾을 수 없다고 경고가 나올 것이다. 이
 
 정상적으로 설정했다면 이제 평생 무료로, 무한으로 즐기자. 😎
 
-> 출처:
+> 참고:
 > - [Configuring a custom domain for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site) 
 > - [Getting started with GitHub Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/getting-started-with-github-pages)

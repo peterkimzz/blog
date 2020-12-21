@@ -23,7 +23,7 @@ export default {
       type: String,
       default: ''
     },
-    thumbnailUrl: {
+    thumbnail: {
       type: String,
       default: ''
     }
@@ -152,7 +152,7 @@ export default {
       return 'ko'
     },
     seoImage() {
-      return this.thumbnailUrl || process.env.BASE_URL + '/thumbnail.png'
+      return this.thumbnail || process.env.BASE_URL + '/thumbnail.png'
     },
     seoFavicon() {
       return process.env.BASE_URL + '/favicon.png'

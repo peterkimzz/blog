@@ -1,6 +1,10 @@
 <template>
   <main class="pb-10">
-    <vue-seo :title="article.title" :description="article.description" />
+    <vue-seo
+      :title="article.title"
+      :description="article.description"
+      :thumbnail="article.thumbnail"
+    />
 
     <div class="-mx-6 md:mx-0">
       <vue-image
@@ -114,6 +118,8 @@ export default {
 
   & ul,
   & ol {
+    @apply text-sm md:text-base;
+    @apply leading-6 md:leading-7;
     @apply pl-5;
   }
 
@@ -132,6 +138,8 @@ export default {
   @apply bg-gray-100;
   @apply rounded-r-md;
   @apply border-l-4 border-gray-300;
+  @apply text-sm md:text-base;
+  @apply leading-6 md:leading-7;
 
   & p {
     margin: 0 !important;
@@ -160,7 +168,7 @@ export default {
 
 ::v-deep .nuxt-content-highlight {
   @apply relative;
-  @apply text-sm md:text-base;
+  @apply text-xs md:text-sm;
   @apply leading-6 md:leading-7;
 }
 ::v-deep .nuxt-content-highlight .filename {

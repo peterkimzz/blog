@@ -10,7 +10,17 @@ module.exports = {
       gray: colors.gray
     },
     fontFamily: {
-      sans: ['-apple-system', ...defaultTheme.fontFamily.sans]
+      sans: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'sans-serif',
+        'Apple Color Emoji',
+        'Segoe UI Emoji'
+      ]
     }
   },
   corePlugins: {

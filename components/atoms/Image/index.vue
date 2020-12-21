@@ -37,7 +37,7 @@ export default {
   @apply block;
   @apply relative;
   @apply w-full;
-  @apply shadow-sm;
+  /* @apply shadow-sm; */
 }
 .img-container.round {
   @apply rounded-md overflow-hidden;

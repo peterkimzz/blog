@@ -77,6 +77,7 @@ export default {
 <style lang="postcss" scoped>
 .post-preview--thumbnail {
   @apply mb-1.5;
+  @apply border border-gray-100;
 }
 .post-preview--title {
   @apply font-bold;
