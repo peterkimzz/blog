@@ -23,7 +23,7 @@
         </vue-info-box> -->
       <div class="my-3">
         <vue-heading>{{ article.title }}</vue-heading>
-        <p class="text-gray-500 mt-1.5 text-xs">
+        <p class="text-gray-400 mt-1.5 text-xs">
           {{ formatDate(article.updated) }}에 마지막으로 수정됨.
         </p>
       </div>
@@ -98,9 +98,18 @@ export default {
     @apply font-semibold;
   }
 
-  & > p {
+  & a {
+    @apply text-blue-900;
+  }
+
+  & p {
+    @apply text-gray-700;
     @apply text-sm md:text-base;
     @apply leading-6 md:leading-7;
+
+    & > strong {
+      @apply text-gray-900;
+    }
   }
 
   & p code {

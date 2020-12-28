@@ -13,7 +13,7 @@
         category
       }}</vue-tag>
       <div class="flex-1">
-        <vue-heading as="h3" class="post-preview--title">{{
+        <vue-heading as="h4" class="post-preview--title">{{
           title
         }}</vue-heading>
         <p v-if="description" class="post-preview--desc">{{ description }}</p>
@@ -82,6 +82,7 @@ export default {
 .post-preview--title {
   @apply font-bold;
   @apply leading-snug !important;
+  /* @apply leading-normal !important; */
 }
 .post-preview--desc {
   @apply mt-1.5;
