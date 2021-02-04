@@ -4,15 +4,15 @@
       <vue-brand />
       <p class="mt-1"><b>기술</b>과 <b>예술</b>을 담다</p>
 
-      <!-- <div class="mt-10">
+      <div class="mt-8 text-gray-500">
         <p>김동현</p>
         <p>peterkimzz69@gmail.com</p>
-      </div> -->
+      </div>
     </div>
 
     <vue-divider />
 
-    <div class="flex justify-between text-gray-500">
+    <div class="flex justify-between text-gray-600">
       <vue-copyright />
       <vue-sns />
     </div>

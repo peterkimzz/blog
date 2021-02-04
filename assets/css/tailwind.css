@@ -9,8 +9,8 @@
     @apply antialiased;
     @apply leading-7;
     
-    @apply bg-white;
-    @apply text-gray-800;
+    @apply bg-gray-800;
+    @apply text-gray-300;
 
   }
 }

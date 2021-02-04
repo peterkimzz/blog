@@ -6,9 +6,11 @@
       <vue-navigation-bar />
     </vue-container>
 
-    <nuxt-child />
+    <div class="min-h-screen">
+      <nuxt-child />
+    </div>
 
-    <div class="bg-gray-50 border-t border-gray-100">
+    <div class="bg-gray-900">
       <vue-container>
         <vue-footer-bar />
       </vue-container>

@@ -13,7 +13,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxt/content": "^1.11.1",
+    "@nuxt/content": "^1.12.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",

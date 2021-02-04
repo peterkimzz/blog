@@ -47,7 +47,7 @@ export default {
 
 .label {
   @apply font-semibold;
-  @apply text-gray-400;
+  @apply text-gray-500;
   @apply mb-0.5;
 }
 </style>

@@ -23,7 +23,7 @@
         </vue-info-box> -->
       <div class="my-3">
         <vue-heading>{{ article.title }}</vue-heading>
-        <p class="text-gray-400 mt-1.5 text-xs">
+        <p class="text-gray-500 mt-1.5 text-xs">
           {{ formatDate(article.updated) }}에 마지막으로 수정됨.
         </p>
       </div>
@@ -99,22 +99,23 @@ export default {
   }
 
   & a {
-    @apply text-blue-900;
+    @apply text-gray-400;
   }
 
   & p {
-    @apply text-gray-700;
     @apply text-sm md:text-base;
     @apply leading-6 md:leading-7;
 
     & > strong {
-      @apply text-gray-900;
+      @apply text-white;
     }
   }
 
   & p code {
+    @apply leading-3;
     @apply font-sans;
-    @apply bg-gray-100 text-black py-0.5 px-1.5 rounded-md;
+    @apply bg-gray-700 text-gray-100 py-0.5 px-1.5 rounded-md;
+    @apply text-sm;
   }
 
   & a {
@@ -144,9 +145,9 @@ export default {
 ::v-deep .nuxt-content blockquote {
   @apply p-4;
   @apply mb-6 md:mb-8;
-  @apply bg-gray-100;
+  @apply bg-gray-900;
   @apply rounded-r-md;
-  @apply border-l-4 border-gray-300;
+  @apply border-l-4 border-gray-700;
   @apply text-sm md:text-base;
   @apply leading-6 md:leading-7;
 

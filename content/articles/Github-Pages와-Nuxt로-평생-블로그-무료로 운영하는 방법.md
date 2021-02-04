@@ -34,7 +34,7 @@ Github가 망하지 않는 이상 평생 무료이고, Github Pages는 정말 �
 
 리파지토리 생성 후 `Settings` 설정으로 이동한 뒤, 아래로 내리다보면 `Github Pages` 라는 섹션을 발견할 수 있다. Github Pages의 호스팅 원리는, 해당 리파지토리에 푸시된 `브랜치`를 루트 폴더로 삼아 호스팅을 하게 된다. 브랜치 이름은 아무거나 해도 상관없다.
 
-> Github Pages에 호스팅하는 브랜치 이름은 관습적으로 **gh-pages** 라는 이름을 쓴다.
+> Github Pages에 호스팅하는 브랜치 이름은 관습적으로 **gh-pages** 라는 이름을 쓴다. 다른 이름을 써도 무방하다.
 
 ## index.html
 

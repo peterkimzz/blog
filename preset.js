@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     colors: {
       ...defaultTheme.colors,
-      gray: colors.gray
+      // blue: colors.blue,
+      gray: colors.trueGray
     },
     fontFamily: {
       sans: [

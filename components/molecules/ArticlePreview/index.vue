@@ -77,12 +77,10 @@ export default {
 <style lang="postcss" scoped>
 .post-preview--thumbnail {
   @apply mb-1.5;
-  @apply border border-gray-100;
 }
 .post-preview--title {
   @apply font-bold;
   @apply leading-snug !important;
-  /* @apply leading-normal !important; */
 }
 .post-preview--desc {
   @apply mt-1.5;
@@ -93,6 +91,6 @@ export default {
 }
 .post-preview--date {
   @apply text-xs;
-  @apply text-gray-400;
+  @apply text-gray-600;
 }
 </style>

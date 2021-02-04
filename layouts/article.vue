@@ -8,7 +8,7 @@
       <nuxt-child />
     </vue-container>
 
-    <div class="bg-gray-50 border-t border-gray-100">
+    <div class="bg-gray-900">
       <vue-container class="max-w-screen-sm">
         <vue-footer-bar />
       </vue-container>

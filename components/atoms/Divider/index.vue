@@ -4,7 +4,8 @@
 
 <style lang="postcss" scoped>
 .divider {
-  @apply bg-gray-100;
+  @apply bg-gray-700;
+  @apply bg-opacity-40;
   @apply w-full h-px;
   @apply my-4;
 }

@@ -6,7 +6,7 @@
       repo="peterkimzz/blog"
       issue-term="title"
       label="Comment"
-      theme="github-light"
+      theme="github-dark"
       crossorigin="anonymous"
       async
     ></script>
