@@ -4,6 +4,7 @@ title: Firebase를 대체할 오픈소스 프로젝트, Supabase
 description: Supabase는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다. 컴퓨터에 직접 설치하는 방식은 아니고, Firebase처럼 클라우드로 제공되는 서비스이다. 내가 Firebase를 사용하면서 아쉬웠던 건, 데이터가 많아졌을 때 인덱싱을 쉽게 적용시켜서 빠르게 레코드를 읽어오는 기능이 강력하진 않아서 데이터가 많은 앱에서는 사용하기 힘들다는 점이다.
 thumbnail: https://media.vlpt.us/images/peterkimzz/post/b2873856-20b6-49a4-a8f4-176a94c92d23/08f3d41684b91f7d68810459b2356ecb4819c382.png
 updated: 2020-12-15
+created: 2020-12-15
 ---
 
 `Supabase`는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다.
