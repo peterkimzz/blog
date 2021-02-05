@@ -12,6 +12,8 @@
     @apply bg-gray-800;
     @apply text-gray-300;
 
+    @apply text-sm md:text-base;
+    @apply leading-6 md:leading-7;
   }
 }
 
