@@ -111,6 +111,9 @@ export default {
     }
   }
 
+  #text {
+  }
+
   & p code {
     @apply leading-3;
     @apply font-sans;
