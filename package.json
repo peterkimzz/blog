@@ -13,16 +13,17 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxt/content": "^1.13.1",    
+    "@nuxt/content": "^1.13.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.0",
     "prism-themes": "^1.5.0",
     "vue-gtag": "^1.11.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.4.2",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9",
     "postcss": "^7",
     "push-dir": "^0.4.1",

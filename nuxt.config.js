@@ -37,7 +37,9 @@ module.exports = {
   env: process.env,
   loading: { color: '#000', height: '3px' },
   components: [
-    { path: '~/components', prefix: 'vue' },
+    { path: '~/components/atoms', prefix: 'vue' },
+    { path: '~/components/molecules', prefix: 'vue' },
+    { path: '~/components/organisms', prefix: 'vue' },
   ],
   plugins: [
     { src: '~/plugins/cheerio' },

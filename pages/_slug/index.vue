@@ -1,6 +1,6 @@
 <template>
   <main class="pb-10">
-    <vue-seo
+    <vue-s-e-o
       :title="article.title"
       :description="article.description"
       :thumbnail="article.thumbnail"
