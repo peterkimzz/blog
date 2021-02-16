@@ -5,8 +5,6 @@ const GetSitemap = async () => {
   const files = await $content('articles').only(["path"]).fetch();
   // const files = await $content({ deep: true }).only(["path"]).fetch();
 
-  console.log(files.map(file => file.path.replace(/\/articles/gi, '')))
-
   return files.map(file => file.path.replace(/\/articles/gi, ''));
 }
 
