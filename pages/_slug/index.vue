@@ -70,7 +70,6 @@ export default {
   layout: 'article',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
-    console.log(article.description)
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
