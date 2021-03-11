@@ -11,7 +11,8 @@ const GetSitemap = async () => {
 }
 
 module.exports = {
-  // target: 'static',
+  target: 'static',
+  mode: 'spa',
   head: {
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
@@ -37,7 +38,9 @@ module.exports = {
   env: process.env,
   loading: { color: '#000', height: '3px' },
   components: [
-    { path: '~/components', prefix: 'vue' },
+    { path: '~/components/atoms', prefix: 'vue' },
+    { path: '~/components/molecules', prefix: 'vue' },
+    { path: '~/components/organisms', prefix: 'vue' },
   ],
   plugins: [
     { src: '~/plugins/cheerio' },
