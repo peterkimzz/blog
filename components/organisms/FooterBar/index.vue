@@ -14,7 +14,7 @@
 
     <div class="flex justify-between text-gray-600">
       <vue-copyright />
-      <vue-sns />
+      <vue-s-n-s />
     </div>
   </footer>
 </template>

@@ -5,14 +5,12 @@ const GetSitemap = async () => {
   const files = await $content('articles').only(["path"]).fetch();
   // const files = await $content({ deep: true }).only(["path"]).fetch();
 
-  console.log(files.map(file => file.path.replace(/\/articles/gi, '')))
-
   return files.map(file => file.path.replace(/\/articles/gi, ''));
 }
 
 module.exports = {
   target: 'static',
-  mode: 'spa',
+  ssr: false,
   head: {
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
@@ -58,8 +56,6 @@ module.exports = {
   sitemap: {
     hostname: process.env.BASE_URL,
     gzip: true,
-    routes: () => {
-      return GetSitemap()
-    }
+    routes: () => GetSitemap()
   }
 }

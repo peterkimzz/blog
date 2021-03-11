@@ -1,6 +1,6 @@
 <template>
   <main class="pb-10">
-    <vue-seo
+    <vue-s-e-o
       :title="article.title"
       :description="article.description"
       :thumbnail="article.thumbnail"
@@ -70,6 +70,7 @@ export default {
   layout: 'article',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
+    console.log(article.description)
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])

@@ -8,24 +8,23 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "build": "nuxt build",
-    "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.13.1",    
+    "@nuxt/content": "^1.14.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/forms": "^0.2.1",
     "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",
-    "nuxt": "^2.15.2",
+    "nuxt": "^2.15.3",
     "prism-themes": "^1.5.0",
     "vue-gtag": "^1.11.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@nuxtjs/tailwindcss": "^3.4.3",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9",
     "postcss": "^7",
-    "push-dir": "^0.4.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
-} 
+}
