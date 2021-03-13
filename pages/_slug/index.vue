@@ -84,11 +84,11 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('ko', options)
     }
-  },
-  async mounted() {
-    const articles = await this.$content('articles')
-    console.log(articles)
   }
+  // async mounted() {
+  //   const articles = await this.$content('articles')
+  //   console.log(articles)
+  // }
 }
 </script>
 
