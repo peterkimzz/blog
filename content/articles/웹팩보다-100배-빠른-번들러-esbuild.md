@@ -1,7 +1,6 @@
 ---
 category: tech
 title: 웹팩보다 100배 빠른 번들러, esbuild
-description: 이번 포스팅은 떠오르는 차세대 자바스크립트 번들러 `esbuild`에 대한 내용입니다. 작년 Github에서 떠오르는 번들링 프로젝트 중 1위를 차지했고, 오늘을 기준으로 20만개의 가까운 Github Star를 받았습니다.
 thumbnail: https://user-images.githubusercontent.com/20244536/111092892-bc80e400-857a-11eb-9bb3-adce2c3c67d3.png
 updated: 2021-03-14
 created: 2021-03-14
@@ -10,6 +9,7 @@ created: 2021-03-14
 이번 포스팅은 떠오르는 차세대 자바스크립트 번들러 `esbuild`에 대한 내용입니다.
 
 작년 Github에서 떠오르는 번들링 프로젝트 중 1위를 차지했고, 오늘을 기준으로 20만개의 가까운 Github Star를 받았습니다.
+<!--more-->
 
 웹팩보다 100배 빠르다는 건 어그로가 아닙니다. 아래 그림을 봐주시죠.
 

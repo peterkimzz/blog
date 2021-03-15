@@ -10,7 +10,6 @@ const GetSitemap = async () => {
 
 module.exports = {
   target: 'static',
-  ssr: false,
   head: {
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
