@@ -1,15 +1,10 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   important: true,
-  // purge: [
-  //   './components/**/*.{vue,js}',
-  //   './layouts/**/*.vue',
-  //   './content/**/*.{md}',
-  //   './pages/**/*.vue',
-  //   './plugins/**/*.{js,ts}',
-  //   './nuxt.config.{js,ts}',
-  // ],
   purge: {
-    enabled: process.env.NODE_ENV === 'production',
     content: [
       'components/**/*.vue',
       'layouts/**/*.vue',
@@ -18,10 +13,30 @@ module.exports = {
       'nuxt.config.js'
     ]
   },
-  presets: [
-    require('./preset')
-  ],
+  theme: {
+    extend: {
+      colors: {
+        gray: colors.trueGray
+      },
+      fontFamily: {
+        sans: [
+          '-apple-system',
+          ...defaultTheme.fontFamily.sans
+        ]
+      }
+    }
+  },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    plugin(({ addBase, theme }) => {
+      addBase({
+        'html': {
+          'word-break': 'keep-all',
+          'background-color': theme('backgroundColor.gray.800'),
+          'color': theme('textColor.gray.300'),
+          '-webkit-font-smoothing': 'antialiased'
+        },
+      })
+    })
   ]
 }

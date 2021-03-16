@@ -9,7 +9,7 @@
     <div class="-mx-6 md:mx-0">
       <vue-image
         :src="article.thumbnail"
-        :alt="article.alt"
+        :alt="article.title"
         class="rounded-none md:rounded-md"
         padding-top="50%"
       />
@@ -108,14 +108,11 @@ export default {
 
   & p {
     @apply text-sm md:text-base;
-    @apply leading-6 md:leading-7;
+    @apply leading-6 md:leading-7 !important;
 
     & > strong {
       @apply text-white;
     }
-  }
-
-  #text {
   }
 
   & p code {
@@ -136,7 +133,7 @@ export default {
   & ul,
   & ol {
     @apply text-sm md:text-base;
-    @apply leading-6 md:leading-7;
+    @apply leading-6 md:leading-7 !important;
     @apply pl-5;
   }
 
@@ -156,7 +153,7 @@ export default {
   @apply rounded-r-md;
   @apply border-l-4 border-gray-700;
   @apply text-sm md:text-base;
-  @apply leading-6 md:leading-7;
+  @apply leading-6 md:leading-7 !important;
 
   & p {
     margin: 0 !important;
@@ -186,7 +183,7 @@ export default {
 ::v-deep .nuxt-content-highlight {
   @apply relative;
   @apply text-xs md:text-sm;
-  @apply leading-6 md:leading-7;
+  @apply leading-6 md:leading-7 !important;
 }
 ::v-deep .nuxt-content-highlight .filename {
   @apply absolute right-0 text-gray-400 font-light z-10 mr-2.5 mt-1 text-sm;

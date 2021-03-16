@@ -29,7 +29,6 @@ module.exports = {
       },
     ],
     link: [
-
     ]
   },
   env: process.env,
@@ -51,6 +50,10 @@ module.exports = {
         theme: 'prism-themes/themes/prism-material-oceanic.css'
       }
     }
+  },
+  tailwindcss: {
+    jit: true,
+    viewer: true,
   },
   sitemap: {
     hostname: process.env.BASE_URL,

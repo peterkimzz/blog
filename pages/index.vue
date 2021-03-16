@@ -3,7 +3,7 @@
     <vue-s-e-o />
 
     <vue-container>
-      <ul class="article-wrapper -mx-1 md:-mx-1.5">
+      <ul class="flex flex-wrap -mx-1 md:-mx-1.5">
         <vue-article-preview
           v-for="article of articles"
           :key="article.slug"
@@ -34,13 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-.article-wrapper {
-  @apply flex flex-wrap;
-}
-.article {
-  @apply w-1/4;
-  @apply p-2;
-}
-</style>
