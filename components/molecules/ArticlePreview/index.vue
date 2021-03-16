@@ -4,22 +4,20 @@
       :to="{ name: 'slug', params: { slug } }"
       class="flex flex-col h-full relative"
     >
-      <vue-image
-        :src="thumbnail"
-        :alt="title"
-        class="post-preview--thumbnail"
-      />
+      <vue-image :src="thumbnail" :alt="title" class="mb-1.5 shadow-sm" />
       <vue-tag :class="['absolute top-2 right-2', TagColor]">{{
         category
       }}</vue-tag>
       <div class="flex-1">
-        <vue-heading as="h4" class="post-preview--title">{{
+        <vue-heading as="h4" class="font-bold leading-snug">{{
           title
         }}</vue-heading>
-        <p v-if="description" class="post-preview--desc">{{ description }}</p>
+        <p v-if="description" class="mt-1.5 text-xs text-gray-500 truncate">
+          {{ description }}
+        </p>
       </div>
       <div class="mt-1">
-        <vue-date class="post-preview--date">{{ updated }}</vue-date>
+        <vue-date class="text-xs text-gray-600">{{ updated }}</vue-date>
       </div>
     </n-link>
   </li>
@@ -73,24 +71,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-.post-preview--thumbnail {
-  @apply mb-1.5;
-}
-.post-preview--title {
-  @apply font-bold;
-  @apply leading-snug !important;
-}
-.post-preview--desc {
-  @apply mt-1.5;
-  @apply text-xs;
-
-  @apply text-gray-500;
-  @apply truncate;
-}
-.post-preview--date {
-  @apply text-xs;
-  @apply text-gray-600;
-}
-</style>

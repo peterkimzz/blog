@@ -5,7 +5,7 @@
     :to="href"
     :title="title"
     :target="target"
-    :class="['link', { block }]"
+    :class="['inline-block hover:underline', { block }]"
     ><slot
   /></component>
 </template>
@@ -50,10 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-.link {
-  @apply inline-block;
-  @apply hover:underline;
-}
-</style>

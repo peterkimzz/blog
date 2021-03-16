@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between text-xs md:text-sm font-medium">
     <div v-if="prev" class="flex-1 mr-0.5">
-      <div class="label">
+      <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">이전 글</span>
       </div>
       <vue-link as="a" :href="`/${prev.slug}`" class="link">
@@ -9,7 +9,7 @@
       </vue-link>
     </div>
     <div v-if="next" class="flex-1 ml-0.5 text-right">
-      <div class="label">
+      <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">다음 글</span>
       </div>
       <vue-link
@@ -38,16 +38,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-.link {
-  @apply leading-snug;
-  @apply hover:underline;
-}
-
-.label {
-  @apply font-semibold;
-  @apply text-gray-500;
-  @apply mb-0.5;
-}
-</style>

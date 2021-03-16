@@ -107,11 +107,12 @@ export default {
   }
 
   & p {
-    @apply text-sm md:text-base;
+    @apply text-sm md:text-base !important;
     @apply leading-6 md:leading-7 !important;
 
     & > strong {
-      @apply text-white;
+      @apply text-gray-100;
+      @apply font-semibold;
     }
   }
 
@@ -132,7 +133,7 @@ export default {
 
   & ul,
   & ol {
-    @apply text-sm md:text-base;
+    @apply text-sm md:text-base !important;
     @apply leading-6 md:leading-7 !important;
     @apply pl-5;
   }
@@ -182,7 +183,7 @@ export default {
 
 ::v-deep .nuxt-content-highlight {
   @apply relative;
-  @apply text-xs md:text-sm;
+  @apply text-xs md:text-base !important;
   @apply leading-6 md:leading-7 !important;
 }
 ::v-deep .nuxt-content-highlight .filename {

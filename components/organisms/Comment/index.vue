@@ -24,9 +24,9 @@ export default {
       script['crossOrigin'] = 'anonymous'
       script['async'] = true
 
-      script.setAttribute('repo', 'peterkimzz/blog')
-      script.setAttribute('issue-term', 'title')
-      script.setAttribute('theme', 'github-light')
+      // script.setAttribute('repo', 'peterkimzz/blog')
+      // script.setAttribute('issue-term', 'title')
+      // script.setAttribute('theme', 'github-light')
 
       this.$el.appendChild(script)
     }

@@ -1,16 +1,11 @@
 <template>
   <nav class="nav">
-    <div class="flex justify-between items-center">
-      <vue-brand class="py-5" />
+    <div class="flex justify-between items-center py-8 md:py-10">
+      <vue-brand />
 
-      <ul>
+      <ul class="text-sm font-semibold">
         <li>
-          <a
-            href="https://resume.peterkimzz.now.sh/"
-            target="_blank"
-            class="text-sm font-semibold hover:underline"
-            >이력서</a
-          >
+          <vue-link href="/resume">이력서</vue-link>
         </li>
       </ul>
     </div>
