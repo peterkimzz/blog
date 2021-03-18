@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",

@@ -29,6 +29,10 @@ module.exports = {
       },
     ],
     link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://rsms.me/inter/inter.css'
+      }
     ]
   },
   env: process.env,

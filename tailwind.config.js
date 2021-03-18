@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
+          'Inter',
           '-apple-system',
           ...defaultTheme.fontFamily.sans
         ]
@@ -28,6 +29,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
     plugin(({ addBase, theme }) => {
       addBase({
         'html': {

@@ -7,12 +7,9 @@
     />
 
     <div class="-mx-6 md:mx-0">
-      <vue-image
-        :src="article.thumbnail"
-        :alt="article.title"
-        class="rounded-none md:rounded-md"
-        padding-top="50%"
-      />
+      <div class="aspect-w-2 aspect-h-1 overflow-hidden rounded-lg shadow-sm">
+        <img :src="article.thumbnail" :alt="article.title" />
+      </div>
     </div>
 
     <article>
@@ -46,7 +43,10 @@
         </ul>
       </nav> -->
 
-      <nuxt-content :document="article" />
+      <nuxt-content
+        :document="article"
+        class="text-sm md:text-base leading-6 md:leading-7"
+      />
 
       <vue-divider class="my-10" />
 
@@ -92,8 +92,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-::v-deep .nuxt-content {
+<style lang="postcss">
+.nuxt-content {
   & > * {
     @apply mt-6 md:mt-8;
   }
@@ -107,8 +107,8 @@ export default {
   }
 
   & p {
-    @apply text-sm md:text-base !important;
-    @apply leading-6 md:leading-7 !important;
+    @apply text-sm md:text-base;
+    @apply leading-6 md:leading-7;
 
     & > strong {
       @apply text-gray-100;
@@ -133,8 +133,8 @@ export default {
 
   & ul,
   & ol {
-    @apply text-sm md:text-base !important;
-    @apply leading-6 md:leading-7 !important;
+    @apply text-sm md:text-base;
+    @apply leading-6 md:leading-7;
     @apply pl-5;
   }
 
@@ -147,33 +147,33 @@ export default {
   }
 }
 
-::v-deep .nuxt-content blockquote {
+.nuxt-content blockquote {
   @apply p-4;
   @apply mb-6 md:mb-8;
   @apply bg-gray-900;
   @apply rounded-r-md;
   @apply border-l-4 border-gray-700;
   @apply text-sm md:text-base;
-  @apply leading-6 md:leading-7 !important;
+  @apply leading-6 md:leading-7;
 
   & p {
-    margin: 0 !important;
+    margin: 0;
   }
 }
 
-::v-deep .nuxt-content h1 {
+.nuxt-content h1 {
   @apply font-bold;
 }
-::v-deep .nuxt-content h2 {
+.nuxt-content h2 {
   @apply font-bold;
   @apply text-2xl;
 }
-::v-deep .nuxt-content h3 {
+.nuxt-content h3 {
   @apply font-bold;
   @apply text-xl;
 }
 
-/* ::v-deep .icon.icon-link {
+/* .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
   width: 20px;
@@ -181,16 +181,16 @@ export default {
   background-size: 20px 20px;
 } */
 
-::v-deep .nuxt-content-highlight {
+.nuxt-content-highlight {
   @apply relative;
-  @apply text-xs md:text-base !important;
-  @apply leading-6 md:leading-7 !important;
+  @apply text-xs md:text-base;
+  @apply leading-6 md:leading-7;
 }
-::v-deep .nuxt-content-highlight .filename {
+.nuxt-content-highlight .filename {
   @apply absolute right-0 text-gray-400 font-light z-10 mr-2.5 mt-1 text-sm;
   @apply pointer-events-none;
 }
-::v-deep .nuxt-content-highlight .line-numbers {
+.nuxt-content-highlight .line-numbers {
   @apply mb-6 md:mb-8;
   @apply rounded-md;
 }
