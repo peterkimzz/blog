@@ -140,12 +140,77 @@
           <h3 class="text-sm font-medium text-gray-500 uppercase">Education</h3>
           <h2 class="text-2xl text-gray-200 font-semibold">학력</h2>
         </div>
+
+        <div>
+          <vue-resume-item src="/imgs/gachon.png" label="2017년 4월 - 6월">
+            <div slot="title" class="flex items-center">
+              <span>
+                가천대학교 전자공학과
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-1.5 text-cyan-400"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <p>
+              미국 엑셀러레이터 Y Combinator의 Startup School 1기 10주 과정을
+              성공적으로 수료했습니다. 이 때 지원했던 프로젝트는 "Hoopee" 모바일
+              앱이었습니다. <br /><br />
+
+              지금은 스타트업 스쿨이 상시 공개되어있는 YC의 무료 강의
+              프로그램으로 바뀌었지만, 제가 지원했을 때는 기존 YC 메인 배치의
+              온라인 버전이었습니다.
+            </p>
+          </vue-resume-item>
+        </div>
       </section>
 
       <section>
         <div class="mb-10">
           <h3 class="text-sm font-medium text-gray-500 uppercase">Awards</h3>
           <h2 class="text-2xl text-gray-200 font-semibold">수상</h2>
+        </div>
+
+        <div>
+          <vue-resume-item
+            src="/imgs/startup_school_logo.png"
+            label="2017년 4월 - 6월"
+          >
+            <div slot="title" class="flex items-center">
+              <span>
+                Y Combinator Startup School
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 ml-1.5 text-cyan-400"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <p>
+              미국 엑셀러레이터 Y Combinator의 Startup School 1기 10주 과정을
+              성공적으로 수료했습니다. 이 때 지원했던 프로젝트는 "Hoopee" 모바일
+              앱이었습니다. <br /><br />
+
+              지금은 스타트업 스쿨이 상시 공개되어있는 YC의 무료 강의
+              프로그램으로 바뀌었지만, 제가 지원했을 때는 기존 YC 메인 배치의
+              온라인 버전이었습니다.
+            </p>
+          </vue-resume-item>
         </div>
       </section>
 

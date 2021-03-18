@@ -16,7 +16,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: colors.trueGray
+        gray: colors.trueGray,
+        cyan: colors.cyan
       },
       fontFamily: {
         sans: [
