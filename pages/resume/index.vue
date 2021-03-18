@@ -142,7 +142,10 @@
         </div>
 
         <div>
-          <vue-resume-item src="/imgs/gachon.png" label="2017년 4월 - 6월">
+          <vue-resume-item
+            src="/imgs/gachon.png"
+            label="2012년 03월 - 2018년 03월"
+          >
             <div slot="title" class="flex items-center">
               <span>
                 가천대학교 전자공학과
