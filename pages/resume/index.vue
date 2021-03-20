@@ -10,7 +10,7 @@
         개발자 김동현 이력서
       </h1>
       <p class="text-gray-600 text-xs mt-4">
-        2021년 3월 16일에 마지막으로 업데이트 됨.
+        2021년 3월 20일에 마지막으로 업데이트 됨.
       </p>
     </header>
 
@@ -149,6 +149,7 @@
         </div>
       </section>
 
+      <!-- Projects -->
       <section>
         <div class="mb-10">
           <h3 class="text-sm font-medium text-gray-500 uppercase">Projects</h3>
@@ -170,6 +171,7 @@
         </div>
       </section>
 
+      <!-- Education -->
       <section>
         <div class="mb-10">
           <h3 class="text-sm font-medium text-gray-500 uppercase">Education</h3>
@@ -194,6 +196,7 @@
         </div>
       </section>
 
+      <!-- Awards -->
       <section>
         <div class="mb-10">
           <h3 class="text-sm font-medium text-gray-500 uppercase">Awards</h3>
@@ -229,6 +232,7 @@
         </div>
       </section>
 
+      <!-- Languages -->
       <section>
         <div class="mb-10">
           <h3 class="text-sm font-medium text-gray-500 uppercase">Languages</h3>
@@ -255,8 +259,10 @@ export default {
           duration: '2019년 11월 - 현재',
           org: 'Empo Inc.',
           bio: 'Backend Developer',
-          desc:
-            '본 엔젤스 시드 투자와 TIPS 프로그램에 선정된 모바일 데이터 공유 플랫폼 앰포 서비스의 서버 개발자로 입사했습니다. 기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행하고 있습니다.'
+          desc: `
+            본 엔젤스 시드 투자와 TIPS 프로그램에 선정된 모바일 데이터 공유 플랫폼 앰포 서비스의 서버 개발자로 입사했습니다.<br><br>
+            
+            기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행하고 있습니다.`
         },
         {
           duration: '2018년 8월 - 2019년 3월',
@@ -300,9 +306,9 @@ export default {
             기존 PHP 언어로 개발되어있던 서버 코드를 Node.js로 변경하면서 데이터베이스 정규화 작업 및 마이그레이션을 진행하고 있습니다. 또한 서버 보안을 위한 AWS 인프라를 조금 더 탄탄히 구성했습니다.`
         },
         {
-          src: '/imgs/solum_logo.jpg',
+          src: '/imgs/solum.png',
           duration: '2019년 6월 - 7월',
-          title: 'Empo',
+          title: 'SoluM ESL Dashboard',
           desc: `
             (주)솔루엠의 외주 프로젝트의 일원으로 참여했던 프로젝트입니다.<br><br>
 
