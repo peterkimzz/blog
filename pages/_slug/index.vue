@@ -7,7 +7,9 @@
     />
 
     <div class="-mx-6 md:mx-0">
-      <div class="aspect-w-2 aspect-h-1 overflow-hidden rounded-lg shadow-sm">
+      <div
+        class="aspect-w-2 aspect-h-1 overflow-hidden md:rounded-lg shadow-sm"
+      >
         <img :src="article.thumbnail" :alt="article.title" />
       </div>
     </div>
