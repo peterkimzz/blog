@@ -10,7 +10,11 @@
       <div
         class="aspect-w-2 aspect-h-1 overflow-hidden md:rounded-lg shadow-sm"
       >
-        <img :src="article.thumbnail" :alt="article.title" />
+        <img
+          :src="article.thumbnail"
+          :alt="article.title"
+          class="object-cover"
+        />
       </div>
     </div>
 
