@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="flex my-4 bg-cyan-700 p-2 rounded-lg">
+    <!-- <div class="flex my-4 bg-cyan-700 p-2 rounded-lg">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -35,7 +35,7 @@
         현재 <code>@tailwindcss/jit</code> 모듈에서 발생하는 이슈로 인해 포스팅
         내 텍스트의 스타일 적용이 안됩니다. 최대한 빠르게 해결하도록 하겠습니다.
       </div>
-    </div>
+    </div> -->
 
     <article>
       <!-- <vue-info-box>
@@ -133,7 +133,6 @@ export default {
 
   & p {
     @apply text-sm md:text-base;
-    @apply leading-6 md:leading-7;
 
     & > strong {
       @apply text-gray-100;
@@ -159,7 +158,6 @@ export default {
   & ul,
   & ol {
     @apply text-sm md:text-base;
-    @apply leading-6 md:leading-7;
     @apply pl-5;
   }
 
@@ -179,7 +177,6 @@ export default {
   @apply rounded-r-md;
   @apply border-l-4 border-gray-700;
   @apply text-sm md:text-base;
-  @apply leading-6 md:leading-7;
 
   & p {
     margin: 0;
@@ -198,18 +195,9 @@ export default {
   @apply text-xl;
 }
 
-/* .icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-} */
-
 .nuxt-content-highlight {
   @apply relative;
   @apply text-xs md:text-base;
-  @apply leading-6 md:leading-7;
 }
 .nuxt-content-highlight .filename {
   @apply absolute right-0 text-gray-400 font-light z-10 mr-2.5 mt-1 text-sm;
