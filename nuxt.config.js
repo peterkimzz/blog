@@ -46,7 +46,7 @@ module.exports = {
     { src: '~/plugins/cheerio' },
     { src: '~/plugins/vue-gtag', mode: 'client' },
   ],
-  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/dayjs', '@nuxt/content', '@nuxtjs/sitemap'],
   buildModules: ['@nuxtjs/tailwindcss'],
   content: {
     markdown: {

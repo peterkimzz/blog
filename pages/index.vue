@@ -28,9 +28,7 @@ export default {
       .sortBy('created', 'desc')
       .fetch()
 
-    return {
-      articles
-    }
+    return { articles }
   }
 }
 </script>

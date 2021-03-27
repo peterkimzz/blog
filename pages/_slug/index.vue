@@ -6,71 +6,32 @@
       :thumbnail="article.thumbnail"
     />
 
-    <div class="-mx-6 md:mx-0">
-      <div
-        class="aspect-w-2 aspect-h-1 overflow-hidden md:rounded-lg shadow-sm"
-      >
-        <img
-          :src="article.thumbnail"
-          :alt="article.title"
-          class="object-cover"
-        />
-      </div>
-    </div>
-
-    <!-- <div class="flex my-4 bg-cyan-700 p-2 rounded-lg">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="w-7 h-7 text-cyan-400"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-          clip-rule="evenodd"
-        />
-      </svg>
-      <div class="flex-1 ml-2 text-sm leading-6 text-cyan-50">
-        현재 <code>@tailwindcss/jit</code> 모듈에서 발생하는 이슈로 인해 포스팅
-        내 텍스트의 스타일 적용이 안됩니다. 최대한 빠르게 해결하도록 하겠습니다.
-      </div>
-    </div> -->
-
     <article>
-      <!-- <vue-info-box>
-          <template #info-box>
-            This is a vue component inside markdown using slots
-          </template>
-        </vue-info-box> -->
-      <div class="my-3">
-        <vue-heading>{{ article.title }}</vue-heading>
-        <p class="text-gray-500 mt-1.5 text-xs">
-          {{ formatDate(article.updated) }}에 마지막으로 수정됨.
-        </p>
-      </div>
-
-      <!-- <nav
-        class="toc my-4 p-4 text-sm bg-gray-50 border border-gray-200 rounded-lg"
-      >
-        <ul>
-          <p class="mb-1"><b>목차</b></p>
-          <li
-            v-for="link of article.toc"
-            :key="link.id"
-            :class="{
-              'py-1': link.depth === 2,
-              'pl-3 py-1': link.depth === 3
-            }"
+      <header class="mt-10">
+        <h1 class="flex flex-col items-center">
+          <span class="text-cyan-500 font-semibold tracking-wider uppercase">{{
+            article.category
+          }}</span>
+          <span
+            class="mt-2 text-center text-3xl md:text-3xl font-extrabold tracking-tight text-gray-100"
+            >{{ article.title }}</span
           >
-            <vue-link :href="`#${link.id}`" block>{{ link.text }}</vue-link>
-          </li>
-        </ul>
-      </nav> -->
+        </h1>
+        <p class="mt-6 text-center text-sm text-gray-500 font-semibold">
+          {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
+        </p>
 
+        <hr class="my-8 border-t-2 border-gray-700 w-20 mx-auto" />
+      </header>
+
+      <!-- Maybe @tailwindcss/jit -->
       <nuxt-content
         :document="article"
-        class="text-sm md:text-base leading-6 md:leading-7"
+        class="md:hidden prose prose-sm prose-cyan"
+      />
+      <nuxt-content
+        :document="article"
+        class="hidden md:block prose prose-cyan"
       />
 
       <vue-divider class="my-10" />
@@ -103,12 +64,6 @@ export default {
       .fetch()
 
     return { article, prev, next }
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('ko', options)
-    }
   }
   // async mounted() {
   //   const articles = await this.$content('articles')
@@ -118,93 +73,22 @@ export default {
 </script>
 
 <style lang="postcss">
-.nuxt-content {
-  & > * {
-    @apply mt-6 md:mt-8;
-  }
-
-  & > em {
-    @apply font-semibold;
-  }
-
-  & a {
-    @apply text-gray-400;
-  }
-
-  & p {
-    @apply text-sm md:text-base;
-
-    & > strong {
-      @apply text-gray-100;
-      @apply font-semibold;
-    }
-  }
-
-  & p code {
-    @apply leading-3;
-    @apply font-sans;
-    @apply bg-gray-700 text-gray-100 py-0.5 px-1.5 rounded-md;
-    @apply text-sm;
-  }
-
-  & a {
-    @apply underline;
-  }
-
-  & img {
-    @apply mx-auto;
-  }
-
-  & ul,
-  & ol {
-    @apply text-sm md:text-base;
-    @apply pl-5;
-  }
-
-  & ul li {
-    @apply list-disc;
-  }
-
-  & ol li {
-    @apply list-decimal;
-  }
+.nuxt-content img {
+  @apply mx-auto;
 }
 
-.nuxt-content blockquote {
-  @apply p-4;
-  @apply mb-6 md:mb-8;
-  @apply bg-gray-900;
-  @apply rounded-r-md;
-  @apply border-l-4 border-gray-700;
-  @apply text-sm md:text-base;
-
-  & p {
-    margin: 0;
-  }
+.nuxt-content img + em {
+  @apply block;
+  @apply text-gray-400;
+  @apply text-sm;
+  @apply text-center;
+  @apply -mt-4;
 }
 
-.nuxt-content h1 {
-  @apply font-bold;
-}
-.nuxt-content h2 {
-  @apply font-bold;
-  @apply text-2xl;
-}
-.nuxt-content h3 {
-  @apply font-bold;
-  @apply text-xl;
-}
-
-.nuxt-content-highlight {
-  @apply relative;
-  @apply text-xs md:text-base;
-}
 .nuxt-content-highlight .filename {
-  @apply absolute right-0 text-gray-400 font-light z-10 mr-2.5 mt-1 text-sm;
+  @apply absolute right-0 text-gray-400 font-light z-10;
+  @apply text-xs md:text-sm;
+  @apply mr-2.5 mt-1;
   @apply pointer-events-none;
-}
-.nuxt-content-highlight .line-numbers {
-  @apply mb-6 md:mb-8;
-  @apply rounded-md;
 }
 </style>

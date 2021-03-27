@@ -4,9 +4,7 @@
 
     <header>
       <p class="text-gray-500 font-medium uppercase">Résumé</p>
-      <h1
-        class="text-2xl md:text-3xl font-bold bg-gradient-to-b bg-clip-text text-transparent from-white to-gray-300"
-      >
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-100">
         개발자 김동현 이력서
       </h1>
       <p class="text-gray-600 text-xs mt-4">

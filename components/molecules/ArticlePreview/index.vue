@@ -11,14 +11,12 @@
         category
       }}</vue-tag>
       <div class="flex-1 mt-2">
-        <vue-heading as="h4" class="font-bold leading-snug">{{
-          title
-        }}</vue-heading>
-        <p v-if="description" class="mt-1.5 text-xs text-gray-500 truncate">
+        <h2 class="font-semibold leading-tight">{{ title }}</h2>
+        <p v-if="description" class="mt-2 text-xs text-gray-500 truncate">
           {{ description }}
         </p>
       </div>
-      <div class="mt-1">
+      <div class="mt-3">
         <vue-date class="text-xs text-gray-600">{{ updated }}</vue-date>
       </div>
     </n-link>

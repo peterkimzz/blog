@@ -6,7 +6,7 @@ updated: 2020-12-15
 created: 2020-12-15
 ---
 
-`Supabase`는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다.
+[`Supabase`](https://supabase.io/)는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다.
 
 컴퓨터에 직접 설치하는 방식은 아니고, Firebase처럼 클라우드로 제공되는 서비스이다.
 
@@ -47,7 +47,7 @@ Supabase 팀은 이 프로젝트를 이렇게 소개한다.
 
 사실 데이터베이스는 서버쪽에서 데이터베이스 설정이나 스키마, 레코드 Read/Write를 코드로 관리하기 편해야한다. ORM을 사용하는 이유이기도 하다.
 
-지금은 클라이언트측 라이브러리는 자바스크립트만 제공이 된다. (사용해보니 타입스크립트도 지원 됨)
+클라이언트측 라이브러리는 현재 자바스크립트만 제공된다. 패키지 이름은 [`@supabase/supabase-js`](https://www.npmjs.com/package/@supabase/supabase-js)이고, 사용해보니 타입스크립트도 지원된다.
 
 ### 설치
 
@@ -260,6 +260,7 @@ Supabase는 런칭 후 9달 동안 약 3,000개 가량의 데이터베이스가 
 
 곧 Storage와 Function 기능을 출시할 예정이라고 한다. 앞으로 더 많은 기능이 제공된다면 정말 강력한 툴이 될 것 같다.
 
-**Source**
-- 공식 웹사이트: https://supabase.io/
-- Github: https://github.com/supabase/supabase
+### 참고
+
+- https://supabase.io/
+- https://github.com/supabase/supabase

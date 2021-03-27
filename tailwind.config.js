@@ -29,12 +29,48 @@ module.exports = {
       fontSize: {
         sm: ['0.875rem', '1.5rem'],
         base: ['1rem', '1.75rem'],
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.300'),
+            blockquote: {
+              color: theme('colors.gray.100'),
+              borderLeftColor: theme('colors.gray.700')
+            },
+            strong: {
+              color: theme('colors.gray.100')
+            },
+            code: {
+              color: theme('colors.gray.100'),
+            },
+            h1: {
+              color: theme('colors.gray.100'),
+            },
+            h2: {
+              color: theme('colors.gray.100'),
+            },
+            h3: {
+              color: theme('colors.gray.100'),
+            },
+            'ol >li::before': {
+              color: theme('colors.gray.400')
+            },
+            'ul >li::before': {
+              color: theme('colors.gray.400')
+            },
+            'figure figcaption': {
+              color: theme('colors.gray.500'),
+            },
+          },
+        },
+      }),
     }
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
     plugin(({ addBase, theme }) => {
       addBase({
         'html': {
