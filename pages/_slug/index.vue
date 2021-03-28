@@ -17,7 +17,9 @@
             >{{ article.title }}</span
           >
         </h1>
-        <p class="mt-6 text-center text-sm text-gray-500 font-semibold">
+        <p
+          class="mt-6 text-center text-xs md:text-sm text-gray-500 font-semibold"
+        >
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
 
@@ -85,6 +87,9 @@ export default {
   @apply -mt-4;
 }
 
+.nuxt-content-highlight {
+  @apply relative;
+}
 .nuxt-content-highlight .filename {
   @apply absolute right-0 text-gray-400 font-light z-10;
   @apply text-xs md:text-sm;

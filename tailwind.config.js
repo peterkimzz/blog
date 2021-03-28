@@ -38,6 +38,9 @@ module.exports = {
               color: theme('colors.gray.100'),
               borderLeftColor: theme('colors.gray.700')
             },
+            a: {
+              wordBreak: 'break-all'
+            },
             strong: {
               color: theme('colors.gray.100')
             },
