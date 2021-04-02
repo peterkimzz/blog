@@ -8,7 +8,7 @@
         개발자 김동현 이력서
       </h1>
       <p class="text-gray-600 text-xs mt-4">
-        2021년 3월 20일에 마지막으로 업데이트 됨.
+        2021년 4월 2일에 마지막으로 업데이트 됨.
       </p>
     </header>
 
@@ -194,6 +194,29 @@
         </div>
       </section>
 
+      <!-- Press -->
+      <section>
+        <div class="mb-10">
+          <h3 class="text-sm font-medium text-gray-500 uppercase">Press</h3>
+          <h2 class="text-2xl text-gray-200 font-semibold">언론</h2>
+        </div>
+
+        <div>
+          <vue-resume-item label="2021년 3월 29일">
+            <div slot="title" class="flex items-center">
+              <a
+                href="https://zdnet.co.kr/view/?no=20210329170514"
+                class="underline text-cyan-500"
+                >클라우드 빌드·배포 등 단순업무, 오픈소스로 한 번에 해결</a
+              >
+            </div>
+            <p>
+              앰포 김동현 개발자, 원격 클라우드 자동화 도구 오픈소스 공개
+            </p>
+          </vue-resume-item>
+        </div>
+      </section>
+
       <!-- Awards -->
       <section>
         <div class="mb-10">
@@ -209,9 +232,12 @@
             :label="award.duration"
           >
             <div slot="title" class="flex items-center">
-              <span>
-                {{ award.title }}
-              </span>
+              <a
+                :href="award.href"
+                target="_blank"
+                :class="[award.href ? 'text-cyan-500 underline' : '']"
+                >{{ award.title }}</a
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -260,7 +286,10 @@ export default {
           desc: `
             본 엔젤스 시드 투자와 TIPS 프로그램에 선정된 모바일 데이터 공유 플랫폼 앰포 서비스의 서버 개발자로 입사했습니다.<br><br>
             
-            기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행하고 있습니다.`
+            기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행하고 있습니다.<br><br>
+
+            이후 현재 앰포 앱의 서버 유지 보수 작업과, 사내 새로운 프로젝트 "데이터스캐너"와 "마릴"의 프론트엔드와 백엔드를 담당하고 있습니다.
+            `
         },
         {
           duration: '2018년 8월 - 2019년 3월',
@@ -293,15 +322,34 @@ export default {
       ],
       projects: [
         {
+          src: '/imgs/briana.png',
+          duration: '2021년 1월 - 현재',
+          title: '브리아나',
+          desc: `
+            가상화폐를 거래할 때 도움을 주는 크롬 확장 프로그램입니다.<br><br>
+
+            혼자 진행하는 사이드 프로젝트이고, 크롬과 웨일, 엣지 브라우저에서 모두 사용 가능합니다.<br><br>
+
+            누구보다 빠르게 시세를 확인해야 하는 유저의 니즈를 포착해, 웹 대신 확장 프로그램으로 만들었습니다.<br><br>
+
+            실시간 국내, 해외 코인 시세 모니터링과, 환율 차이 (김프), 즐겨찾기 등 현재 시장에 나와있는 확장 프로그램 중 가장 뛰어난 기능을 가지고 있습니다. 또한 확장 프로그램 특성상 창 사이즈가 제한적이기 때문에 UI와 UX를 극도로 신경썼습니다.<br><br>
+
+            현재 일간 활성 사용자(DAU)는 100명 이상입니다.
+            `
+        },
+        {
           src: '/imgs/empo.ico',
           duration: '2019년 11월 - 현재',
           title: 'Empo',
           desc: `
-            엠포는 모바일 데이터 직거래 플랫폼입니다.<br><br>
+            앰포는 모바일 데이터 직거래 플랫폼입니다.<br><br>
 
             전 세계의 심각한 대역폭 공급 불균형을 해소하기 위해 글로벌 시장을 타겟으로 서비스 중입니다. 현재는 인도가 메인 타겟이고, 안드로이드 OS만 서비스 중입니다.<br><br>
 
-            기존 PHP 언어로 개발되어있던 서버 코드를 Node.js로 변경하면서 데이터베이스 정규화 작업 및 마이그레이션을 진행하고 있습니다. 또한 서버 보안을 위한 AWS 인프라를 조금 더 탄탄히 구성했습니다.`
+            기존 PHP 언어로 개발되어있던 서버 코드를 Node.js로 변경하면서 데이터베이스 정규화 작업 및 마이그레이션을 진행했습니다.<br><br>
+
+            데이터를 거래하는 앱이라, 은행처럼 데이터 거래 기록을 주고 받는 Data transaction에 신경을 많이 썼습니다.
+            `
         },
         {
           src: '/imgs/solum.png',
@@ -394,8 +442,6 @@ export default {
           당시 제출했던 오픈소스 프로젝트는 Github에 커밋, 푸시 등 이벤트가 발생했을 때 AWS EC2 컴퓨터에 원격으로 커맨드를 날릴 수 있는 라이브러리입니다.<br><br>
 
           <img src="https://user-images.githubusercontent.com/20244536/111867035-ca889780-89b4-11eb-9684-f754ae33c329.png"><br>
-
-          <a target="_blank" href="https://www.oss.kr/notice/show/3a6b233b-bef5-4c1d-97da-dc9815eea2ab" class="underline text-cyan-400">링크 보기</a>
           `
         },
         {
