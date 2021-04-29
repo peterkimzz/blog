@@ -1,11 +1,15 @@
 require('dotenv').config()
 
 const GetSitemap = async () => {
-  const { $content } = require("@nuxt/content");
-  const files = await $content('articles').only(["path"]).fetch();
+  const { $content } = require('@nuxt/content')
+
+  const files = await $content('articles')
+    .only(['path'])
+    .where({ is_published: true })
+    .fetch()
   // const files = await $content({ deep: true }).only(["path"]).fetch();
 
-  return files.map(file => file.path.replace(/\/articles/gi, ''));
+  return files.map(file => file.path.replace(/\/articles/gi, ''))
 }
 
 module.exports = {
@@ -17,7 +21,7 @@ module.exports = {
       {
         name: 'viewport',
         content:
-          'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
+          'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
       },
       {
         name: 'google-site-verification',
@@ -26,7 +30,7 @@ module.exports = {
       {
         name: 'naver-site-verification',
         content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
-      },
+      }
     ],
     link: [
       {
@@ -40,15 +44,16 @@ module.exports = {
   components: [
     { path: '~/components/atoms', prefix: 'vue' },
     { path: '~/components/molecules', prefix: 'vue' },
-    { path: '~/components/organisms', prefix: 'vue' },
+    { path: '~/components/organisms', prefix: 'vue' }
   ],
   plugins: [
     { src: '~/plugins/cheerio' },
-    { src: '~/plugins/vue-gtag', mode: 'client' },
+    { src: '~/plugins/vue-gtag', mode: 'client' }
   ],
   modules: ['@nuxtjs/dayjs', '@nuxt/content', '@nuxtjs/sitemap'],
   buildModules: ['@nuxtjs/tailwindcss'],
   content: {
+    liveEdit: false,
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css'
@@ -57,7 +62,7 @@ module.exports = {
   },
   tailwindcss: {
     jit: true,
-    viewer: true,
+    viewer: true
   },
   sitemap: {
     hostname: process.env.BASE_URL,

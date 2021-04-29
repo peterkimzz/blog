@@ -4,11 +4,13 @@ title: Rollup.js - 플러그인으로 완성도를 높이다
 thumbnail: https://user-images.githubusercontent.com/20244536/107738247-a4cef980-6d49-11eb-88a5-f7b8b6190a61.png
 updated: 2021-02-12
 created: 2021-02-12
+is_published: true
 ---
 
 지난 포스팅에서 `rollup.js` 를 이용해 두 개의 자바스크립트 파일을 하나로 묶고, `rollup.config.js` 파일을 구성해서 CLI가 아닌 스크립트로 설정 파일을 관리하는 것 까지 진행했습니다.
 
 이번 시간에는 `rollup` 에 날개를 달아줄 플러그인들을 살펴보고 나아가 요즘 핫한 `typescript` 까지 적용해보도록 하겠습니다.
+
 <!--more-->
 
 ## 들어가기 전에
@@ -25,7 +27,7 @@ faker (imported by src/faker.js)
 
 해석하자면 우리의 `src/faker.js` 파일에서 가져온 `faker` 모듈에 대한 처리가 잘 되지 않았다는 얘기네요.
 
-지난 포스팅에 [`Tree shaking`](https://webpack.js.org/guides/tree-shaking/)에 대해 언급했었는데, `main.js` 에서 다른 모듈을 가져올 때 실제로 사용되는 함수만 번들링의 결과물에 포함시킨다는 내용이었습니다. 
+지난 포스팅에 [`Tree shaking`](https://webpack.js.org/guides/tree-shaking/)에 대해 언급했었는데, `main.js` 에서 다른 모듈을 가져올 때 실제로 사용되는 함수만 번들링의 결과물에 포함시킨다는 내용이었습니다.
 
 여기서 추가적으로 `rollup`은 우리가 직접 작성한 모듈 말고, relative path를 가리키는 외부 모듈을 가져올 때 우리의 번들링 결과물에 포함시키지 않고, 단순히 가리키기만 합니다.
 
@@ -65,7 +67,7 @@ $ yarn add -D @rollup/plugin-node-resolve
 프로젝트에 플러그인 역할을 할 패키지를 설치 후, 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 export default {
   input: 'src/main.js',
@@ -73,10 +75,8 @@ export default {
     dir: 'dist',
     format: 'cjs'
   },
-  plugins: [
-    nodeResolve()
-  ]
-};
+  plugins: [nodeResolve()]
+}
 ```
 
 이렇게 설정하고 번들링을 하면 예상되는 결과는 우리의 결과물에 `faker`의 `findName()` 함수에 대한 코드가 포함되어 있어야겠죠.
@@ -97,7 +97,7 @@ src/faker.js (1:7)
 
 당연하게도 우리가 어떤 파일에서 `import a from './a.js'` 라고 가져올 수 있는 건, `a.js` 파일에는 `export default` 이 있기 때문에 가능한 시나리오입니다.
 
-하지만 `faker` 모듈을 살펴보면 그런 부분이 없습니다. 사실 `faker` 뿐만 아니라 엄청나게 많은 모듈들이 `faker` 와 같은 포맷으로 작성되어 있습니다. 
+하지만 `faker` 모듈을 살펴보면 그런 부분이 없습니다. 사실 `faker` 뿐만 아니라 엄청나게 많은 모듈들이 `faker` 와 같은 포맷으로 작성되어 있습니다.
 
 그래서 여기서 또 다른 플러그인 하나가 등장합니다. `CommonJS` 로 작성된 모듈들을 `ES6` 바꾸어서 `rollup`이 해석할 수 있게 도와줍니다.
 
@@ -108,19 +108,16 @@ $ yarn add -D @rollup/plugin-commonjs
 패키지를 설치하고 설정 파일을 다시 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 
 export default {
   input: 'src/main.js',
   output: {
     dir: 'dist',
-    format: 'cjs',
+    format: 'cjs'
   },
-  plugins: [
-    nodeResolve(),
-    commonjs()
-  ]
+  plugins: [nodeResolve(), commonjs()]
 }
 ```
 
@@ -206,15 +203,15 @@ $ yarn add -D @rollup/plugin-typescript
 다음 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript'
 
 export default {
   input: 'src/main.js',
   output: {
     dir: 'dist',
-    format: 'cjs',
+    format: 'cjs'
   },
   plugins: [
     nodeResolve(),
@@ -248,9 +245,9 @@ created dist in 5.6s
 `rollup` 의 권장사항은 `named` 입니다. 애초에 코드를 작성할 때도 마지막에 `export default` 를 하지 않기를 권장합니다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript'
 
 export default {
   input: 'src/main.js',
@@ -280,10 +277,10 @@ $ yarn add -D rollup-plugin-terser
 다음은 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript';
-import { terser } from "rollup-plugin-terser";
+import typescript from '@rollup/plugin-typescript'
+import { terser } from 'rollup-plugin-terser'
 
 export default {
   input: 'src/main.js',

@@ -4,9 +4,11 @@ title: Github Pages로 개인 블로그 평생 무료로 운영하기
 thumbnail: https://user-images.githubusercontent.com/20244536/102336973-3aae0880-3fd5-11eb-8fd1-e3c184d6ab7e.jpg
 updated: 2020-12-17
 created: 2020-12-17
+is_published: true
 ---
 
 거의 대부분의 개발자들이 `개인 블로그`를 운영하라고 얘기한다. 나도 그렇게 생각한다. 왜냐면 분명히 내가 작성했던 코드인데도, 일주일만 지나도 기억이 안나기 때문이다. 그리고 웬만하면 공개해서 작성하라고 하고 싶다. 이미 우리는 누군가가 옛날에 썼던 글을 보고, 문제를 해결한 경험히 굉장히 많기 때문이다. 나는 이런 개발자들의 문화가 너무 좋다. 이런 개발자들의 문화가 다른 업종에도 접목된다면 정말 좋으련만.
+
 <!--more-->
 
 아무튼 얼마 전 블로그를 새롭게 오픈했다. 사실 `미디엄`, `브런치`나 `Velog`같이 훌륭한 서비스들이 이미 많이 존재한다. 그럼에도 내가 개인 블로그를 오픈한 건, 개발자로써 개인 도메인을 가지고 싶기 때문이다. 무엇보다 디자인을 내 마음대로 꾸밀 수 있다.
@@ -49,20 +51,19 @@ $ git clone https://github.com/USERNAME/REPOSITORY.git
 
 다음, 루트 폴더에 HTML 파일을 만든다.
 
-
 ```html[index.html]
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog by Github Pages</title>
-</head>
-<body>
-  <div>
-    <h1>Hello, Pages!</h1>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog by Github Pages</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello, Pages!</h1>
+    </div>
+  </body>
 </html>
 ```
 
@@ -80,7 +81,7 @@ $ git push
 
 ![](https://user-images.githubusercontent.com/20244536/102366952-8fb14500-3ffc-11eb-9fd3-d5ec231449e7.png)
 
-이 글을 보는 사람들은 `React`나 `Vue` 같은 모던 웹 프레임워크를 사용할 확률이 높다. 나는 웹 프론트엔드를 주로 Nuxt.js를 사용하기 때문에 Nuxt 프로젝트를 main 브랜치에 전부 올리고, `Github Actions`를 이용해 main 브랜치에 푸시되면 알아서 빌드해서 gh-pages 브랜치에 다시 배포하게끔 CI/CD를 구성했다. 
+이 글을 보는 사람들은 `React`나 `Vue` 같은 모던 웹 프레임워크를 사용할 확률이 높다. 나는 웹 프론트엔드를 주로 Nuxt.js를 사용하기 때문에 Nuxt 프로젝트를 main 브랜치에 전부 올리고, `Github Actions`를 이용해 main 브랜치에 푸시되면 알아서 빌드해서 gh-pages 브랜치에 다시 배포하게끔 CI/CD를 구성했다.
 
 일반적인 설정이라면 React나 Vue는 SPA라서 HTML 파일이 하나밖에 나오지 않지만, 정적 배포를 위해 모던 프레임워크는 모두 `정적 빌드` 옵션을 제공한다. 그 기능을 이용하면 엄청난 생산성을 누릴 수 있다.
 
@@ -100,7 +101,7 @@ Github Pages 섹션을 보면, `Custom domain`을 넣는 부분이 있다. 여�
 
 아무튼 도메인이 `example.com` 이라면 무조건 `www.example.com`으로 설정하면 된다는 말이다. input에 www를 포함한 도메인을 넣어주고 Save하자.
 
-Save하면 네임 서버를 찾을 수 없다고 경고가 나올 것이다. 이제 여기서 도메인을 구입한 사이트로 이동해야 한다. 나는 GoDaddy에서 도메인을 구입했다. 다른 DNS 제공 업체여도 원리는 같다. 
+Save하면 네임 서버를 찾을 수 없다고 경고가 나올 것이다. 이제 여기서 도메인을 구입한 사이트로 이동해야 한다. 나는 GoDaddy에서 도메인을 구입했다. 다른 DNS 제공 업체여도 원리는 같다.
 
 ![](https://user-images.githubusercontent.com/20244536/102372403-832feb00-4002-11eb-9600-5e9bdbf58194.png)
 
@@ -120,5 +121,6 @@ Save하면 네임 서버를 찾을 수 없다고 경고가 나올 것이다. 이
 정상적으로 설정했다면 이제 평생 무료로, 무한으로 즐기자. 😎
 
 ### 참고
-- [Configuring a custom domain for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site) 
+
+- [Configuring a custom domain for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site)
 - [Getting started with GitHub Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/getting-started-with-github-pages)

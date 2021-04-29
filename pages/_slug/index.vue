@@ -26,14 +26,9 @@
         <hr class="my-8 border-t-2 border-gray-700 w-20 mx-auto" />
       </header>
 
-      <!-- Maybe @tailwindcss/jit -->
       <nuxt-content
         :document="article"
-        class="md:hidden prose prose-sm prose-cyan"
-      />
-      <nuxt-content
-        :document="article"
-        class="hidden md:block prose prose-cyan"
+        class="prose prose-sm md:prose prose-cyan md:prose-cyan line-numbers"
       />
 
       <vue-divider class="my-10" />
@@ -46,14 +41,17 @@
         <vue-comment />
       </client-only>
 
-      <vue-divider class="my-10" />
-
-      <vue-sponsor-button />
+      <!-- <vue-divider class="my-10" /> -->
+      <!-- <vue-sponsor-button /> -->
     </article>
   </main>
 </template>
 
 <script>
+// import Prism from 'prismjs'
+// import 'prismjs/plugins/toolbar/prism-toolbar.js'
+// import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js'
+
 export default {
   layout: 'article',
   async asyncData({ $content, params }) {
@@ -66,11 +64,10 @@ export default {
       .fetch()
 
     return { article, prev, next }
-  }
-  // async mounted() {
-  //   const articles = await this.$content('articles')
-  //   console.log(articles)
-  // }
+  },
+  mounted() {
+    // Prism.highlightAll()
+  },
 }
 </script>
 

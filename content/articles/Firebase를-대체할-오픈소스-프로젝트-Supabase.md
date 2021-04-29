@@ -4,6 +4,7 @@ title: Firebase를 대체할 오픈소스 프로젝트, Supabase
 thumbnail: https://media.vlpt.us/images/peterkimzz/post/b2873856-20b6-49a4-a8f4-176a94c92d23/08f3d41684b91f7d68810459b2356ecb4819c382.png
 updated: 2020-12-15
 created: 2020-12-15
+is_published: true
 ---
 
 [`Supabase`](https://supabase.io/)는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다.
@@ -11,13 +12,14 @@ created: 2020-12-15
 컴퓨터에 직접 설치하는 방식은 아니고, Firebase처럼 클라우드로 제공되는 서비스이다.
 
 내가 Firebase를 사용하면서 아쉬웠던 건, 데이터가 많아졌을 때 인덱싱을 쉽게 적용시켜서 빠르게 레코드를 읽어오는 기능이 강력하진 않아서 데이터가 많은 앱에서는 사용하기 힘들다는 점이다.
+
 <!--more-->
 
 ## Supabase?
 
 Supabase 팀은 이 프로젝트를 이렇게 소개한다.
 
->  Create a backend in less than 2 minutes. Start your project with a Postgres Database, Authentication, instant APIs, and realtime subscriptions.
+> Create a backend in less than 2 minutes. Start your project with a Postgres Database, Authentication, instant APIs, and realtime subscriptions.
 
 2분 안에 Postgres, 인증과 API, 실시간 구독을 구현할 수 있다는 얘기이다. 사실이라면 엄청나게 편리할 것 같다.
 
@@ -63,38 +65,30 @@ npm으로 제공하는 라이브러리를 이용해 간단하게 인스턴스를
 ```ts
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = "https://siwwiuleewkpfbschahw.supabase.co";
-const supabaseKey = process.env.SUPABASE_KEY as string;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseUrl = 'https://siwwiuleewkpfbschahw.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY as string
+const supabase = createClient(supabaseUrl, supabaseKey)
 ```
-
 
 **레코드 쓰기**
 
 ```ts
 await supabase
   .from('User')
-  .insert([
-    { some_column: 'someValue', other_column: 'otherValue' },
-  ])
+  .insert([{ some_column: 'someValue', other_column: 'otherValue' }])
 ```
-
 
 **레코드 읽기**
 
 ```ts
-let { data: User, error } = await supabase
-  .from('User')
-  .select('*')
+let { data: User, error } = await supabase.from('User').select('*')
 
 let { data: User, error } = await supabase
   .from('User')
   .select('some_column, other_column')
   .range(0, 9)
 
-let { data: User, error } = await supabase
-  .from('User')
-  .select(`
+let { data: User, error } = await supabase.from('User').select(`
     some_column,
     other_table (
       foreign_key
@@ -103,6 +97,7 @@ let { data: User, error } = await supabase
 ```
 
 **이벤트 훅**
+
 ```ts
 // insert
 const User = supabase
@@ -128,7 +123,7 @@ const User = supabase
 
 ## GraphQL vs Supabase
 
-GraphQL에 익숙한 사람들을 위해 gql과 비슷하게 사용할 수 있는 인터페이스도 제공된다. 
+GraphQL에 익숙한 사람들을 위해 gql과 비슷하게 사용할 수 있는 인터페이스도 제공된다.
 
 현재는 GraphQL만큼 강력하진 않겠지만, 그에 준하는 기능들을 가지게 된다면 엄청난 장점이 될 것 같다.
 
@@ -148,9 +143,7 @@ const { loading, error, data } = useQuery(gql`
 `)
 
 // supabase
-const { data, error } = await supabase
-  .from('dogs')
-  .select(`
+const { data, error } = await supabase.from('dogs').select(`
       id, breed,
       owner (id, name)
   `)
@@ -189,6 +182,7 @@ let { user, error } = await supabase.auth.signIn({
 ```
 
 **기타 편의 기능**
+
 ```ts
 // 비밀번호 재설정 이메일 보내기
 let { data, error } = await supabase.auth.api.resetPasswordForEmail(email)
@@ -210,13 +204,11 @@ let { user, error } = await supabase.auth.api.inviteUserByEmail(
 
 추가로 Firebase와 동일하게 회원 관리를 위한 이메일 템플릿은 웹 대시보드에서 수정이 가능하다.
 
-
 ## SQL
 
 내부적으로 PostgreSQL을 사용하기 때문에, 이렇게 웹 브라우저에서 SQL을 실행시키는 인터페이스도 제공된다.
 
 ![](https://images.velog.io/images/peterkimzz/post/4741f89f-921f-4d89-b76b-5ef16d9a2836/image.png)
-
 
 **Quick start**
 

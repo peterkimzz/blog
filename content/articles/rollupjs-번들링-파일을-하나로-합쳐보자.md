@@ -4,11 +4,13 @@ title: Rollup.js - 번들링, 파일을 하나로 합쳐보자
 thumbnail: https://user-images.githubusercontent.com/20244536/107738251-a6002680-6d49-11eb-8708-dbe40704924e.png
 updated: 2021-02-09
 created: 2021-02-09
+is_published: true
 ---
 
 `번들링` 이라는 말을 프론트엔드 개발자라면 많이 들어보셨을겁니다. 번들링은, 파일을 하나로 묶는 것을 말합니다.
 
 그럼 왜 굳이 파일을 하나로 묶어야 할까요? 바로 **HTTP 통신의 특성 때문입니다.**
+
 <!--more-->
 
 단발성으로 리소스를 요청하는 HTTP 특성상, 요청할 파일이 많으면 그만큼 요청을 많이 보내야해서 비효율적입니다. 그래서 번들링해서 파일을 하나로 묶으면 요청 횟수가 적어지니 효율적이겠죠.
@@ -80,8 +82,7 @@ export const GenerateName = () => {
 방금 만든 모듈을 이용해서 `main.js`를 구성해보도록 하겠습니다.
 
 ```js [src/main.js]
-
-import { GenerateName } from "./faker";
+import { GenerateName } from './faker'
 
 function Init() {
   const name = GenerateName()
@@ -107,7 +108,6 @@ Init()
 }
 ```
 
-
 옵션에 대한 설명은 두 번째 자리에 진입점이 될 파일을 넣고, --file 옵션에는 번들링된 결과 파일 명을 적어주면 되겠습니다.
 
 > 프로젝트 내부에만 rollup을 설치했기 때문에 명령어를 터미널에 직접치면 작동하지 않습니다. 터미널에서도 실행시키고 싶다면 `$ yarn add global rollup`으로 설치해주세요.
@@ -131,18 +131,18 @@ created dist/main.js in 43ms
 성공적으로 번들링되었습니다! 현재는 경고가 하나 뜨는걸로 보이는데, 일단은 결과 파일을 살펴보도록 하겠습니다.
 
 ```js [dist/main.js]
-import faker from 'faker';
+import faker from 'faker'
 
 const GenerateName = () => {
   return faker.name.findName()
-};
-
-function Init() {
-  const name = GenerateName();
-  console.log(`name: ${name}`);
 }
 
-Init();
+function Init() {
+  const name = GenerateName()
+  console.log(`name: ${name}`)
+}
+
+Init()
 ```
 
 분리되어있던 `faker.js` 파일의 코드들이 `main.js`에 합쳐져있음을 확인할 수 있습니다.
@@ -185,24 +185,26 @@ import 구문을 사용할 수 없다는 오류가 출력되고 있습니다. �
 ```js
 // dist/main.js
 
-'use strict';
+'use strict'
 
-var faker = require('faker');
+var faker = require('faker')
 
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+function _interopDefaultLegacy(e) {
+  return e && typeof e === 'object' && 'default' in e ? e : { default: e }
+}
 
-var faker__default = /*#__PURE__*/_interopDefaultLegacy(faker);
+var faker__default = /*#__PURE__*/ _interopDefaultLegacy(faker)
 
 const GenerateName = () => {
   return faker__default['default'].name.findName()
-};
-
-function Init() {
-  const name = GenerateName();
-  console.log(`name: ${name}`);
 }
 
-Init();
+function Init() {
+  const name = GenerateName()
+  console.log(`name: ${name}`)
+}
+
+Init()
 ```
 
 이것 저것 코드가 많이 추가되었는데 다시 테스트 해보도록 하겠습니다.
@@ -238,15 +240,16 @@ export const GenerateName = () => {
 }
 
 export const Test = () => {
-  return "Some string"
+  return 'Some string'
 }
 ```
 
 기존에 작성했던 `faker.js` 파일에 `Test()` 함수를 추가해서 내보내도록 했습니다.
 
 **main.js**
+
 ```js
-import { GenerateName, Test } from "./faker";
+import { GenerateName, Test } from './faker'
 
 function Init() {
   const name = GenerateName()
@@ -276,7 +279,7 @@ Init()
 }
 ```
 
-코드가 많이 짧아졌습니다. 
+코드가 많이 짧아졌습니다.
 
 -c 뒤에는 설정 파일 경로를 넣어주면 되는데, 설정하지 않는다면 프로젝트 루트 디렉토리의 `rollup.config.js` 파일을 찾도록 되어있습니다. 이것도 같이 구성하도록 하겠습니다.
 

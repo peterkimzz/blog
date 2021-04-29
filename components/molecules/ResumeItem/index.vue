@@ -5,7 +5,7 @@
       :src="src"
       class="inline-block mb-3 w-16 h-16 rounded-3xl bg-gray-700 p-1.5 shadow-sm object-contain"
     />
-    <div v-if="label" class="text-sm text-gray-500">{{ label }}</div>
+    <div v-if="label" class="text-xs md:text-sm text-gray-500">{{ label }}</div>
     <div class="font-semibold mb-3">
       <slot name="title" />
     </div>
@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  props: ['src', 'label']
+  props: ['src', 'label'],
 }
 </script>

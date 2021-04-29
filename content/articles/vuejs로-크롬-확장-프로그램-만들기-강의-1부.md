@@ -4,6 +4,7 @@ title: Vue.js로 크롬 확장 프로그램 만들기 강의 - 1부
 thumbnail: https://user-images.githubusercontent.com/20244536/112748762-fd580e80-8ff8-11eb-8fcb-a36b676c7c48.png
 updated: 2021-03-28
 created: 2021-03-28
+is_published: true
 ---
 
 안녕하세요, 개발자 peterkimzz입니다.
@@ -11,6 +12,7 @@ created: 2021-03-28
 제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
 
 크롬 확장 프로그램은 이미 여러분들에게 익숙한 웹 기술로 쉽게 개발할 수 있고, [React](https://reactjs.org/)와 [Vue](https://vuejs.org/)같은 SPA 방식의 프레임워크에 매우매우 잘 어울립니다. 심지어 최초 한 번만 5달러를 지불하면, 평생 무료로 앱 배포가 가능합니다.
+
 <!--more-->
 
 때문에 이 강의를 계기로 더욱 많은 사람들이 확장 프로그램을 만들었으면 좋겠다는 취지로 이 강의를 만들게 되었습니다.
@@ -91,23 +93,24 @@ $ touch index.html
 
 ```html[index.html]
 <DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Vue extension
-    </title>
-  </head>
+      <title>
+        Vue extension
+      </title>
+    </head>
 
-  <body>
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
-  </body>
-</html>
+    <body>
+      <div>
+        <h1>Hello, world!</h1>
+      </div>
+    </body>
+  </html></DOCTYPE
+>
 ```
 
 `html` 별 거 없습니다. `<>`으로 열어주면, `</>` 으로 닫는다, 이것만 기억하세요.
@@ -133,7 +136,7 @@ $ touch index.html
   "key1": "value1",
   "key2": {
     "key2-1": "value2-1",
-    "key2-2": "value2-2",
+    "key2-2": "value2-2"
     // ...
   }
 }
@@ -199,11 +202,10 @@ touch manifest.json
 
 ![](https://user-images.githubusercontent.com/20244536/112747952-a7349c80-8ff3-11eb-9b43-2ccfe9e37c6e.png)
 
-다만 확장 프로그램은 브라우저에 띄우는 것과는 달리, 브라우저 위에 작게 뜨는 형태라 큰 사이즈로 보이진 않습니다. 
+다만 확장 프로그램은 브라우저에 띄우는 것과는 달리, 브라우저 위에 작게 뜨는 형태라 큰 사이즈로 보이진 않습니다.
 
 직접 설정하더라도, 최대로 설정 가능한 폭은 `width: 800px`, 높이는 `height: 600px` 입니다. 그 이상의 크기는 무시됩니다.
 
 ## 1부 마무리
 
 여기까지 웹 페이지를 구성하는 `html`, 데이터를 저장하는 포맷인 `json`과 크롬 확장 프로그램을 구성하는 설정 파일인 `manifest.json` 대해 아주 간략하게 배웠습니다.
-

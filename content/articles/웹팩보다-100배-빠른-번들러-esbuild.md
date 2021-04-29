@@ -4,11 +4,13 @@ title: 웹팩보다 100배 빠른 번들러, esbuild
 thumbnail: https://user-images.githubusercontent.com/20244536/111092892-bc80e400-857a-11eb-9bb3-adce2c3c67d3.png
 updated: 2021-03-14
 created: 2021-03-14
+is_published: true
 ---
 
 이번 포스팅은 떠오르는 차세대 자바스크립트 번들러 [`esbuild`](https://esbuild.github.io/)에 대한 내용입니다.
 
 작년 Github에서 떠오르는 번들링 프로젝트 중 1위를 차지했고, 오늘을 기준으로 20만개의 가까운 Github Star를 받았습니다.
+
 <!--more-->
 
 웹팩보다 100배 빠르다는 건 어그로가 아닙니다. 아래 그림을 봐주시죠.
@@ -123,23 +125,23 @@ $ esbuild src/main.js --bundle --outdir=dist
 결과물 파일은 이렇습니다.
 
 ```js [dist/main.js]
-(() => {
+;(() => {
   // src/main.js
   var Animal = class {
     constructor(sound) {
-      this.sound = sound;
+      this.sound = sound
     }
     Bark() {
-      console.log(this.sound + "!");
+      console.log(this.sound + '!')
     }
-  };
+  }
   var Dog = class extends Animal {
     constructor() {
-      super("\uBA4D\uBA4D");
+      super('\uBA4D\uBA4D')
     }
-  };
-  new Dog().Bark();
-})();
+  }
+  new Dog().Bark()
+})()
 ```
 
 애초에 ES6로 작성해서 그런지, 딱히 바뀐 건 크게 없어보입니다. 한글로 된 부분은 유니코드로 변환되었고, 상단에 코드의 출처를 주석으로 달아주었네요.
@@ -194,12 +196,14 @@ $ touch scripts/build.js
 ```
 
 ```js [scripts/build.js]
-require('esbuild').build({
-  entryPoints: ['src/main.js'],
-  outdir: 'dist',
-  bundle: true,
-  platform: 'node',
-}).catch(() => process.exit(1))
+require('esbuild')
+  .build({
+    entryPoints: ['src/main.js'],
+    outdir: 'dist',
+    bundle: true,
+    platform: 'node'
+  })
+  .catch(() => process.exit(1))
 ```
 
 프로젝트에 scripts 폴더를 만들고, 그 아래 build.js 파일을 만들었습니다. 아까 명령어를 이해했으면, 이 설정 값도 직관적으로 바로 이해가 됩니다.
@@ -270,7 +274,7 @@ export interface IAnimal {
   sound: string
 }
 
-class Animal implements IAnimal  {
+class Animal implements IAnimal {
   sound: string
 
   constructor(sound: string) {
