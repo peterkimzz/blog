@@ -32,3 +32,9 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.asd {
+  font-size: 10px;
+}
+</style>
