@@ -12,7 +12,11 @@
       >
         {{ title }}
       </h2>
-      <p class="mt-4 text-gray-400 leading-7 line-clamp-3">{{ description }}</p>
+      <p
+        class="text-sm md:text-base mt-3 md:mt-4 text-gray-400 leading-7 line-clamp-3"
+      >
+        {{ description }}
+      </p>
       <div class="text-sm mt-2">
         {{ $dayjs(updated).format('YYYY년 MM월 DD일') }}
       </div>

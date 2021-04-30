@@ -22,18 +22,12 @@
         >
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
-
-        <!-- <hr class="my-8 border-t-2 border-gray-700 w-20 mx-auto" /> -->
       </header>
 
       <nuxt-content
         :document="article"
         class="prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
       />
-      <!-- <nuxt-content
-        :document="article"
-        class="prose prose-sm md:prose prose-cyan md:prose-cyan"
-      /> -->
 
       <vue-divider class="my-10" />
 

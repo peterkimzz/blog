@@ -49,14 +49,20 @@
             <input
               v-model="query"
               type="text"
-              name="email"
-              id="email"
-              class="block w-full pl-10 py-3 md:pl-12 md:py-4 md:text-lg bg-transparent border-gray-600 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-gray-500 focus:border-gray-500 rounded-md"
+              id="search-input"
+              name="search"
+              class="block w-full pl-12 pr-20 py-3 md:pl-12 md:py-4 md:text-lg bg-transparent border-gray-600 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-gray-500 focus:border-gray-500 rounded-md"
               placeholder="검색"
               aria-invalid="true"
-              aria-describedby="email-error"
+              aria-describedby="search-error"
               @keyup="(e) => Search(e.target.value)"
             />
+            <div
+              class="absolute inset-y-0 right-0 pr-4 md:pr-5 flex items-center pointer-events-none text-gray-500 font-semibold"
+            >
+              <span v-if="IsMac">⌘ K</span>
+              <span v-else>Ctrl K</span>
+            </div>
           </div>
         </vue-container>
       </div>
@@ -104,6 +110,15 @@ export default {
 
     return { articles }
   },
+  computed: {
+    IsMac() {
+      if (process.server) {
+        return false
+      }
+
+      return window.navigator.platform.indexOf('Mac') > -1
+    },
+  },
   methods: {
     async Search(query) {
       this.articles = await this.$content('articles')
@@ -112,6 +127,16 @@ export default {
         .where(IS_PROD ? { is_published: true } : {})
         .fetch()
     },
+  },
+  mounted() {
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey && e.key === 'k') || (e.metaKey && e.key === 'k')) {
+        e.preventDefault()
+
+        const $input = document.getElementById('search-input')
+        $input.focus()
+      }
+    })
   },
 }
 </script>

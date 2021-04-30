@@ -8,7 +8,7 @@
         개발자 김동현 이력서
       </h1>
       <p class="text-gray-600 text-xs mt-4">
-        2021년 4월 29일에 마지막으로 업데이트 됨.
+        2021년 4월 30일에 마지막으로 업데이트 됨.
       </p>
     </header>
 
@@ -22,7 +22,7 @@
         <div class="md:flex">
           <img
             src="/profile.jpg"
-            class="w-24 h-24 rounded-3xl shadow-sm bg-gray-700 p-1"
+            class="w-24 h-24 rounded-[2.4rem] shadow-lg bg-gray-700 bg-opacity-50 p-1"
           />
           <div class="space-y-6 mt-6 md:mt-0 md:ml-10">
             <vue-definition sub-label="Name" label="이름"
@@ -161,8 +161,15 @@
             :key="project.title"
             :label="project.duration"
           >
-            <div slot="title" class="flex items-center">
-              <span class="font-semibold">{{ project.title }}</span>
+            <div slot="title" class="flex items-center font-semibold">
+              <a
+                v-if="project.href"
+                :href="project.href"
+                target="_blank"
+                class="text-cyan-500 underline"
+                >{{ project.title }}</a
+              >
+              <span v-else>{{ project.title }}</span>
             </div>
             <p v-html="project.desc"></p>
           </vue-resume-item>
@@ -321,6 +328,7 @@ export default {
           src: '/imgs/briana.png',
           duration: '2021년 1월 - 현재',
           title: '브리아나',
+          href: 'https://brianalabs.com',
           desc: `
             가상화폐를 거래할 때 도움을 주는 크롬 확장 프로그램입니다.<br><br>
 
@@ -337,6 +345,7 @@ export default {
           src: '/imgs/empo.ico',
           duration: '2019년 11월 - 현재',
           title: 'Empo',
+          href: 'https://empo.im',
           desc: `
             앰포는 모바일 데이터 직거래 플랫폼입니다.<br><br>
 
@@ -362,6 +371,7 @@ export default {
           src: '/imgs/gangmom_logo.png',
           duration: '2018년 8월 - 2019년 3월',
           title: '강남엄마',
+          href: 'https://gangmom.kr',
           desc: `
             "학원 찾을 땐, 강남엄마"<br><br>
 
