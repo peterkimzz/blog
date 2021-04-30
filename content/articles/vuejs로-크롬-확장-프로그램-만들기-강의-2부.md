@@ -1,6 +1,9 @@
 ---
 category: tech
-title: Introduction
+title: Vue.js로 크롬 확장 프로그램 만들기 강의 - 2부
+thumbnail: https://user-images.githubusercontent.com/20244536/112748762-fd580e80-8ff8-11eb-8fcb-a36b676c7c48.png
+updated: 2021-04-30
+created: 2021-04-30
 is_published: false
 ---
 

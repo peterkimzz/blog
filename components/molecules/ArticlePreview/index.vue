@@ -1,23 +1,20 @@
 <template>
   <li>
-    <n-link
-      :to="{ name: 'slug', params: { slug } }"
-      class="flex flex-col h-full relative"
-    >
-      <div class="aspect-w-3 aspect-h-2 shadow-sm rounded-lg overflow-hidden">
-        <img :src="thumbnail" :alt="title" class="object-cover" />
-      </div>
-      <vue-tag :class="['absolute top-2 right-2', TagColor]">{{
-        category
-      }}</vue-tag>
-      <div class="flex-1 mt-2">
-        <h2 class="font-semibold leading-tight">{{ title }}</h2>
-        <p v-if="description" class="mt-2 text-xs text-gray-500 truncate">
-          {{ description }}
-        </p>
-      </div>
-      <div class="mt-3">
-        <vue-date class="text-xs text-gray-600">{{ updated }}</vue-date>
+    <n-link :to="`/${slug}`" class="group">
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase"
+        :class="GetCategoryColor"
+      >
+        {{ category }}
+      </span>
+      <h2
+        class="text-base md:text-lg mt-2 font-semibold text-gray-100 group-hover:underline"
+      >
+        {{ title }}
+      </h2>
+      <p class="mt-4 text-gray-400 leading-7 line-clamp-3">{{ description }}</p>
+      <div class="text-sm mt-2">
+        {{ $dayjs(updated).format('YYYY년 MM월 DD일') }}
       </div>
     </n-link>
   </li>
@@ -29,45 +26,40 @@ export default {
     slug: {
       type: String,
       default: '/',
-      required: true
-    },
-    thumbnail: {
-      type: String,
-      default: '/',
-      required: true
+      required: true,
     },
     category: {
       type: String,
       default: null,
       validator(v) {
         return ['tech', 'design', 'life'].indexOf(v) !== -1
-      }
+      },
     },
     title: {
       type: String,
       default: 'Title',
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      default: null
+      default: null,
     },
     updated: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
-    TagColor() {
+    GetCategoryColor() {
       switch (this.category) {
         case 'tech':
-          return ''
+          return 'bg-purple-800 text-purple-200'
         case 'design':
-          return 'bg-red-500 text-red-50'
+          return 'bg-pink-800 text-pink-200'
         case 'life':
-          return 'bg-blue-500 text-blue-50'
+          return 'bg-indigo-800 text-indigo-200'
       }
-    }
-  }
+    },
+  },
 }
 </script>

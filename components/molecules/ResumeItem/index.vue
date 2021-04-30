@@ -9,7 +9,7 @@
     <div class="font-semibold mb-3">
       <slot name="title" />
     </div>
-    <div class="leading-7">
+    <div class="leading-7 md:leading-8">
       <slot />
     </div>
   </div>

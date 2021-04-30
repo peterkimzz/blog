@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20 text-sm md:text-base">
+  <div class="pb-20 text-sm md:text-lg">
     <vue-s-e-o title="이력서" :title-template-visible="false" />
 
     <header>
@@ -48,7 +48,7 @@
               >
             </vue-definition>
             <vue-definition sub-label="Intro" label="소개" class="block">
-              <p class="mt-4 leading-7">
+              <p class="mt-4 leading-8">
                 안녕하세요, 소프트웨어 개발자 김동현입니다.<br /><br />
 
                 저는 플랫폼 개발에 자신있습니다. 또한 저의 최대 강점은 개발

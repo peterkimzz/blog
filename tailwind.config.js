@@ -20,17 +20,13 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        sans: [
-          'Inter',
-          '-apple-system',
-          ...defaultTheme.fontFamily.sans
-        ]
+        sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
       },
       fontSize: {
         sm: ['0.875rem', '1.5rem'],
-        base: ['1rem', '1.75rem'],
+        base: ['1rem', '1.75rem']
       },
-      typography: (theme) => ({
+      typography: theme => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.300'),
@@ -42,16 +38,16 @@ module.exports = {
               color: theme('colors.gray.100')
             },
             code: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.100')
             },
             h1: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.100')
             },
             h2: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.100')
             },
             h3: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.100')
             },
             'ol >li::before': {
               color: theme('colors.gray.400')
@@ -60,26 +56,27 @@ module.exports = {
               color: theme('colors.gray.400')
             },
             'figure figcaption': {
-              color: theme('colors.gray.500'),
-            },
-          },
-        },
-      }),
+              color: theme('colors.gray.500')
+            }
+          }
+        }
+      })
     }
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
-    plugin(({ addBase, theme }) => {
-      addBase({
-        'html': {
-          'word-break': 'keep-all',
-          'background-color': theme('backgroundColor.gray.800'),
-          'color': theme('textColor.gray.300'),
-          '-webkit-font-smoothing': 'antialiased'
-        },
-      })
-    })
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography')
+    // plugin(({ addBase, theme }) => {
+    //   addBase({
+    //     html: {
+    //       'word-break': 'keep-all',
+    //       'background-color': theme('backgroundColor.gray.800'),
+    //       color: theme('textColor.gray.300'),
+    //       '-webkit-font-smoothing': 'antialiased'
+    //     }
+    //   })
+    // })
   ]
 }

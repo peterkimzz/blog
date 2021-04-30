@@ -6,8 +6,8 @@
       :thumbnail="article.thumbnail"
     />
 
-    <article>
-      <header class="mt-10">
+    <article class="relative">
+      <header class="mt-10 mb-10">
         <h1 class="flex flex-col items-center">
           <span class="text-cyan-500 font-semibold tracking-wider uppercase">{{
             article.category
@@ -23,13 +23,17 @@
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
 
-        <hr class="my-8 border-t-2 border-gray-700 w-20 mx-auto" />
+        <!-- <hr class="my-8 border-t-2 border-gray-700 w-20 mx-auto" /> -->
       </header>
 
       <nuxt-content
         :document="article"
-        class="prose prose-sm md:prose prose-cyan md:prose-cyan line-numbers"
+        class="prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
       />
+      <!-- <nuxt-content
+        :document="article"
+        class="prose prose-sm md:prose prose-cyan md:prose-cyan"
+      /> -->
 
       <vue-divider class="my-10" />
 
@@ -58,10 +62,14 @@ export default {
     const article = await $content('articles', params.slug).fetch()
 
     const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .only(['category', 'title', 'slug'])
+      .sortBy('created', 'asc')
+      // .where({ is_published: true })
       .surround(params.slug)
       .fetch()
+
+    console.log(prev)
+    console.log(next)
 
     return { article, prev, next }
   },
