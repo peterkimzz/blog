@@ -35,9 +35,9 @@
 
       <vue-divider class="my-10" />
 
-      <client-only>
+      <!-- <client-only>
         <vue-comment />
-      </client-only>
+      </client-only> -->
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
