@@ -63,7 +63,7 @@ export default {
     const [prev, next] = await $content('articles')
       .only(['category', 'title', 'slug'])
       .sortBy('created', 'asc')
-      .where(IS_PROD ? { is_published: true } : {})
+      // .where(IS_PROD ? { is_published: true } : {})
       .surround(params.slug)
       .fetch()
 

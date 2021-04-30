@@ -4,22 +4,17 @@
       <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">이전 글</span>
       </div>
-      <vue-link as="a" :href="`/${prev.slug}`" class="link">
+      <n-link :to="`/${prev.slug}`" class="hover:underline">
         {{ prev.title }}
-      </vue-link>
+      </n-link>
     </div>
     <div v-if="next" class="flex-1 ml-0.5 text-right">
       <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">다음 글</span>
       </div>
-      <vue-link
-        as="a"
-        :href="`/${next.slug}`"
-        class="link"
-        style="word-break: keep-all"
-      >
+      <n-link :to="`/${next.slug}`" class="hover:underline">
         {{ next.title }}
-      </vue-link>
+      </n-link>
     </div>
   </div>
 </template>
@@ -29,12 +24,12 @@ export default {
   props: {
     prev: {
       type: Object,
-      default: () => null
+      default: () => null,
     },
     next: {
       type: Object,
-      default: () => null
-    }
-  }
+      default: () => null,
+    },
+  },
 }
 </script>
