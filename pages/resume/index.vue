@@ -211,6 +211,7 @@
             <div slot="title" class="flex items-center">
               <a
                 href="https://zdnet.co.kr/view/?no=20210329170514"
+                target="_blank"
                 class="underline text-cyan-500"
                 >클라우드 빌드·배포 등 단순업무, 오픈소스로 한 번에 해결</a
               >
