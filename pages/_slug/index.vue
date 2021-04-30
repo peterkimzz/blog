@@ -46,29 +46,28 @@
 </template>
 
 <script>
-// import Prism from 'prismjs'
-// import 'prismjs/plugins/toolbar/prism-toolbar.js'
-// import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js'
+const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
+  data() {
+    return {
+      article: {},
+      prev: {},
+      next: {},
+    }
+  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
     const [prev, next] = await $content('articles')
       .only(['category', 'title', 'slug'])
       .sortBy('created', 'asc')
-      // .where({ is_published: true })
+      .where(IS_PROD ? { is_published: true } : {})
       .surround(params.slug)
       .fetch()
 
-    console.log(prev)
-    console.log(next)
-
     return { article, prev, next }
-  },
-  mounted() {
-    // Prism.highlightAll()
   },
 }
 </script>
