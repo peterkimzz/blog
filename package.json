@@ -24,6 +24,7 @@
     "vue-gtag": "1.14.0"
   },
   "devDependencies": {
+    "@nuxtjs/device": "^2.1.0",
     "@nuxtjs/tailwindcss": "4.0.3",
     "postcss": "8.2.13"
   }

@@ -51,7 +51,7 @@ module.exports = {
     { src: '~/plugins/vue-gtag', mode: 'client' }
   ],
   modules: ['@nuxtjs/dayjs', '@nuxt/content', '@nuxtjs/sitemap'],
-  buildModules: ['@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   content: {
     liveEdit: false,
     markdown: {

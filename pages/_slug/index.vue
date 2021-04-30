@@ -46,14 +46,12 @@
 </template>
 
 <script>
-const IS_PROD = process.env.NODE_ENV === 'production'
+// const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
-
-    console.log(article)
 
     const [prev, next] = await $content('articles')
       .only(['category', 'title', 'slug'])

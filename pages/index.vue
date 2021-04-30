@@ -47,7 +47,7 @@
               </svg>
             </div>
             <input
-              v-model="query"
+              v-model="q"
               type="text"
               id="search-input"
               name="search"
@@ -60,7 +60,8 @@
             <div
               class="absolute inset-y-0 right-0 pr-4 md:pr-5 flex items-center pointer-events-none text-gray-500 font-semibold"
             >
-              <span v-if="IsMac">⌘ K</span>
+              <span v-if="$device.isMacOS">⌘ K</span>
+              <span v-else-if="$device.isMobile"></span>
               <span v-else>Ctrl K</span>
             </div>
           </div>
@@ -98,17 +99,19 @@ const IS_PROD = process.env.NODE_ENV === 'production'
 export default {
   data() {
     return {
-      query: '',
+      q: '',
       articles: [],
     }
   },
-  async asyncData({ $content }) {
+  async asyncData({ $content, query }) {
+    const q = query.q || ''
     const articles = await $content('articles')
       .sortBy('created', 'desc')
+      .search(q)
       .where(IS_PROD ? { is_published: true } : {})
       .fetch()
 
-    return { articles }
+    return { articles, q }
   },
   computed: {
     IsMac() {
@@ -119,13 +122,18 @@ export default {
       return window.navigator.platform.indexOf('Mac') > -1
     },
   },
-  methods: {
-    async Search(query) {
+  watch: {
+    async '$route.query.q'(q) {
       this.articles = await this.$content('articles')
         .sortBy('created', 'desc')
-        .search(query)
+        .search(q)
         .where(IS_PROD ? { is_published: true } : {})
         .fetch()
+    },
+  },
+  methods: {
+    Search(q) {
+      this.$router.push({ query: { q } })
     },
   },
   mounted() {
@@ -137,6 +145,9 @@ export default {
         $input.focus()
       }
     })
+  },
+  destroyed() {
+    window.removeEventListener('keydown')
   },
 }
 </script>
