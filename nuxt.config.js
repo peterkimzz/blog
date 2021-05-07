@@ -63,12 +63,10 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     async create(feed) {
       feed.options = {
-        link: process.env.BASE_URL + '/',
+        link: process.env.BASE_URL,
         title: process.env.META_TITLE,
-        language: 'ko',
         description: process.env.META_DESCRIPTION
       }
-      feed.addCategory('Nuxt.js')
 
       const { $content } = require('@nuxt/content')
 
