@@ -2,13 +2,11 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>기술과 예술을 담은 블로그</title>
-        <link>https://www.peterkimzz.com/</link>
+        <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Fri, 07 May 2021 05:08:46 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 May 2021 05:13:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
-        <language>ko</language>
-        <category>Nuxt.js</category>
         <item>
             <title><![CDATA[5년차 개발자의 2020년 회고록]]></title>
             <link>https://www.peterkimzz.com/5년차-개발자의-2020년-회고록</link>
