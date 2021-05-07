@@ -1,17 +1,5 @@
 require('dotenv').config()
 
-const GetSitemap = async () => {
-  const { $content } = require('@nuxt/content')
-
-  const files = await $content('articles')
-    .only(['path'])
-    .where({ is_published: true })
-    .fetch()
-  // const files = await $content({ deep: true }).only(["path"]).fetch();
-
-  return files.map(file => file.path.replace(/\/articles/gi, ''))
-}
-
 module.exports = {
   target: 'static',
   head: {
@@ -50,7 +38,12 @@ module.exports = {
     { src: '~/plugins/cheerio' },
     { src: '~/plugins/vue-gtag', mode: 'client' }
   ],
-  modules: ['@nuxtjs/dayjs', '@nuxt/content', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxtjs/dayjs',
+    '@nuxtjs/feed',
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
+  ],
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   content: {
     liveEdit: false,
@@ -64,9 +57,50 @@ module.exports = {
     jit: true,
     viewer: true
   },
+  feed: {
+    type: 'rss2',
+    path: '/feed.xml',
+    cacheTime: 1000 * 60 * 15,
+    async create(feed) {
+      feed.options = {
+        link: process.env.BASE_URL + '/feed.xml',
+        title: process.env.META_TITLE,
+        language: 'ko',
+        description: process.env.META_DESCRIPTION
+      }
+      feed.addCategory('Nuxt.js')
+
+      const { $content } = require('@nuxt/content')
+
+      const articles = await $content('articles')
+        .where({ is_published: true })
+        .fetch()
+
+      articles.forEach(article => {
+        feed.addItem({
+          id: process.env.BASE_URL + '/' + article.slug,
+          title: article.title,
+          link: process.env.BASE_URL + '/' + article.slug,
+          date: new Date(article.created),
+          author: 'peterkimzz69@gmail.com',
+          category: article.category,
+          content: article.description,
+          description: article.description
+        })
+      })
+    }
+  },
   sitemap: {
     hostname: process.env.BASE_URL,
-    gzip: true,
-    routes: () => GetSitemap()
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+
+      const articles = await $content('articles')
+        .only(['path'])
+        .where({ is_published: true })
+        .fetch()
+
+      return articles.map(article => article.path.replace(/\/articles/gi, ''))
+    }
   }
 }

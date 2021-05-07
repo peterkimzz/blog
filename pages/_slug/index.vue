@@ -26,7 +26,7 @@
 
       <nuxt-content
         :document="article"
-        class="prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
+        class="mx-auto prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
       />
 
       <vue-divider class="my-10" />

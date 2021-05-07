@@ -147,7 +147,7 @@ export default {
     })
   },
   destroyed() {
-    window.removeEventListener('keydown')
+    window.removeEventListener('keydown', () => {})
   },
 }
 </script>
