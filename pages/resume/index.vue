@@ -31,14 +31,6 @@
             <vue-definition sub-label="Birthday" label="생년월일"
               >1993년 2월 25일</vue-definition
             >
-            <vue-definition sub-label="Phone" label="연락처">
-              <a
-                target="_blank"
-                href="tel:+82-10-4273-5480"
-                class="hover:underline"
-                >+82-10-4273-5480</a
-              >
-            </vue-definition>
             <vue-definition sub-label="Email" label="이메일">
               <a
                 target="_blank"

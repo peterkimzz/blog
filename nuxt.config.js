@@ -28,7 +28,7 @@ module.exports = {
     ]
   },
   env: process.env,
-  loading: { color: '#000', height: '3px' },
+  loading: { color: '#06B6D4', height: '3px' },
   components: [
     { path: '~/components/atoms', prefix: 'vue' },
     { path: '~/components/molecules', prefix: 'vue' },
