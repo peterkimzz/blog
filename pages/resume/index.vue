@@ -7,7 +7,7 @@
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-100">
         개발자 김동현 이력서
       </h1>
-      <p class="text-gray-600 text-xs mt-4">
+      <p class="mt-4 text-gray-500 text-sm">
         2021년 4월 30일에 마지막으로 업데이트 됨.
       </p>
     </header>
