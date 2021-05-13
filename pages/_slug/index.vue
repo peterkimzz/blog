@@ -18,14 +18,18 @@
           >
         </h1>
         <p
-          class="mt-6 text-center text-xs md:text-sm text-gray-500 font-semibold"
+          class="mt-6 text-center text-sm md:text-sm text-gray-500 font-semibold"
         >
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
         <div
-          class="flex items-end justify-center mt-4 md:mt-6 text-center space-x-3"
+          class="flex items-end justify-center mt-6 md:mt-6 text-center space-x-2"
         >
-          <button title="카카오톡으로 공유하기" @click="OnShareByKakaotalk">
+          <button
+            title="카카오톡으로 공유하기"
+            class="p-1"
+            @click="OnShareByKakaotalk"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 208 191.94"
@@ -37,7 +41,11 @@
               />
             </svg>
           </button>
-          <button title="페이스북으로 공유하기" @click="OnShareByFacebook">
+          <button
+            title="페이스북으로 공유하기"
+            class="p-1"
+            @click="OnShareByFacebook"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -53,6 +61,7 @@
             id="clipboard"
             :data-clipboard-text="PageURL"
             title="링크 클립보드에 복사하기"
+            class="p-1"
             @click="OnCopyLink"
           >
             <svg
