@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Tue, 11 May 2021 02:49:01 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 May 2021 06:57:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -60,12 +60,24 @@
             <link>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-1부</link>
             <guid>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-1부</guid>
             <pubDate>Sun, 28 Mar 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[안녕하세요, 개발자 peterkimzz입니다.
-제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
+            <description><![CDATA[제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
 크롬 확장 프로그램은 이미 여러분들에게 익숙한 웹 기술로 쉽게 개발할 수 있고, React와 Vue같은 SPA 방식의 프레임워크에 매우매우 잘 어울립니다. 심지어 최초 한 번만 5달러를 지불하면, 평생 무료로 앱 배포가 가능합니다.]]></description>
-            <content:encoded><![CDATA[안녕하세요, 개발자 peterkimzz입니다.
-제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
+            <content:encoded><![CDATA[제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
 크롬 확장 프로그램은 이미 여러분들에게 익숙한 웹 기술로 쉽게 개발할 수 있고, React와 Vue같은 SPA 방식의 프레임워크에 매우매우 잘 어울립니다. 심지어 최초 한 번만 5달러를 지불하면, 평생 무료로 앱 배포가 가능합니다.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Vue.js로 크롬 확장 프로그램 만들기 강의 - 2부]]></title>
+            <link>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-2부</link>
+            <guid>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-2부</guid>
+            <pubDate>Thu, 13 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[이전 포스팅에서 index.html과 manifest.json 파일을 이용해서 확장 프로그램을 개발자 모드로 실행시키는 것 까지 진행했습니다.
+이번 포스팅에서는 Vue.js와 Vite을 사용해서 프로젝트를 재설계해보도록 하겠습니다.
+Vue.js
+Vue.js는 웹사이트를 만들기 위해 고안된 프레임워크입니다. 그냥 순수 HTML을 작성하는 것 보다 개발자에게 훨씬 더 많은 이점을 가져다주기 때문에 사용합니다.]]></description>
+            <content:encoded><![CDATA[이전 포스팅에서 index.html과 manifest.json 파일을 이용해서 확장 프로그램을 개발자 모드로 실행시키는 것 까지 진행했습니다.
+이번 포스팅에서는 Vue.js와 Vite을 사용해서 프로젝트를 재설계해보도록 하겠습니다.
+Vue.js
+Vue.js는 웹사이트를 만들기 위해 고안된 프레임워크입니다. 그냥 순수 HTML을 작성하는 것 보다 개발자에게 훨씬 더 많은 이점을 가져다주기 때문에 사용합니다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[웹 폰트와 사이즈는 어떻게 결정해야할까?]]></title>
