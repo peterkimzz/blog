@@ -75,7 +75,7 @@
           <img src="/undraw_tree.svg" alt="No result." class="w-full" />
           <p class="mt-6 font-semibold text-gray-300">검색 결과가 없습니다.</p>
         </div>
-        <ul v-else class="flex flex-wrap md:-mx-2">
+        <ul v-else class="flex flex-wrap sm:-mx-4">
           <vue-article-preview
             v-for="article of articles"
             :key="article.slug"
@@ -85,7 +85,7 @@
             :description="article.description"
             :thumbnail="article.thumbnail"
             :updated="article.updated"
-            class="w-full sm:w-1/2 pb-14 md:pb-20 md:w-1/3 md:px-2"
+            class="w-full sm:w-1/2 sm:px-4 pb-14 md:pb-20 md:w-1/3"
           />
         </ul>
       </div>

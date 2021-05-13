@@ -61,7 +61,7 @@
             id="clipboard"
             :data-clipboard-text="PageURL"
             title="링크 클립보드에 복사하기"
-            class="p-1"
+            class="p-1 focus:border-cyan-500"
             @click="OnCopyLink"
           >
             <svg
@@ -82,7 +82,7 @@
 
       <nuxt-content
         :document="article"
-        class="mx-auto prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
+        class="w-full max-w-full prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
       />
 
       <vue-divider class="my-10" />

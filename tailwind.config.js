@@ -63,6 +63,9 @@ module.exports = {
       })
     }
   },
+  variants: {
+    borderColor: ['focus', 'active']
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
