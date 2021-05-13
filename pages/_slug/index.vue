@@ -91,7 +91,7 @@
 
       <vue-divider class="my-10" />
 
-      <vue-comment />
+      <!-- <vue-comment /> -->
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
