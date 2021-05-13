@@ -7,8 +7,6 @@ created: 2021-03-28
 is_published: true
 ---
 
-안녕하세요, 개발자 peterkimzz입니다.
-
 제가 최근 우연히 크롬 확장 프로그램을 개발했는데, 이게 생각보다 꽤 괜찮은 시장이라는 걸 알게 되었습니다.
 
 크롬 확장 프로그램은 이미 여러분들에게 익숙한 웹 기술로 쉽게 개발할 수 있고, [React](https://reactjs.org/)와 [Vue](https://vuejs.org/)같은 SPA 방식의 프레임워크에 매우매우 잘 어울립니다. 심지어 최초 한 번만 5달러를 지불하면, 평생 무료로 앱 배포가 가능합니다.
@@ -23,20 +21,15 @@ is_published: true
 
 아 그리고 현재는 리눅스 명령어로만 강의를 진행하므로, WindowsOS 사용자 분들은 bash 커맨드를 입력할 수 있는 환경을 구성해주세요.
 
-<!-- ## 프로젝트 기획하기
+## 프로젝트 기획하기
 
 본격적으로 코드를 작성하기에 앞서, 어떤 확장 프로그램을 만들지 기획을 먼저 해보도록 하겠습니다.
 
 만들고 싶은 앱을 정한 뒤에, 필요한 내용들을 하나씩 배워나가는 게 가장 학습 효과가 좋기 때문입니다. 뭐든지 목표가 있어야 열심히 하게 되니까요.
 
-그래서 이것저것 고민을 많이 했는데, 결론적으로 우리에게 가장 친숙한 날씨 관련 앱을 만들어보려고 합니다.
+그래서 뭘 만들어볼지 이것저것 고민을 많이 했는데, **가상화폐 시세 보는 앱**을 만들어볼까합니다.
 
-주제를 날씨로 선정한 이유는 이러합니다.
-
-1. 무료로 데이터를 제공해주는 API가 있다.
-2. 기능이 간단하다. 그냥 앱 열었을 때 몇 가지 정보가 보이면 된다.
-
-다만 확장 프로그램이라는 게 브라우저에서만 동작하는 앱 이라는 걸 감안해서, 특별한 상황에서만 도움이 될 만한 앱을 만들어볼까 합니다. -->
+이유는 간단합니다. 무료로 데이터를 제공해주는 API가 있기 때문이죠. 공부할 땐 이게 최고입니다.
 
 ## 사전 준비
 
@@ -59,6 +52,8 @@ $ mkdir vue-extension
 $ cd vue-extension
 $ npm init -y
 ```
+
+> 참고로 각 줄 맨 앞에 `$` 기호는 실제로 입력하는 글자는 아닙니다. 그냥 해당 명령어가 bash 커맨드라는 걸 표기하기 위해 붙입니다.
 
 위 명령어들을 처음 보시더라도 당황하지 마세요. 설명해드리겠습니다.
 
@@ -92,25 +87,24 @@ $ touch index.html
 그럼 바로 `html` 코드를 작성하겠습니다.
 
 ```html[index.html]
-<DOCTYPE html>
-  <html lang="ko">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <title>
-        Vue extension
-      </title>
-    </head>
+    <title>
+      Vue extension
+    </title>
+  </head>
 
-    <body>
-      <div>
-        <h1>Hello, world!</h1>
-      </div>
-    </body>
-  </html></DOCTYPE
->
+  <body>
+    <div>
+      <h1>Hello, world!</h1>
+    </div>
+  </body>
+</html>
 ```
 
 `html` 별 거 없습니다. `<>`으로 열어주면, `</>` 으로 닫는다, 이것만 기억하세요.
@@ -160,7 +154,7 @@ touch manifest.json
 
 현재 최신 버전은 `3`이고, 이 버전으로 작성된 확장 프로그램은 올해 1월부터 크롬 웹스토어에 정식 등록이 가능합니다.
 
-지금 당장 자신이 만들 프로그램이 [크롬 웹스토어](https://chrome.google.com/webstore/category/extensions)에만 올릴 예정이라면, 버전 `3`으로 작성해도 됩니다.
+지금 당장 자신이 만들 프로그램이 [크롬 웹스토어](https://chrome.google.com/webstore/category/extensions)에만 올라갈 예정이라면, 버전 `3`으로 작성해도 됩니다.
 
 하지만 웨일 등 다른 브라우저의 자체 스토어에도 올릴 예정이라면, 버전 `2`로 작성해야합니다.
 
@@ -175,7 +169,7 @@ touch manifest.json
 ```json[manifest.json]
 {
   "name": "Vue extension",
-  "description": "Build an Extension with Vue.js!",
+  "description": "My extension app made by Vue.js",
   "version": "0.0.1",
   "manifest_version": 3,
   "action": {

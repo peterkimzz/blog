@@ -20,13 +20,13 @@
     "@tailwindcss/typography": "0.4.0",
     "cheerio": "1.0.0-rc.9",
     "dotenv": "9.0.2",
-    "nuxt": "2.15.5",
+    "nuxt": "2.15.6",
     "prism-themes": "1.7.0",
     "vue-gtag": "1.16.1"
   },
   "devDependencies": {
     "@nuxtjs/device": "2.1.0",
     "@nuxtjs/tailwindcss": "4.1.0",
-    "postcss": "8.2.14"
+    "postcss": "8.2.15"
   }
 }
