@@ -15,7 +15,7 @@ export default {
 
       script.setAttribute('src', 'https://utteranc.es/client.js')
       script.setAttribute('repo', 'peterkimzz/blog')
-      script.setAttribute('issue-term', 'title')
+      script.setAttribute('issue-term', 'pathname')
       script.setAttribute('label', 'Comment')
       script.setAttribute('theme', 'github-dark')
       script.setAttribute('crossorigin', 'anonymous')

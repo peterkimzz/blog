@@ -1,6 +1,6 @@
 <template>
   <li>
-    <n-link :to="`/${slug}`" class="group">
+    <n-link :to="`/${slug}/`" class="group">
       <span
         class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase"
         :class="GetCategoryColor"
