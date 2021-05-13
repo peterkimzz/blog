@@ -1,6 +1,6 @@
 <template>
   <div>
-    <script
+    <!-- <script
       type="application/javascript"
       src="https://utteranc.es/client.js"
       repo="peterkimzz/blog"
@@ -8,7 +8,7 @@
       theme="github-dark"
       crossorigin="anonymous"
       async
-    ></script>
+    ></script> -->
   </div>
 </template>
 
@@ -34,8 +34,8 @@ export default {
       this.$el.append(script)
     },
   },
-  // mounted() {
-  //   this.InsertScript()
-  // },
+  mounted() {
+    this.InsertScript()
+  },
 }
 </script>
