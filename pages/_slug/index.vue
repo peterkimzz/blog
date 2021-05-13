@@ -108,8 +108,6 @@ export default {
   data() {
     return {
       article: {},
-      prev: {},
-      next: {},
     }
   },
   async asyncData({ $content, params }) {
