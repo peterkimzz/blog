@@ -20,6 +20,7 @@ module.exports = {
         content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
       }
     ],
+    script: [{ src: 'https://developers.kakao.com/sdk/js/kakao.js' }],
     link: [
       {
         rel: 'stylesheet',
@@ -36,7 +37,8 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/cheerio' },
-    { src: '~/plugins/vue-gtag', mode: 'client' }
+    { src: '~/plugins/vue-gtag', mode: 'client' },
+    { src: '~/plugins/kakao', mode: 'client' }
   ],
   modules: [
     '@nuxtjs/dayjs',
