@@ -4,17 +4,17 @@
       <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">이전 글</span>
       </div>
-      <n-link :to="`/${prev.slug}`" class="hover:underline">
+      <a :href="`/${prev.slug}`" class="hover:underline">
         {{ prev.title }}
-      </n-link>
+      </a>
     </div>
     <div v-if="next" class="flex-1 ml-0.5 text-right">
       <div class="font-semibold text-gray-500 mb-0.5">
         <span class="align-middle">다음 글</span>
       </div>
-      <n-link :to="`/${next.slug}`" class="hover:underline">
+      <a :href="`/${next.slug}`" class="hover:underline">
         {{ next.title }}
-      </n-link>
+      </a>
     </div>
   </div>
 </template>

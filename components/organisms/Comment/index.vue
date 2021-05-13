@@ -1,35 +1,34 @@
 <template>
-  <div>
-    <script
-      type="application/javascript"
-      src="https://utteranc.es/client.js"
-      repo="peterkimzz/blog"
-      issue-term="title"
-      label="Comment"
-      theme="github-dark"
-      crossorigin="anonymous"
-      async
-    ></script>
-  </div>
+  <div id="comment"></div>
 </template>
 
 <script>
 export default {
+  // watch: {
+  //   $route() {
+  //     this.InsertScript()
+  //   },
+  // },
   methods: {
     InsertScript() {
       const script = document.createElement('script')
 
-      script['type'] = 'application/javascript'
-      script['src'] = 'https://utteranc.es/client.js'
-      script['crossOrigin'] = 'anonymous'
-      script['async'] = true
+      script.setAttribute('src', 'https://utteranc.es/client.js')
+      script.setAttribute('repo', 'peterkimzz/blog')
+      script.setAttribute('issue-term', 'title')
+      script.setAttribute('label', 'Comment')
+      script.setAttribute('theme', 'github-dark')
+      script.setAttribute('crossorigin', 'anonymous')
+      script.setAttribute('async', 'async')
 
-      // script.setAttribute('repo', 'peterkimzz/blog')
-      // script.setAttribute('issue-term', 'title')
-      // script.setAttribute('theme', 'github-light')
+      this.$el.append(script)
 
-      this.$el.appendChild(script)
-    }
-  }
+      // const $comment = document.getElementById('comment')
+      // $comment.appendChild(script)
+    },
+  },
+  mounted() {
+    this.InsertScript()
+  },
 }
 </script>

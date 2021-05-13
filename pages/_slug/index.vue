@@ -35,9 +35,7 @@
 
       <vue-divider class="my-10" />
 
-      <client-only>
-        <vue-comment />
-      </client-only>
+      <vue-comment />
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
@@ -46,7 +44,7 @@
 </template>
 
 <script>
-// const IS_PROD = process.env.NODE_ENV === 'production'
+const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
@@ -56,7 +54,7 @@ export default {
     const [prev, next] = await $content('articles')
       .only(['category', 'title', 'slug'])
       .sortBy('created', 'asc')
-      // .where(IS_PROD ? { is_published: true } : {})
+      .where(IS_PROD ? { is_published: true } : {})
       .surround(params.slug)
       .fetch()
 
