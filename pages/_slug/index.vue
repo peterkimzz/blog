@@ -9,14 +9,11 @@
     <article class="relative">
       <header class="mt-10 mb-10">
         <div class="flex flex-col items-center">
-          <span
-            v-if="article.category"
-            class="text-cyan-500 font-semibold tracking-wider uppercase"
-            >{{ article.category }}</span
-          >
+          <span class="text-cyan-500 font-semibold tracking-wider uppercase">{{
+            article.category
+          }}</span>
 
           <h1
-            v-if="article.title"
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >
             {{ article.title }}
@@ -27,7 +24,8 @@
         >
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
-        <div
+
+        <!-- <div
           class="flex items-end justify-center mt-6 md:mt-6 text-center space-x-2"
         >
           <button
@@ -82,7 +80,7 @@
               />
             </svg>
           </button>
-        </div>
+        </div> -->
       </header>
 
       <nuxt-content
@@ -96,7 +94,7 @@
 
       <vue-divider class="my-10" />
 
-      <vue-comment />
+      <!-- <vue-comment /> -->
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
