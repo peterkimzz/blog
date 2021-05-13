@@ -8,15 +8,17 @@
 
     <article class="relative">
       <header class="mt-10 mb-10">
-        <h1 class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
           <span class="text-cyan-500 font-semibold tracking-wider uppercase">{{
             article.category
           }}</span>
-          <span
+
+          <h1
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
-            >{{ article.title }}</span
           >
-        </h1>
+            {{ article.title }}
+          </h1>
+        </div>
         <p
           class="mt-6 text-center text-sm md:text-sm text-gray-500 font-semibold"
         >
