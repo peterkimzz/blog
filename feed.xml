@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Thu, 13 May 2021 07:53:14 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 May 2021 08:10:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -78,12 +78,6 @@ Vue.js는 웹사이트를 만들기 위해 고안된 프레임워크입니다. �
 이번 포스팅에서는 Vue.js와 Vite을 사용해서 프로젝트를 재설계해보도록 하겠습니다.
 Vue.js
 Vue.js는 웹사이트를 만들기 위해 고안된 프레임워크입니다. 그냥 순수 HTML을 작성하는 것 보다 개발자에게 훨씬 더 많은 이점을 가져다주기 때문에 사용합니다.]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Lorem ipsum]]></title>
-            <link>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-3부</link>
-            <guid>https://www.peterkimzz.com/vuejs로-크롬-확장-프로그램-만들기-강의-3부</guid>
-            <pubDate>Fri, 14 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[웹 폰트와 사이즈는 어떻게 결정해야할까?]]></title>
