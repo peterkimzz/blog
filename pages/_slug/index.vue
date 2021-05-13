@@ -9,11 +9,14 @@
     <article class="relative">
       <header class="mt-10 mb-10">
         <div class="flex flex-col items-center">
-          <span class="text-cyan-500 font-semibold tracking-wider uppercase">{{
-            article.category
-          }}</span>
+          <span
+            v-if="article.category"
+            class="text-cyan-500 font-semibold tracking-wider uppercase"
+            >{{ article.category }}</span
+          >
 
           <h1
+            v-if="article.title"
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >
             {{ article.title }}
@@ -107,13 +110,6 @@ const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
-  data() {
-    return {
-      article: {},
-      prev: null,
-      next: null,
-    }
-  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
