@@ -25,11 +25,11 @@
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
 
-        <vue-share
+        <!-- <vue-share
           :title="article.title"
           :description="article.description"
           :url="PageURL"
-        />
+        /> -->
       </header>
 
       <nuxt-content
