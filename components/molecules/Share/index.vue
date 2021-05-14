@@ -1,6 +1,11 @@
 <template>
   <div class="flex items-end justify-center mt-6 md:mt-6 text-center space-x-2">
-    <button id="kakao-share-btn" title="카카오톡으로 공유하기" class="p-1">
+    <button
+      id="kakao-share-btn"
+      title="카카오톡으로 공유하기"
+      class="p-1"
+      @click="OnShareByKakaotalk"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 208 191.94"
@@ -104,11 +109,6 @@ export default {
         },
       })
     },
-  },
-  mounted() {
-    document
-      .getElementById('kakao-share-btn')
-      .addEventListener('click', this.OnShareByKakaotalk)
   },
 }
 </script>
