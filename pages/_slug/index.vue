@@ -108,19 +108,25 @@ const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
-  async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+  async asyncData({ $content, params, error }) {
+    try {
+      const article = await $content('articles', params.slug).fetch()
 
-    console.log({ article })
+      console.log({ article })
 
-    // const [prev, next] = await $content('articles')
-    //   .only(['category', 'title', 'slug'])
-    //   .sortBy('created', 'asc')
-    //   .where(IS_PROD ? { is_published: true } : {})
-    //   .surround(params.slug)
-    //   .fetch()
+      // const [prev, next] = await $content('articles')
+      //   .only(['category', 'title', 'slug'])
+      //   .sortBy('created', 'asc')
+      //   .where(IS_PROD ? { is_published: true } : {})
+      //   .surround(params.slug)
+      //   .fetch()
 
-    return { article }
+      return { article }
+    } catch (err) {
+      console.log('fetching article error')
+      console.log(err)
+      // error(err)
+    }
   },
   computed: {
     PageURL() {
