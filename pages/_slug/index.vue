@@ -14,9 +14,10 @@
           }}</span>
 
           <h1
+            v-if="article"
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >
-            <!-- {{ article.title }} -->
+            {{ article.title }}
           </h1>
         </div>
         <p
