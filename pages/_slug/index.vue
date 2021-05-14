@@ -25,7 +25,7 @@
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
 
-        <!-- <div
+        <div
           class="flex items-end justify-center mt-6 md:mt-6 text-center space-x-2"
         >
           <button
@@ -80,7 +80,7 @@
               />
             </svg>
           </button>
-        </div> -->
+        </div>
       </header>
 
       <nuxt-content
@@ -90,11 +90,11 @@
 
       <vue-divider class="my-10" />
 
-      <vue-prev-next :prev="prev" :next="next" class="mb-14" />
+      <!-- <vue-prev-next :prev="prev" :next="next" class="mb-14" /> -->
 
-      <vue-divider class="my-10" />
+      <!-- <vue-divider class="my-10" /> -->
 
-      <!-- <vue-comment /> -->
+      <vue-comment />
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
