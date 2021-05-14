@@ -107,8 +107,8 @@ export default {
     const q = query.q || ''
     const articles = await $content('articles')
       .sortBy('created', 'desc')
+      .where(IS_PROD ? { published: true } : {})
       .search(q)
-      .where(IS_PROD ? { is_published: true } : {})
       .fetch()
 
     return { articles, q }
@@ -126,8 +126,8 @@ export default {
     async '$route.query.q'(q) {
       this.articles = await this.$content('articles')
         .sortBy('created', 'desc')
+        .where(IS_PROD ? { published: true } : {})
         .search(q)
-        .where(IS_PROD ? { is_published: true } : {})
         .fetch()
     },
   },

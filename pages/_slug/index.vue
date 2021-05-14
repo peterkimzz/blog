@@ -1,5 +1,5 @@
 <template>
-  <main class="pb-10" v-if="article">
+  <main class="pb-10">
     <vue-s-e-o
       :title="article.title"
       :description="article.description"
@@ -25,11 +25,11 @@
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
 
-        <!-- <vue-share
+        <vue-share
           :title="article.title"
           :description="article.description"
           :url="PageURL"
-        /> -->
+        />
       </header>
 
       <nuxt-content
@@ -60,9 +60,8 @@ export default {
     const article = await $content('articles', params.slug).fetch()
 
     const [prev, next] = await $content('articles')
-      .only(['category', 'title', 'slug'])
       .sortBy('created', 'asc')
-      .where(IS_PROD ? { is_published: true } : {})
+      .where(IS_PROD ? { published: true } : {})
       .surround(params.slug)
       .fetch()
 

@@ -7,7 +7,7 @@
     </vue-container>
 
     <div class="min-h-screen">
-      <nuxt-child />
+      <Nuxt />
     </div>
 
     <div class="bg-gray-900">

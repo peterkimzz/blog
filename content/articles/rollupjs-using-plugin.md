@@ -4,7 +4,7 @@ title: Rollup.js - 플러그인으로 완성도를 높이다
 thumbnail: https://user-images.githubusercontent.com/20244536/107738247-a4cef980-6d49-11eb-88a5-f7b8b6190a61.png
 updated: 2021-02-12
 created: 2021-02-12
-is_published: true
+published: true
 ---
 
 지난 포스팅에서 `rollup.js` 를 이용해 두 개의 자바스크립트 파일을 하나로 묶고, `rollup.config.js` 파일을 구성해서 CLI가 아닌 스크립트로 설정 파일을 관리하는 것 까지 진행했습니다.

@@ -4,7 +4,7 @@
       id="kakao-share-btn"
       title="카카오톡으로 공유하기"
       class="p-1"
-      @click="OnShareByKakaotalk"
+      @click="OnShareByKakaotalk()"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@
     <button
       title="페이스북으로 공유하기"
       class="p-1"
-      @click="OnShareByFacebook"
+      @click="OnShareByFacebook()"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
       :data-clipboard-text="url"
       title="링크 클립보드에 복사하기"
       class="p-1 focus:border-cyan-500"
-      @click="OnCopyLink"
+      @click="OnCopyLink()"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

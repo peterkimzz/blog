@@ -4,7 +4,7 @@ title: 웹팩보다 100배 빠른 번들러, esbuild
 thumbnail: https://user-images.githubusercontent.com/20244536/111092892-bc80e400-857a-11eb-9bb3-adce2c3c67d3.png
 updated: 2021-03-14
 created: 2021-03-14
-is_published: true
+published: true
 ---
 
 이번 포스팅은 떠오르는 차세대 자바스크립트 번들러 [`esbuild`](https://esbuild.github.io/)에 대한 내용입니다.

@@ -3,7 +3,7 @@ category: tech
 title: Vue.js로 크롬 확장 프로그램 만들기 강의 - 2부
 updated: 2021-05-13
 created: 2021-05-13
-is_published: true
+published: true
 ---
 
 [이전 포스팅](/vuejs로-크롬-확장-프로그램-만들기-강의-1부)에서 `index.html`과 `manifest.json` 파일을 이용해서 확장 프로그램을 개발자 모드로 실행시키는 것 까지 진행했습니다.

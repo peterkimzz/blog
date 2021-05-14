@@ -5,7 +5,7 @@
     </vue-container>
 
     <vue-container class="max-w-screen-md">
-      <nuxt-child />
+      <Nuxt />
     </vue-container>
 
     <div class="bg-gray-900">

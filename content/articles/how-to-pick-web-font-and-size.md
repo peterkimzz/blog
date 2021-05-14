@@ -4,7 +4,7 @@ title: 웹 폰트와 사이즈는 어떻게 결정해야할까?
 thumbnail: https://user-images.githubusercontent.com/20244536/102753419-964e0c80-43ae-11eb-837a-fd902643f37a.png
 updated: 2020-12-21
 created: 2020-12-21
-is_published: true
+published: true
 ---
 
 웹 사이트의 완성도를 결정하는 가장 중요한 요소 중 하나는 바로 **폰트** 입니다. 폰트는 한국어로 **서체** 정도로 해석할 수 있겠고, 비슷한 활자의 모음이라고 생각하면 됩니다.

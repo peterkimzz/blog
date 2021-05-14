@@ -20,27 +20,13 @@ module.exports = {
         content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
       }
     ],
-    script: [
-      { src: 'https://developers.kakao.com/sdk/js/kakao.js' },
-      {
-        async: true,
-        'data-ad-client': 'ca-pub-2068198827609617',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-      }
-    ],
+    script: [{ src: 'https://developers.kakao.com/sdk/js/kakao.js' }],
     link: [
       {
         rel: 'stylesheet',
         href: 'https://rsms.me/inter/inter.css'
       }
     ]
-  },
-  /** issue with yarn generate and v-click */
-  generate: {
-    subFolders: true
-  },
-  router: {
-    base: '/'
   },
   env: process.env,
   loading: { color: '#06B6D4', height: '3px' },
@@ -58,8 +44,8 @@ module.exports = {
     '@nuxtjs/dayjs',
     '@nuxtjs/feed',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
-    // '@nuxtjs/google-adsense'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-adsense'
   ],
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   content: {
@@ -88,7 +74,7 @@ module.exports = {
       const { $content } = require('@nuxt/content')
 
       const articles = await $content('articles')
-        .where({ is_published: true })
+        .where({ published: true })
         .fetch()
 
       articles.forEach(article => {
@@ -112,13 +98,13 @@ module.exports = {
 
       const articles = await $content('articles')
         .only(['path'])
-        .where({ is_published: true })
+        .where({ published: true })
         .fetch()
 
       return articles.map(article => article.path.replace(/\/articles/gi, ''))
     }
+  },
+  'google-adsense': {
+    id: 'ca-pub-2068198827609617'
   }
-  // 'google-adsense': {
-  //   id: 'ca-pub-2068198827609617'
-  // }
 }
