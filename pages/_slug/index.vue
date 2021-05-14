@@ -132,7 +132,6 @@ export default {
   },
   methods: {
     OnCopyLink() {
-      console.log('on copy link')
       const clipboard = new ClipboardJS('#clipboard')
 
       clipboard.on('success', (e) => {
@@ -140,7 +139,6 @@ export default {
       })
     },
     OnShareByFacebook() {
-      console.log('on copy facebook')
       window.open(
         'http://www.facebook.com/sharer.php?u=' + this.PageURL,
         'fb',
@@ -148,7 +146,6 @@ export default {
       )
     },
     OnShareByKakaotalk() {
-      console.log('on copy kakao')
       if (!Kakao.isInitialized()) {
         return
       }
@@ -165,15 +162,6 @@ export default {
         },
       })
     },
-  },
-  created() {
-    console.log('created')
-    console.log(this.$route.params)
-    console.log(this.article)
-  },
-  mounted() {
-    console.log('mounted')
-    console.log(this.article)
   },
 }
 </script>

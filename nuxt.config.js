@@ -35,6 +35,12 @@ module.exports = {
       }
     ]
   },
+  generate: {
+    subFolders: true
+  },
+  router: {
+    base: '/'
+  },
   env: process.env,
   loading: { color: '#06B6D4', height: '3px' },
   components: [
