@@ -1,5 +1,5 @@
 <template>
-  <main class="pb-10">
+  <main class="pb-10" v-if="article">
     <vue-s-e-o
       :title="article.title"
       :description="article.description"
@@ -109,10 +109,7 @@ const IS_PROD = process.env.NODE_ENV === 'production'
 export default {
   layout: 'article',
   async asyncData({ $content, params }) {
-    console.log(params)
     const article = await $content('articles', params.slug).fetch()
-
-    console.log({ article })
 
     // const [prev, next] = await $content('articles')
     //   .only(['category', 'title', 'slug'])
@@ -122,6 +119,11 @@ export default {
     //   .fetch()
 
     return { article }
+  },
+  watch: {
+    article(data) {
+      console.log('article', data)
+    },
   },
   computed: {
     PageURL() {
@@ -162,7 +164,12 @@ export default {
     },
   },
   created() {
+    console.log('created')
     console.log(this.$route.params)
+    console.log(this.article)
+  },
+  mounted() {
+    console.log('mounted')
     console.log(this.article)
   },
 }
