@@ -1,5 +1,5 @@
 <template>
-  <main class="pb-10">
+  <main class="pb-10" v-if="article">
     <vue-s-e-o
       :title="article.title"
       :description="article.description"
@@ -16,7 +16,7 @@
           <h1
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >
-            {{ article.title }}
+            <!-- {{ article.title }} -->
           </h1>
         </div>
         <p
@@ -111,14 +111,14 @@ export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
-    const [prev, next] = await $content('articles')
-      .only(['category', 'title', 'slug'])
-      .sortBy('created', 'asc')
-      .where(IS_PROD ? { is_published: true } : {})
-      .surround(params.slug)
-      .fetch()
+    // const [prev, next] = await $content('articles')
+    //   .only(['category', 'title', 'slug'])
+    //   .sortBy('created', 'asc')
+    //   .where(IS_PROD ? { is_published: true } : {})
+    //   .surround(params.slug)
+    //   .fetch()
 
-    return { article, prev, next }
+    return { article }
   },
   computed: {
     PageURL() {
