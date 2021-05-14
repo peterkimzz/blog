@@ -44,7 +44,8 @@ module.exports = {
     '@nuxtjs/dayjs',
     '@nuxtjs/feed',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-adsense'
   ],
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   content: {
@@ -102,5 +103,8 @@ module.exports = {
 
       return articles.map(article => article.path.replace(/\/articles/gi, ''))
     }
+  },
+  'google-adsense': {
+    id: process.env.GOOGLE_AD_SENSE_ID
   }
 }

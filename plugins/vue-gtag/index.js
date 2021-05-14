@@ -2,6 +2,6 @@ import Vue from 'vue'
 import VueGtag from 'vue-gtag'
 
 Vue.use(VueGtag, {
-  config: { id: 'G-E7PSWP6P7T' },
+  config: { id: process.env.GOOGLE_ANALYTICS_ID },
   enabled: process.env.NODE_ENV === 'production'
 })
