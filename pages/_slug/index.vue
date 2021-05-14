@@ -1,5 +1,5 @@
 <template>
-  <main class="pb-10" v-if="article">
+  <main class="pb-10">
     <vue-s-e-o
       :title="article.title"
       :description="article.description"
@@ -14,7 +14,6 @@
           }}</span>
 
           <h1
-            v-if="article"
             class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >
             {{ article.title }}
@@ -95,7 +94,7 @@
 
       <!-- <vue-divider class="my-10" /> -->
 
-      <vue-comment />
+      <!-- <vue-comment /> -->
 
       <!-- <vue-divider class="my-10" /> -->
       <!-- <vue-sponsor-button /> -->
@@ -111,6 +110,8 @@ export default {
   layout: 'article',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
+
+    console.log({ article })
 
     // const [prev, next] = await $content('articles')
     //   .only(['category', 'title', 'slug'])
