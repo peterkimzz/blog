@@ -41,8 +41,8 @@
 
       <vue-prev-next :prev="prev" :next="next" class="mb-14" />
 
-      <vue-divider class="my-10" >
-      
+      <vue-divider class="my-10" />
+
       <vue-comment />
 
       <!-- <vue-divider class="my-10" /> -->
