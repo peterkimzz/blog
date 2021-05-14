@@ -35,6 +35,7 @@ module.exports = {
       }
     ]
   },
+  /** issue with yarn generate and v-click */
   generate: {
     subFolders: true
   },
