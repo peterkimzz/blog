@@ -20,7 +20,14 @@ module.exports = {
         content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
       }
     ],
-    script: [{ src: 'https://developers.kakao.com/sdk/js/kakao.js' }],
+    script: [
+      { src: 'https://developers.kakao.com/sdk/js/kakao.js' },
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-2068198827609617',
+        async: 'async'
+      }
+    ],
     link: [
       {
         rel: 'stylesheet',
@@ -44,8 +51,7 @@ module.exports = {
     '@nuxtjs/dayjs',
     '@nuxtjs/feed',
     '@nuxt/content',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/google-adsense'
+    '@nuxtjs/sitemap'
   ],
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   content: {
@@ -103,8 +109,5 @@ module.exports = {
 
       return articles.map(article => article.path.replace(/\/articles/gi, ''))
     }
-  },
-  'google-adsense': {
-    id: 'ca-pub-2068198827609617'
   }
 }
