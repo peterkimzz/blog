@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  important: true,
+  mode: 'jit',
   purge: {
     content: [
       'components/**/*.vue',
@@ -22,10 +22,10 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
       },
-      fontSize: {
-        sm: ['0.875rem', '1.5rem'],
-        base: ['1rem', '1.75rem']
-      },
+      // fontSize: {
+      //   sm: ['0.875rem', '1.5rem'],
+      //   base: ['1rem', '1.75rem']
+      // },
       typography: theme => ({
         DEFAULT: {
           css: {

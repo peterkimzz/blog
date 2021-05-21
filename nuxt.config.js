@@ -62,10 +62,6 @@ module.exports = {
       }
     }
   },
-  tailwindcss: {
-    jit: true,
-    viewer: true
-  },
   feed: {
     type: 'rss2',
     path: '/feed.xml',

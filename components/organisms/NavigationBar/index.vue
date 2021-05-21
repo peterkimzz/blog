@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <div class="flex justify-between items-center py-8 md:py-10">
-      <vue-brand />
+      <vue-brand class="w-28 md:w-36 text-white" />
 
       <ul class="flex items-center text-xs md:text-sm font-semibold space-x-4">
         <li>

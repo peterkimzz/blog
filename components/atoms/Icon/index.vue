@@ -1,5 +1,5 @@
 <template>
-  <component :is="Icon" class="icon fill-current" @click="Click" />
+  <component :is="Icon" class="inline-block w-4 fill-current" @click="Click" />
 </template>
 
 <script>
@@ -7,8 +7,8 @@ export default {
   props: {
     icon: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     Icon() {
@@ -17,20 +17,13 @@ export default {
       } catch (err) {
         return ''
       }
-    }
+    },
   },
   methods: {
     Click() {
       console.log('')
       this.$emit('click')
-    }
-  }
+    },
+  },
 }
 </script>
-
-<style lang="postcss" scoped>
-.icon {
-  @apply inline-block;
-  @apply w-4;
-}
-</style>

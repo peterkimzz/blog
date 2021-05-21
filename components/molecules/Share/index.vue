@@ -82,10 +82,20 @@ export default {
       const clipboard = new ClipboardJS('#clipboard')
 
       clipboard.on('success', (e) => {
+        this.$gtag.event('on_copy_link', {
+          event_category: 'post',
+          event_label: this.title,
+        })
+
         e.clearSelection()
       })
     },
     OnShareByFacebook() {
+      this.$gtag.event('on_share_to_facebook', {
+        event_category: 'post',
+        event_label: this.title,
+      })
+
       window.open(
         'http://www.facebook.com/sharer.php?u=' + this.url,
         'fb',
@@ -96,6 +106,11 @@ export default {
       if (!Kakao.isInitialized()) {
         return
       }
+
+      this.$gtag.event('on_share_to_kakaotalk', {
+        event_category: 'post',
+        event_label: this.title,
+      })
 
       Kakao.Link.sendDefault({
         objectType: 'feed',
