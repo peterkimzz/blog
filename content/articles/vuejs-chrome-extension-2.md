@@ -6,7 +6,7 @@ created: 2021-05-13
 published: true
 ---
 
-[이전 포스팅](/vuejs로-크롬-확장-프로그램-만들기-강의-1부)에서 `index.html`과 `manifest.json` 파일을 이용해서 확장 프로그램을 개발자 모드로 실행시키는 것 까지 진행했습니다.
+[이전 포스팅](/vuejs-chrome-extension-1)에서 `index.html`과 `manifest.json` 파일을 이용해서 확장 프로그램을 개발자 모드로 실행시키는 것 까지 진행했습니다.
 
 이번 포스팅에서는 Vue.js와 Vite을 사용해서 프로젝트를 재설계해보도록 하겠습니다.
 
