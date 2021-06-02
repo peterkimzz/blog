@@ -19,7 +19,7 @@ published: true
 
 ```css
 html {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
       Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 ```

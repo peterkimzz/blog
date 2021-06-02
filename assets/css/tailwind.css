@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    /* word-break: keep-all; */
+    word-break: keep-all;
     @apply antialiased;
 
     @apply bg-gray-800;
