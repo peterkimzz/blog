@@ -3,7 +3,7 @@ category: tech
 title: 웹소켓과 socket.io
 updated: 2021-06-02
 created: 2021-06-02
-published: false
+published: true
 ---
 
 예전에 회사 프로젝트를 진행할 때, 지도에 실시간으로 사용자의 위치를 보여주는 기능이 필요해서 [`socket.io`](https://socket.io) 를 사용해서 구현했던 적이 있습니다.
