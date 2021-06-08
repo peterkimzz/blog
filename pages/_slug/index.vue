@@ -14,13 +14,26 @@
           }}</span>
 
           <h1
-            class="mt-2 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
+            class="
+              mt-2
+              text-center text-2xl
+              md:text-3xl
+              font-extrabold
+              tracking-tight
+              text-gray-100
+            "
           >
             {{ article.title }}
           </h1>
         </div>
         <p
-          class="mt-6 text-center text-sm md:text-sm text-gray-500 font-semibold"
+          class="
+            mt-6
+            text-center text-sm
+            md:text-sm
+            text-gray-500
+            font-semibold
+          "
         >
           {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
         </p>
@@ -34,7 +47,14 @@
 
       <nuxt-content
         :document="article"
-        class="w-full max-w-full prose prose-sm md:prose-lg prose-cyan md:prose-cyan"
+        class="
+          w-full
+          max-w-full
+          prose prose-sm
+          md:prose-lg
+          prose-cyan
+          md:prose-cyan
+        "
       />
 
       <vue-divider class="my-10" />

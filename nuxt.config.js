@@ -2,6 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   target: 'static',
+  server: {
+    port: 3001
+  },
   head: {
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
@@ -21,12 +24,12 @@ module.exports = {
       }
     ],
     script: [
-      { src: 'https://developers.kakao.com/sdk/js/kakao.js' },
-      {
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': 'ca-pub-2068198827609617',
-        async: 'async'
-      }
+      { src: 'https://developers.kakao.com/sdk/js/kakao.js' }
+      // {
+      //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      //   'data-ad-client': 'ca-pub-2068198827609617',
+      //   async: 'async'
+      // }
     ],
     link: [
       {
