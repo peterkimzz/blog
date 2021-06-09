@@ -3,6 +3,7 @@ category: tech
 title: 정말 너무 쉬운 Docker
 updated: 2021-06-09
 created: 2021-06-09
+published: true
 ---
 
 우리가 [`Docker`](https://docker.com)를 사용해야하는 가장 큰 이유는, 어떤 컴퓨터에서든 똑같은 개발 환경을 보장해주기 떄문입니다.
