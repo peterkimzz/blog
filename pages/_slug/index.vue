@@ -110,6 +110,7 @@ export default {
   @apply text-sm;
   @apply text-center;
   @apply -mt-4;
+  @apply not-italic;
 }
 
 .nuxt-content-highlight {

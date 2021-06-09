@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   target: 'static',
   server: {
-    port: 3001
+    port: 4000
   },
   head: {
     meta: [
