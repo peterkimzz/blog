@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Wed, 09 Jun 2021 07:14:16 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Jun 2021 07:30:07 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -82,6 +82,16 @@
             <content:encoded><![CDATA[Supabase는 구글 Firebase를 엔터프라이즈 레벨에서도 사용 가능하도록 만든 오픈소스 프로젝트이다. 현재는 베타 서비스이다.
 컴퓨터에 직접 설치하는 방식은 아니고, Firebase처럼 클라우드로 제공되는 서비스이다.
 내가 Firebase를 사용하면서 아쉬웠던 건, 데이터가 많아졌을 때 인덱싱을 쉽게 적용시켜서 빠르게 레코드를 읽어오는 기능이 강력하진 않아서 데이터가 많은 앱에서는 사용하기 힘들다는 점이다.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[정말 너무 쉬운 Docker]]></title>
+            <link>https://www.peterkimzz.com/super-easy-docker</link>
+            <guid>https://www.peterkimzz.com/super-easy-docker</guid>
+            <pubDate>Wed, 09 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[우리가 Docker를 사용해야하는 가장 큰 이유는, 어떤 컴퓨터에서든 똑같은 개발 환경을 보장해주기 떄문입니다.
+로컬 컴퓨터에서 열심히 개발하고 AWS에 코드를 올렸는데, 에러를 마주하며 스트레스를 받았던 경험이 한 번쯤은 있을겁니다. 내 컴퓨터랑 클라우드 컴퓨터의 환경이 100% 똑같지 않기 때문이죠. 근데 이 어려움을 한 번에 해결해준다? 쓰지 말아야 할 이유가 없습니다.]]></description>
+            <content:encoded><![CDATA[우리가 Docker를 사용해야하는 가장 큰 이유는, 어떤 컴퓨터에서든 똑같은 개발 환경을 보장해주기 떄문입니다.
+로컬 컴퓨터에서 열심히 개발하고 AWS에 코드를 올렸는데, 에러를 마주하며 스트레스를 받았던 경험이 한 번쯤은 있을겁니다. 내 컴퓨터랑 클라우드 컴퓨터의 환경이 100% 똑같지 않기 때문이죠. 근데 이 어려움을 한 번에 해결해준다? 쓰지 말아야 할 이유가 없습니다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Vue.js로 크롬 확장 프로그램 만들기 강의 - 1부]]></title>
