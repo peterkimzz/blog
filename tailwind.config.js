@@ -20,12 +20,7 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        sans: [
-          'Inter',
-          'Noto Sans KR',
-          '-apple-system',
-          ...defaultTheme.fontFamily.sans
-        ]
+        sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
       },
       typography: theme => ({
         DEFAULT: {
