@@ -20,12 +20,13 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
+        sans: [
+          'Inter',
+          'Noto Sans KR',
+          '-apple-system',
+          ...defaultTheme.fontFamily.sans
+        ]
       },
-      // fontSize: {
-      //   sm: ['0.875rem', '1.5rem'],
-      //   base: ['1rem', '1.75rem']
-      // },
       typography: theme => ({
         DEFAULT: {
           css: {

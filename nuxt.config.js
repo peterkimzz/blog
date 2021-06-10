@@ -33,8 +33,16 @@ module.exports = {
     ],
     link: [
       {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com'
+      },
+      {
         rel: 'stylesheet',
         href: 'https://rsms.me/inter/inter.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Gothic+A1'
       }
     ]
   },
