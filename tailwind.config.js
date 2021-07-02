@@ -4,15 +4,13 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   mode: 'jit',
-  purge: {
-    content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
-  },
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -20,7 +18,20 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
+        sans: [
+          'Pretendard',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'system-ui',
+          'Roboto',
+          'Helvetica Neue',
+          'Segoe UI',
+          'Apple SD Gothic Neo',
+          'Noto Sans KR',
+          'Malgun Gothic',
+          'sans-serif'
+        ]
+        // sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
       },
       typography: theme => ({
         DEFAULT: {
