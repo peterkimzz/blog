@@ -35,7 +35,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
+          'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css'
       },
       {
         rel: 'stylesheet',

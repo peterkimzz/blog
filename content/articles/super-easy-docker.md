@@ -3,6 +3,7 @@ category: tech
 title: 정말 너무 쉬운 Docker
 updated: 2021-06-09
 created: 2021-06-09
+thumbnail: https://dynami-sign.vercel.app/api/sign?t=정말 너무 쉬운 Docker
 published: true
 ---
 

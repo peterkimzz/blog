@@ -9,30 +9,30 @@ export default {
   props: {
     title: {
       type: String,
-      default: TITLE
+      default: TITLE,
     },
     titleTemplate: {
       type: String,
-      default: SITE_NAME
+      default: SITE_NAME,
     },
     titleTemplateVisible: {
       type: Boolean,
-      default: true
+      default: true,
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     thumbnail: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   head() {
     return {
       htmlAttrs: {
         lang: this.seoLang,
-        dir: 'ltr'
+        dir: 'ltr',
       },
       title: this.seoTitle,
       meta: [
@@ -40,92 +40,92 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           hid: 'keywords',
           name: 'keywords',
           content:
-            '개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.'
+            '개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.',
         },
         {
           hid: 'author',
           name: 'author',
-          content: SITE_NAME
+          content: SITE_NAME,
         },
         // Open Graph
         {
           property: 'og:type',
-          content: 'website'
+          content: 'website',
         },
         {
           property: 'og:url',
-          content: this.seoURL
+          content: this.seoURL,
         },
         {
           property: 'og:title',
-          content: this.seoTitle
+          content: this.seoTitle,
         },
         {
           property: 'og:image',
-          content: this.seoImage
+          content: this.seoImage,
         },
         {
           property: 'og:description',
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           property: 'og:site_name',
-          content: SITE_NAME
+          content: SITE_NAME,
         },
         {
           property: 'og:locale',
-          content: this.seoLang
+          content: this.seoLang,
         },
         // Twitter
         {
           name: 'twitter:card',
-          content: 'summary_large_image'
+          content: 'summary_large_image',
         },
         {
           name: 'twitter:site',
-          content: '@peterkimzz'
+          content: '@peterkimzz',
         },
         {
           name: 'twitter:creator',
-          content: '@peterkimzz'
+          content: '@peterkimzz',
         },
         {
           name: 'twitter:title',
-          content: this.seoTitle
+          content: this.seoTitle,
         },
         {
           name: 'twitter:description',
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           name: 'twitter:image',
-          content: this.seoImage
-        }
+          content: this.seoImage,
+        },
       ],
       link: [
         {
           rel: 'canonical',
-          href: this.seoURL
+          href: this.seoURL,
         },
         {
           rel: 'icon',
-          href: this.seoFavicon
+          href: this.seoFavicon,
         },
         {
           rel: 'shortcut icon',
-          href: this.seoFavicon
+          href: this.seoFavicon,
         },
         {
           rel: 'apple-touch-icon',
-          href: this.seoFavicon
-        }
-      ]
+          href: this.seoFavicon,
+        },
+      ],
     }
   },
   computed: {
@@ -156,7 +156,7 @@ export default {
     },
     seoFavicon() {
       return process.env.BASE_URL + '/favicon.png'
-    }
-  }
+    },
+  },
 }
 </script>
