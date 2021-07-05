@@ -36,10 +36,6 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://rsms.me/inter/inter.css'
       }
     ]
   },
