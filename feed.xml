@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Mon, 16 Aug 2021 11:41:47 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Aug 2021 11:46:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -132,6 +132,10 @@ Vue.js는 웹사이트를 만들기 위해 고안된 프레임워크입니다. �
             <link>https://www.peterkimzz.com/vuejs-chrome-extension-3</link>
             <guid>https://www.peterkimzz.com/vuejs-chrome-extension-3</guid>
             <pubDate>Mon, 16 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[이전 포스팅에서는 Vite을 이용해 크롬 확장 프로그램을 만들기 위한 기본적인 프로젝트 환경 설정까지 마쳤습니다.
+본격적으로 Vue.js 코드를 작성해보도록 합시다.]]></description>
+            <content:encoded><![CDATA[이전 포스팅에서는 Vite을 이용해 크롬 확장 프로그램을 만들기 위한 기본적인 프로젝트 환경 설정까지 마쳤습니다.
+본격적으로 Vue.js 코드를 작성해보도록 합시다.]]></content:encoded>
         </item>
     </channel>
 </rss>
