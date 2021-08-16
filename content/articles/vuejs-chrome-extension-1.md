@@ -1,9 +1,9 @@
 ---
 category: tech
 title: Vue.js로 크롬 확장 프로그램 만들기 강의 - 1부
-thumbnail: https://user-images.githubusercontent.com/20244536/112748762-fd580e80-8ff8-11eb-8fcb-a36b676c7c48.png
 updated: 2021-03-28
 created: 2021-03-28
+thumbnail: https://dynamisign.com/api/sign?d=peterkimzz.com&t=Vue.js%EB%A1%9C%20%ED%81%AC%EB%A1%AC%20%ED%99%95%EC%9E%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%A7%8C%EB%93%A4%EA%B8%B0%20%EA%B0%95%EC%9D%98%20-%201%EB%B6%80
 published: true
 ---
 
