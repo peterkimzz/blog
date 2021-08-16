@@ -4,7 +4,7 @@ title: Vue.js로 크롬 확장 프로그램 만들기 강의 - 3부
 updated: 2021-08-16
 created: 2021-08-16
 thumbnail: https://dynamisign.com/api/sign?d=peterkimzz.com&t=Vue.js%EB%A1%9C%20%ED%81%AC%EB%A1%AC%20%ED%99%95%EC%9E%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%A7%8C%EB%93%A4%EA%B8%B0%20%EA%B0%95%EC%9D%98%20-%203%EB%B6%80
-published: false
+published: true
 ---
 
 [이전 포스팅](/vuejs-chrome-extension-2)에서는 [Vite](https://vitejs.dev/)을 이용해 크롬 확장 프로그램을 만들기 위한 기본적인 프로젝트 환경 설정까지 마쳤습니다.
@@ -1060,7 +1060,9 @@ npm run build
 
 하다가 잘 안되는 부분은 댓글 남겨주세요.
 
-찐막으로 제가 실제 배포해서 운영 중인 코인 시세 모니터링 프로그램인 `브리아나` 링크 소개하면서 이번 시리스 마무리하도록 하겠습니다.
+찐막으로 제가 실제 배포해서 운영 중인 코인 시세 모니터링 프로그램인 `브리아나` 소개해드리면서 이번 시리즈 마무리하도록 하겠습니다.
 
 [브리아나 - 1초만에 코인 시세 확인하기](https://store.whale.naver.com/detail/hkipiplimgkfnhbimapmehjohnialiec)
 ![image](https://user-images.githubusercontent.com/20244536/129557679-d4986353-e84f-425c-887a-a43e3734bfad.png)
+
+여러분들도 멋진 확장 프로그램 만드시길 바랍니다.
