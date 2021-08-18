@@ -8,7 +8,7 @@
         개발자 김동현 이력서
       </h1>
       <p class="mt-4 text-gray-500 text-sm">
-        2021년 4월 30일에 마지막으로 업데이트 됨.
+        2021년 8월 18일에 마지막으로 업데이트 됨.
       </p>
     </header>
 
@@ -22,7 +22,14 @@
         <div class="md:flex">
           <img
             src="/profile.jpg"
-            class="w-24 h-24 rounded-[2.4rem] shadow-lg bg-gray-700 bg-opacity-50 p-1"
+            class="
+              w-24
+              h-24
+              rounded-[2.4rem]
+              shadow-lg
+              bg-gray-700 bg-opacity-50
+              p-1
+            "
           />
           <div class="space-y-6 mt-6 md:mt-0 md:ml-10">
             <vue-definition sub-label="Name" label="이름"
@@ -149,6 +156,37 @@
         <div class="space-y-10">
           <vue-resume-item
             v-for="project in projects"
+            :src="project.src"
+            :key="project.title"
+            :label="project.duration"
+          >
+            <div slot="title" class="flex items-center font-semibold">
+              <a
+                v-if="project.href"
+                :href="project.href"
+                target="_blank"
+                class="text-cyan-500 underline"
+                >{{ project.title }}</a
+              >
+              <span v-else>{{ project.title }}</span>
+            </div>
+            <p v-html="project.desc"></p>
+          </vue-resume-item>
+        </div>
+      </section>
+
+      <!-- Open Source Projects -->
+      <section>
+        <div class="mb-10">
+          <h3 class="text-sm font-medium text-gray-500 uppercase">
+            Open Source Projects
+          </h3>
+          <h2 class="text-2xl text-gray-200 font-semibold">오픈 프로젝트</h2>
+        </div>
+
+        <div class="space-y-10">
+          <vue-resume-item
+            v-for="project in openSourceProjects"
             :src="project.src"
             :key="project.title"
             :label="project.duration"
@@ -321,7 +359,7 @@ export default {
           src: '/imgs/briana.png',
           duration: '2021년 1월 - 현재',
           title: '브리아나',
-          href: 'https://brianalabs.com',
+          href: 'https://store.whale.naver.com/detail/hkipiplimgkfnhbimapmehjohnialiec',
           desc: `
             가상화폐를 거래할 때 도움을 주는 크롬 확장 프로그램입니다.<br><br>
 
@@ -426,13 +464,44 @@ export default {
             인 앱 결제는 총 최초 4개의 "여우 구슬" 아이템이 주어지고 에피소드를 1개 진행하면 "여우 구슬"이 1개 차감되는 방식이었고, 하루마다 여우 구슬 2개가 지급됐습니다.`,
         },
       ],
+      openSourceProjects: [
+        {
+          duration: '2020년 10월',
+          title: 'bunkerity/bunkerized-nginx',
+          href: 'https://github.com/bunkerity/bunkerized-nginx',
+          desc: `
+          이 프로젝트는 많은 보안 기능이 탑재된 nginx 라이브러리입니다.<br><br>
+
+          원래 let's encrypt 자동 인증서 갱신 기능을 사용하려고 도입했었는데, 네이버나 구글같은 검색 엔진 크롤러들이 웹사이트 데이터를 가져가지 못하게 차단하는 이슈가 있었습니다.<br><br>
+          
+          원인은 bunkerized-nginx TLSv1.3 미만 프로토콜을 사용하는 요청을 모두 거부했기 때문이었고, 이를 TLSv1.2 까지 허용하도록 수정했습니다.<br><br>
+
+          <img src="https://user-images.githubusercontent.com/20244536/129873967-51436da1-2249-4d47-87ef-4bbeb68f5823.png"><br>
+          `,
+        },
+        {
+          duration: '2020년 4월',
+          title: 'peterkimzz/aws-ssm-send-command',
+          href: 'https://github.com/peterkimzz/aws-ssm-send-command',
+          desc: `
+          이 프로젝트는 제가 직접 개발하고 배포한 첫 오픈소스 프로젝트입니다.<br><br>
+
+          주요 기능은 Github Actions의 프로세스가 진행 중일 때, AWS EC2 컴퓨터에 원격으로 명령어를 보내는 프로그램입니다.<br><br>
+
+          만든 계기는 Github 저장소에 코드를 Push 했을 때, EC2에서 서비스 중인 프로젝트를 자동으로 업데이트 해보고 싶었기 때문입니다.<br><br>
+
+          Jenkins나 AWS CodePipeline 같은 도구를 사용할 수도 있지만, 정말 많은 프로젝트가 Github에 의존적이기 때문에, Github Actions을 이용하는 프로젝트라면 코드 몇 줄만으로 정말 간단하게 CI/CD를 구현할 수 있어서 굉장히 유용합니다.<br><br>
+
+          <img src="https://user-images.githubusercontent.com/20244536/129874895-7664d1c0-9e6c-4963-ab6b-17490626f5bc.png"><br>
+          `,
+        },
+      ],
       awards: [
         {
           src: '/imgs/nipa.png',
           duration: '2020년 11월',
           title: '오픈소스 활용기 자랑하기',
-          href:
-            'https://www.oss.kr/notice/show/3a6b233b-bef5-4c1d-97da-dc9815eea2ab',
+          href: 'https://www.oss.kr/notice/show/3a6b233b-bef5-4c1d-97da-dc9815eea2ab',
           desc: `
           정보통신산업진흥원 (NIPA)에서 운영하는 오픈소스 소프트웨어 통합지원센터의 [오픈소스 활용기 자랑하기]에 수상했습니다.<br><br>
 
