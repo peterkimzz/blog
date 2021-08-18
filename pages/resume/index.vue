@@ -181,7 +181,9 @@
           <h3 class="text-sm font-medium text-gray-500 uppercase">
             Open Source Projects
           </h3>
-          <h2 class="text-2xl text-gray-200 font-semibold">오픈 프로젝트</h2>
+          <h2 class="text-2xl text-gray-200 font-semibold">
+            오픈 소스 프로젝트
+          </h2>
         </div>
 
         <div class="space-y-10">
