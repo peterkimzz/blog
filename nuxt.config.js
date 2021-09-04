@@ -39,6 +39,7 @@ module.exports = {
       }
     ]
   },
+  vite: {},
   env: process.env,
   loading: { color: '#06B6D4', height: '3px' },
   components: [
@@ -57,7 +58,11 @@ module.exports = {
     '@nuxt/content',
     '@nuxtjs/sitemap'
   ],
-  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
+  buildModules: [
+    // 'nuxt-vite',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/device'
+  ],
   content: {
     liveEdit: false,
     markdown: {
