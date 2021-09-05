@@ -64,8 +64,6 @@
 
       <vue-divider class="my-10" />
 
-      <!-- <vue-comment /> -->
-
       <div class="giscus"></div>
 
       <!-- <vue-divider class="my-10" /> -->
@@ -76,12 +74,6 @@
 
 <script>
 const IS_PROD = process.env.NODE_ENV === 'production'
-
-// data-mapping="pathname"
-//         data-reactions-enabled="1"
-//         data-emit-metadata="0"
-//         data-theme="dark"
-//         crossorigin="anonymous"
 
 export default {
   layout: 'article',
@@ -96,13 +88,14 @@ export default {
           'data-repo-id': 'MDEwOlJlcG9zaXRvcnkzMjAyNTkyMTY=',
           'data-category': 'Blog Comments',
           'data-category-id': 'DIC_kwDOExbEkM4B-8Mf',
-          'data-mapping': 'pathname',
+          'data-mapping': 'title',
           'data-reactions-enabled': 1,
           'data-emit-metadata': 0,
           'data-theme': 'dark',
-          callback: () => {
-            console.log('giscus ready')
-          },
+          // callback: () => {
+          //   console.log('reday', this.isGiscusReady)
+          //   this.isGiscusReady = true
+          // },
         },
       ],
     }
@@ -120,6 +113,11 @@ export default {
       return { article, prev, next }
     } catch (err) {
       error(err)
+    }
+  },
+  data() {
+    return {
+      isGiscusReady: false,
     }
   },
   computed: {
