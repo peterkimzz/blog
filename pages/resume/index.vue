@@ -21,7 +21,7 @@
         </div>
         <div class="md:flex">
           <img
-            src="/profile.jpg"
+            src="https://user-images.githubusercontent.com/20244536/132115718-4ab0874f-b30f-4a4c-8894-4655e3bc5b38.jpg"
             class="
               w-24
               h-24
@@ -217,7 +217,7 @@
 
         <div>
           <vue-resume-item
-            src="/imgs/gachon.png"
+            src="https://user-images.githubusercontent.com/20244536/132115712-71f404b5-dd11-41fd-a786-56f4e14b9f78.png"
             label="2012년 03월 - 2018년 03월"
           >
             <div slot="title" class="flex items-center">
@@ -358,7 +358,7 @@ export default {
       ],
       projects: [
         {
-          src: '/imgs/briana.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115703-23e117c2-db45-46a8-b9e0-4e3f655f8f7e.png',
           duration: '2021년 1월 - 현재',
           title: '브리아나',
           href: 'https://store.whale.naver.com/detail/hkipiplimgkfnhbimapmehjohnialiec',
@@ -375,7 +375,7 @@ export default {
             `,
         },
         {
-          src: '/imgs/empo.ico',
+          src: 'https://user-images.githubusercontent.com/20244536/132115737-c4e9f7fc-85c9-4900-9f69-e440cc21c2e5.png',
           duration: '2019년 11월 - 현재',
           title: 'Empo',
           href: 'https://empo.im',
@@ -390,7 +390,7 @@ export default {
             `,
         },
         {
-          src: '/imgs/solum.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115719-adcd95f6-32c0-4e8d-97e7-5a153f5c995b.png',
           duration: '2019년 6월 - 7월',
           title: 'SoluM ESL Dashboard',
           desc: `
@@ -401,7 +401,7 @@ export default {
             SEO가 필요없는 애플리케이션이므로 정적 페이지인 Vue.js로 개발해서 서버 비용 부담을 줄였습니다. (내부 보안 정책에 의해 프로젝트에 도메인 주소는 연결시키지 않았습니다.)`,
         },
         {
-          src: '/imgs/gangmom_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115713-30969773-a224-4ddb-ada6-35281265ca19.png',
           duration: '2018년 8월 - 2019년 3월',
           title: '강남엄마',
           href: 'https://gangmom.kr',
@@ -416,7 +416,7 @@ export default {
             - admin.gangmom.kr`,
         },
         {
-          src: '/imgs/factoryhunt_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115711-08b1fc27-c2d2-4a22-b895-85ee402d1dc3.png',
           duration: '2017년 6월 - 2018년 6월',
           title: 'Factoryhunt',
           desc: `
@@ -429,7 +429,7 @@ export default {
             또한 한국 업체와 영어권 업체가 타겟이었기 때문에, 영어와 한국어를 지원했습니다.`,
         },
         {
-          src: '/imgs/picon_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115716-5e7e0fb7-70dd-4966-ac4d-8658b8146c65.png',
           duration: '2017년 4월 - 6월',
           title: 'Picon',
           desc: `
@@ -440,7 +440,7 @@ export default {
             이 프로젝트에서는 Swift를 사용해 App Store에만 배포했습니다. 총 3번 상금을 지급했었고 BM이 다소 약해 중단된 프로젝트입니다.`,
         },
         {
-          src: '/imgs/hoopee_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115714-c0efeace-7c4f-4a02-9861-7a5a675f74ff.png',
           duration: '2017년 2월 - 4월',
           title: 'Hoopee',
           desc: `
@@ -453,7 +453,7 @@ export default {
             또한 기술적으로도 문제가 있었는데 "React Native"를 이용해 iOS와 Android를 모두 개발했지만 당시 라이브로 사용하기엔 너무 높은 러닝 커브 + 적은 레퍼런스 + 잦은 버그로 당장 상용화는 어려울 것 같아 중단했습니다.`,
         },
         {
-          src: '/imgs/a_man_like_fox_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115700-6f007b48-a558-4123-93d1-b3463355d900.png',
           duration: '2016년 3월 - 11월',
           title: '여우같은 그 남자',
           desc: `
@@ -500,7 +500,7 @@ export default {
       ],
       awards: [
         {
-          src: '/imgs/nipa.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115715-06d99a7e-fe95-40ef-b3e6-5584fb9135b0.png',
           duration: '2020년 11월',
           title: '오픈소스 활용기 자랑하기',
           href: 'https://www.oss.kr/notice/show/3a6b233b-bef5-4c1d-97da-dc9815eea2ab',
@@ -515,7 +515,7 @@ export default {
           `,
         },
         {
-          src: '/imgs/startup_school_logo.png',
+          src: 'https://user-images.githubusercontent.com/20244536/132115720-5279ca96-22b8-4877-88e4-adf0cb1c0aa8.png',
           duration: '2017년 4월 - 6월',
           title: 'Y Combinator Startup School',
           desc: `

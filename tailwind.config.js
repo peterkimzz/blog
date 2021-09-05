@@ -5,6 +5,7 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
   mode: 'jit',
   purge: [
+    './content/**/*.md',
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
@@ -18,20 +19,7 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        sans: [
-          'Pretendard',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'system-ui',
-          'Roboto',
-          'Helvetica Neue',
-          'Segoe UI',
-          'Apple SD Gothic Neo',
-          'Noto Sans KR',
-          'Malgun Gothic',
-          'sans-serif'
-        ]
-        // sans: ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans]
+        sans: ['Pretendard', ...defaultTheme.fontFamily.sans]
       },
       typography: theme => ({
         DEFAULT: {
@@ -75,18 +63,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
+    // require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography')
-    // plugin(({ addBase, theme }) => {
-    //   addBase({
-    //     html: {
-    //       'word-break': 'keep-all',
-    //       'background-color': theme('backgroundColor.gray.800'),
-    //       color: theme('textColor.gray.300'),
-    //       '-webkit-font-smoothing': 'antialiased'
-    //     }
-    //   })
-    // })
   ]
 }

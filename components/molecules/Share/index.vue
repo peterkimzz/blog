@@ -76,6 +76,10 @@ export default {
       default: null,
       required: true,
     },
+    thumbnail: {
+      type: String,
+      default: null,
+    },
   },
   methods: {
     OnCopyLink() {
@@ -121,7 +125,9 @@ export default {
             webUrl: this.url,
             mobileWebUrl: this.url,
           },
-          imageUrl: process.env.BASE_URL + '/thumbnail.png',
+          imageUrl:
+            this.thumbnail ||
+            'https://user-images.githubusercontent.com/20244536/132115770-59711547-4cb3-4a3a-abfe-12740b985441.png',
         },
       })
     },

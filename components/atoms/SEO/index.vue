@@ -36,7 +36,6 @@ export default {
       },
       title: this.seoTitle,
       meta: [
-        // Native
         {
           hid: 'description',
           name: 'description',
@@ -152,10 +151,13 @@ export default {
       return 'ko'
     },
     seoImage() {
-      return this.thumbnail || process.env.BASE_URL + '/thumbnail.png'
+      return (
+        this.thumbnail ||
+        'https://user-images.githubusercontent.com/20244536/132115770-59711547-4cb3-4a3a-abfe-12740b985441.png'
+      )
     },
     seoFavicon() {
-      return process.env.BASE_URL + '/favicon.png'
+      return 'https://user-images.githubusercontent.com/20244536/132115763-2a9011f1-0336-4cb6-9a57-5e44def5c131.png'
     },
   },
 }

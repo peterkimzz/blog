@@ -1,10 +1,17 @@
 <template>
   <div>
     <vue-s-e-o />
-
+    <!-- 
     <div class="relative">
       <div
-        class="relative py-4 md:py-10 bg-gray-700 bg-opacity-20 overflow-hidden shadow-sm"
+        class="
+          relative
+          py-4
+          md:py-10
+          bg-gray-700 bg-opacity-20
+          overflow-hidden
+          shadow-sm
+        "
       >
         <div aria-hidden="true" class="absolute inset-0">
           <svg
@@ -29,7 +36,16 @@
         <vue-container class="max-w-sm">
           <div class="relative rounded-md shadow-sm bg-gray-700 bg-opacity-5">
             <div
-              class="absolute inset-y-0 left-0 pl-4 md:pl-5 flex items-center pointer-events-none"
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-4
+                md:pl-5
+                flex
+                items-center
+                pointer-events-none
+              "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,14 +67,42 @@
               type="text"
               id="search-input"
               name="search"
-              class="block w-full pl-12 pr-20 py-3 md:pl-12 md:py-4 md:text-lg bg-transparent border-gray-600 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-gray-500 focus:border-gray-500 rounded-md"
+              class="
+                block
+                w-full
+                pl-12
+                pr-20
+                py-3
+                md:pl-12
+                md:py-4
+                md:text-lg
+                bg-transparent
+                border-gray-600
+                text-gray-200
+                placeholder-gray-500
+                focus:outline-none
+                focus:ring-gray-500
+                focus:border-gray-500
+                rounded-md
+              "
               placeholder="검색"
               aria-invalid="true"
               aria-describedby="search-error"
               @keyup="(e) => Search(e.target.value)"
             />
             <div
-              class="absolute inset-y-0 right-0 pr-4 md:pr-5 flex items-center pointer-events-none text-gray-500 font-semibold"
+              class="
+                absolute
+                inset-y-0
+                right-0
+                pr-4
+                md:pr-5
+                flex
+                items-center
+                pointer-events-none
+                text-gray-500
+                font-semibold
+              "
             >
               <span v-if="$device.isMacOS">⌘ K</span>
               <span v-else-if="$device.isMobile"></span>
@@ -67,12 +111,16 @@
           </div>
         </vue-container>
       </div>
-    </div>
+    </div> -->
 
     <vue-container>
       <div class="py-10">
         <div v-if="!articles.length" class="text-center md:max-w-md md:mx-auto">
-          <img src="/undraw_tree.svg" alt="No result." class="w-full" />
+          <!-- <img
+            src="~/assets/svg/undraw_tree.svg"
+            alt="No result."
+            class="w-full"
+          /> -->
           <p class="mt-6 font-semibold text-gray-300">검색 결과가 없습니다.</p>
         </div>
         <ul v-else class="flex flex-wrap sm:-mx-4">

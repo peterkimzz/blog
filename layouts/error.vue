@@ -3,7 +3,7 @@
     <h1 class="font-black text-white text-4xl transform -rotate-2">
       Sorry, not found.
     </h1>
-    <img src="/undraw_dreamer.svg" class="block mt-10" />
+    <!-- <img src="~/assets/svg/undraw_dreamer.svg" class="block mt-10" /> -->
   </div>
 </template>
 

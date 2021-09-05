@@ -41,6 +41,7 @@
         <vue-share
           :title="article.title"
           :description="article.description"
+          :thumbnail="article.thumbnail"
           :url="PageURL"
         />
       </header>
@@ -121,5 +122,12 @@ export default {
   @apply text-xs md:text-sm;
   @apply mr-2.5 mt-1;
   @apply pointer-events-none;
+}
+
+.nuxt-content .token.inserted {
+  @apply bg-green-900;
+}
+.nuxt-content .token.deleted {
+  @apply bg-red-900;
 }
 </style>

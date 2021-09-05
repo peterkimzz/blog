@@ -1,6 +1,15 @@
 <template>
   <div
-    class="text-xs md:text-sm shadow-sm text-gray-400 font-medium bg-gray-900 rounded-lg p-4"
+    class="
+      text-xs
+      md:text-sm
+      shadow-sm
+      text-gray-400
+      font-medium
+      bg-gray-900
+      rounded-lg
+      p-4
+    "
   >
     <div class="flex">
       <div class="mr-2">☕</div>
@@ -13,10 +22,17 @@
         <a
           href="https://ko-fi.com/U7U22YFKV"
           target="_blank"
-          class="inline-block mt-4 bg-gray-300 shadow-sm overflow-hidden rounded-lg"
+          class="
+            inline-block
+            mt-4
+            bg-gray-300
+            shadow-sm
+            overflow-hidden
+            rounded-lg
+          "
           ><img
             class="w-36"
-            src="/ko-fi.png"
+            src="https://user-images.githubusercontent.com/20244536/132115822-7bc572c0-a9f3-4432-a5b4-c131158afdbc.png"
             alt="Buy Me a Coffee at ko-fi.com"
           />
         </a>
