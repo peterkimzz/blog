@@ -132,7 +132,7 @@
             :title="article.title"
             :description="article.description"
             :thumbnail="article.thumbnail"
-            :updated="article.updated"
+            :updated="article.created"
             class="w-full sm:w-1/2 sm:px-4 pb-14 md:pb-20 md:w-1/3"
           />
         </ul>
