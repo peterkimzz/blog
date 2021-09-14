@@ -1,9 +1,10 @@
 require('dotenv').config()
 
 module.exports = {
+  ssr: false,
   target: 'static',
   server: {
-    port: 4000
+    port: 4000,
   },
   head: {
     meta: [
@@ -12,57 +13,56 @@ module.exports = {
       {
         name: 'viewport',
         content:
-          'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
+          'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
       },
       {
         name: 'google-site-verification',
-        content: '4UxOeSKrw8W8YzFcrj7uL5G8n88ZFWKa0VHSHiDzyqg'
+        content: '4UxOeSKrw8W8YzFcrj7uL5G8n88ZFWKa0VHSHiDzyqg',
       },
       {
         name: 'naver-site-verification',
-        content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce'
-      }
+        content: '7ba96ea30a0f3e92ddd2c4429331bfb82798e3ce',
+      },
     ],
     script: [{ src: 'https://developers.kakao.com/sdk/js/kakao.js' }],
     link: [
       {
         rel: 'stylesheet',
-        href:
-          'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
-      }
-    ]
+        href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+      },
+    ],
   },
-  vite: {},
   env: process.env,
   loading: { color: '#06B6D4', height: '3px' },
   components: [
     { path: '~/components/atoms', prefix: 'vue' },
     { path: '~/components/molecules', prefix: 'vue' },
-    { path: '~/components/organisms', prefix: 'vue' }
+    { path: '~/components/organisms', prefix: 'vue' },
   ],
   plugins: [
     { src: '~/plugins/cheerio' },
     { src: '~/plugins/vue-gtag', mode: 'client' },
-    { src: '~/plugins/kakao', mode: 'client' }
+    { src: '~/plugins/kakao', mode: 'client' },
   ],
   modules: [
     '@nuxtjs/dayjs',
     '@nuxtjs/feed',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
   ],
   buildModules: [
     // 'nuxt-vite',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
   ],
+  vite: {},
   content: {
     liveEdit: false,
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-darcula.css'
-      }
-    }
+        theme: 'prism-themes/themes/prism-darcula.css',
+      },
+    },
   },
   feed: {
     type: 'rss2',
@@ -72,7 +72,7 @@ module.exports = {
       feed.options = {
         link: process.env.BASE_URL,
         title: process.env.META_TITLE,
-        description: process.env.META_DESCRIPTION
+        description: process.env.META_DESCRIPTION,
       }
 
       const { $content } = require('@nuxt/content')
@@ -81,7 +81,7 @@ module.exports = {
         .where({ published: true })
         .fetch()
 
-      articles.forEach(article => {
+      articles.forEach((article) => {
         feed.addItem({
           id: process.env.BASE_URL + '/' + article.slug,
           title: article.title,
@@ -90,10 +90,10 @@ module.exports = {
           author: 'peterkimzz69@gmail.com',
           category: article.category,
           content: article.description,
-          description: article.description
+          description: article.description,
         })
       })
-    }
+    },
   },
   sitemap: {
     hostname: process.env.BASE_URL,
@@ -105,7 +105,7 @@ module.exports = {
         .where({ published: true })
         .fetch()
 
-      return articles.map(article => article.path.replace(/\/articles/gi, ''))
-    }
-  }
+      return articles.map((article) => article.path.replace(/\/articles/gi, ''))
+    },
+  },
 }
