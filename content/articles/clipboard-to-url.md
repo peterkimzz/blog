@@ -3,7 +3,7 @@ category: tech
 title: 클립보드 이미지를 1초만에 링크로 만드는 툴 개발하기
 updated: 2021-09-14
 created: 2021-09-14
-thumbnail: https://user-images.githubusercontent.com/20244536/132088930-d2a8a3a0-8772-46c5-9815-87e671a20eae.png
+thumbnail: https://user-images.githubusercontent.com/20244536/133209740-1982eec8-1c1a-4dc9-8c37-ee5970d6ee0a.png
 published: true
 ---
 
