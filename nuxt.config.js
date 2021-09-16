@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 module.exports = {
-  ssr: false,
   target: 'static',
   server: {
     port: 4000,
