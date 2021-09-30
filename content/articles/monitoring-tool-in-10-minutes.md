@@ -1,6 +1,6 @@
 ---
 category: tech
-title: 10분만에 평생 무료인 모니터링 도구 만들기
+title: 평생 무료인 모니터링 도구 10분만에 만들기
 updated: 2021-09-14
 created: 2021-09-03
 thumbnail: https://user-images.githubusercontent.com/20244536/132088930-d2a8a3a0-8772-46c5-9815-87e671a20eae.png

@@ -1,6 +1,6 @@
 ---
 category: tech
-title: Github Pages로 개인 블로그 평생 무료로 운영하기
+title: 평생 무료로 개인 블로그 운영하기
 thumbnail: https://user-images.githubusercontent.com/20244536/102336973-3aae0880-3fd5-11eb-8fd1-e3c184d6ab7e.jpg
 updated: 2020-12-17
 created: 2020-12-17
