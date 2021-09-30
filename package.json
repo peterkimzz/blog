@@ -13,23 +13,21 @@
     "@nuxt/content": "1.14.0",
     "@nuxtjs/dayjs": "1.4.0",
     "@nuxtjs/feed": "2.0.0",
-    "@nuxtjs/google-adsense": "1.4.0",
     "@nuxtjs/sitemap": "2.4.0",
-    "@tailwindcss/aspect-ratio": "0.2.1",
-    "@tailwindcss/forms": "0.3.3",
+    "@tailwindcss/forms": "0.3.4",
     "@tailwindcss/line-clamp": "0.2.1",
     "@tailwindcss/typography": "0.4.1",
     "cheerio": "1.0.0-rc.10",
     "clipboard": "2.0.8",
     "dotenv": "10.0.0",
     "nuxt": "2.15.8",
-    "prism-themes": "1.8.0",
+    "prism-themes": "1.9.0",
     "vue-gtag": "1.16.1"
   },
   "devDependencies": {
     "@nuxtjs/device": "2.1.0",
     "@nuxtjs/tailwindcss": "4.2.1",
     "nuxt-vite": "0.2.4",
-    "postcss": "8.3.6"
+    "postcss": "8.3.8"
   }
 }

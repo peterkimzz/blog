@@ -55,6 +55,9 @@ module.exports = {
     '@nuxtjs/device',
   ],
   vite: {},
+  tailwindcss: {
+    viewer: false,
+  },
   content: {
     liveEdit: false,
     markdown: {

@@ -116,17 +116,13 @@
     <vue-container>
       <div class="py-10">
         <div v-if="!articles.length" class="text-center md:max-w-md md:mx-auto">
-          <!-- <img
-            src="~/assets/svg/undraw_tree.svg"
-            alt="No result."
-            class="w-full"
-          /> -->
           <p class="mt-6 font-semibold text-gray-300">검색 결과가 없습니다.</p>
         </div>
         <ul v-else class="flex flex-wrap sm:-mx-4">
-          <vue-article-preview
+          <VueArticlePreview
             v-for="article of articles"
             :key="article.slug"
+            :published="article.published"
             :slug="article.slug"
             :category="article.category"
             :title="article.title"

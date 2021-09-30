@@ -65,9 +65,6 @@
       <vue-divider class="my-10" />
 
       <div class="giscus"></div>
-
-      <!-- <vue-divider class="my-10" /> -->
-      <!-- <vue-sponsor-button /> -->
     </article>
   </main>
 </template>
