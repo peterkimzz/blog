@@ -75,9 +75,6 @@ export default {
     category: {
       type: String,
       default: null,
-      validator(v) {
-        return ['tech', 'design', 'life'].indexOf(v) !== -1
-      },
     },
     title: {
       type: String,
@@ -105,7 +102,11 @@ export default {
         case 'design':
           return 'bg-pink-800 text-pink-200'
         case 'life':
-          return 'bg-indigo-800 text-indigo-200'
+          return 'bg-blue-800 text-blue-200'
+        case 'review':
+          return 'bg-cyan-800 text-cyan-200'
+        default:
+          return 'bg-gray-700 text-gray-200'
       }
     },
   },

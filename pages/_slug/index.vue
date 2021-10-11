@@ -15,7 +15,7 @@
 
           <h1
             class="
-              mt-2
+              mt-1.5
               text-center text-2xl
               md:text-3xl
               font-extrabold
@@ -35,7 +35,9 @@
             font-semibold
           "
         >
-          {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
+          <time :datetime="article.updated">
+            {{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}
+          </time>
         </p>
 
         <vue-share

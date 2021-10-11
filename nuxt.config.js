@@ -54,7 +54,6 @@ module.exports = {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
   ],
-  vite: {},
   tailwindcss: {
     viewer: false,
   },
