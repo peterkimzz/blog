@@ -4,9 +4,19 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Thu, 30 Sep 2021 11:20:56 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 11 Oct 2021 14:11:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[브라우저 확장 프로그램을 10개월동안 운영하면서 느낀 것들]]></title>
+            <link>https://www.peterkimzz.com/briana-extension-review</link>
+            <guid>https://www.peterkimzz.com/briana-extension-review</guid>
+            <pubDate>Sun, 10 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[올해 초 가상화폐 투자가 유행하면서 코인 시세 1초만에 보는 크롬 확장 프로그램 만들기 라는 글을 작성했고, 가상화폐 관련 확장 프로그램을 크롬 웹 스토어에 게시했습니다.
+중간에 다른 사이드 프로젝트를 하느라 업데이트를 2-3개월 정도 안하긴 했지만, 꾸준하게 사용해주시는 유저분들 덕분에 꾸준히 업데이트를 진행했습니다. 초기 버전이 꽤 쓸만했기 때문에 유저분들이 계속 재방문하지 않았을까 생각합니다.]]></description>
+            <content:encoded><![CDATA[올해 초 가상화폐 투자가 유행하면서 코인 시세 1초만에 보는 크롬 확장 프로그램 만들기 라는 글을 작성했고, 가상화폐 관련 확장 프로그램을 크롬 웹 스토어에 게시했습니다.
+중간에 다른 사이드 프로젝트를 하느라 업데이트를 2-3개월 정도 안하긴 했지만, 꾸준하게 사용해주시는 유저분들 덕분에 꾸준히 업데이트를 진행했습니다. 초기 버전이 꽤 쓸만했기 때문에 유저분들이 계속 재방문하지 않았을까 생각합니다.]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[클립보드 이미지를 1초만에 링크로 만드는 툴 개발하기]]></title>
             <link>https://www.peterkimzz.com/clipboard-to-url</link>
