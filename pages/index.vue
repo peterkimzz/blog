@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vue-s-e-o />
+    <VueSEO />
     <!-- 
     <div class="relative">
       <div

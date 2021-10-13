@@ -1,7 +1,10 @@
-require('dotenv').config()
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-module.exports = {
+import 'dotenv/config'
+
+export default defineNuxtConfig({
   target: 'static',
+  bridge: false,
   server: {
     port: 4000,
   },
@@ -49,11 +52,7 @@ module.exports = {
     '@nuxt/content',
     '@nuxtjs/sitemap',
   ],
-  buildModules: [
-    // 'nuxt-vite',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/device',
-  ],
+  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/device'],
   tailwindcss: {
     viewer: false,
   },
@@ -109,4 +108,4 @@ module.exports = {
       return articles.map((article) => article.path.replace(/\/articles/gi, ''))
     },
   },
-}
+})
