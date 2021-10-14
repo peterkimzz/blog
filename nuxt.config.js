@@ -1,5 +1,4 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
-
 import 'dotenv/config'
 
 export default defineNuxtConfig({

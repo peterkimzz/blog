@@ -6,6 +6,7 @@
     :title="title"
     :target="target"
     :class="['inline-block hover:underline', { block }]"
+    rel="noopener"
     ><slot
   /></component>
 </template>

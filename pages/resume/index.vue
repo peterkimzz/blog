@@ -41,6 +41,7 @@
             <vue-definition sub-label="Email" label="이메일">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="mailto:peterkimzz69@gmail.com"
                 class="hover:underline break-all"
                 >peterkimzz69@gmail.com</a
@@ -164,6 +165,7 @@
               <a
                 v-if="project.href"
                 :href="project.href"
+                rel="noopener noreferrer"
                 target="_blank"
                 class="text-cyan-500 underline"
                 >{{ project.title }}</a
@@ -197,6 +199,7 @@
               <a
                 v-if="project.href"
                 :href="project.href"
+                rel="noopener noreferrer"
                 target="_blank"
                 class="text-cyan-500 underline"
                 >{{ project.title }}</a
@@ -243,6 +246,7 @@
             <div slot="title" class="flex items-center">
               <a
                 href="https://zdnet.co.kr/view/?no=20210329170514"
+                rel="noopener noreferrer"
                 target="_blank"
                 class="underline text-cyan-500"
                 >클라우드 빌드·배포 등 단순업무, 오픈소스로 한 번에 해결</a
@@ -269,6 +273,7 @@
           >
             <div slot="title" class="flex items-center">
               <a
+                rel="noopener noreferrer"
                 :href="award.href"
                 target="_blank"
                 :class="[award.href ? 'text-cyan-500 underline' : '']"
