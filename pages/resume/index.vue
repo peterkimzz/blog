@@ -1,15 +1,11 @@
 <template>
   <div class="pb-20 text-sm md:text-lg">
-    <vue-s-e-o title="이력서" :title-template-visible="false" />
+    <vue-s-e-o title="개발자 김동현 이력서" :title-template-visible="false" />
 
     <header>
       <p class="text-gray-500 font-medium uppercase">Résumé</p>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-100">
-        개발자 김동현 이력서
-      </h1>
-      <p class="mt-4 text-gray-500 text-sm">
-        2021년 8월 18일에 마지막으로 업데이트 됨.
-      </p>
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-100">개발자 김동현 이력서</h1>
+      <p class="mt-4 text-gray-500 text-sm">2021년 8월 18일에 마지막으로 업데이트 됨.</p>
     </header>
 
     <main class="mt-16 space-y-28">
@@ -22,46 +18,34 @@
         <div class="md:flex">
           <img
             src="https://user-images.githubusercontent.com/20244536/132115718-4ab0874f-b30f-4a4c-8894-4655e3bc5b38.jpg"
-            class="
-              w-24
-              h-24
-              rounded-[2.4rem]
-              shadow-lg
-              bg-gray-700 bg-opacity-50
-              p-1
-            "
+            class="w-24 h-24 rounded-[2.4rem] shadow-lg bg-gray-700 bg-opacity-50 p-1"
           />
           <div class="space-y-6 mt-6 md:mt-0 md:ml-10">
-            <vue-definition sub-label="Name" label="이름"
-              >김동현</vue-definition
-            >
-            <vue-definition sub-label="Birthday" label="생년월일"
-              >1993년 2월 25일</vue-definition
-            >
+            <vue-definition sub-label="Name" label="이름">김동현</vue-definition>
+            <vue-definition sub-label="Birthday" label="생년월일">1993년 2월 25일</vue-definition>
             <vue-definition sub-label="Email" label="이메일">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="mailto:peterkimzz69@gmail.com"
                 class="hover:underline break-all"
-                >peterkimzz69@gmail.com</a
-              >
+              >peterkimzz69@gmail.com</a>
             </vue-definition>
             <vue-definition sub-label="Intro" label="소개">
               <p class="leading-8">
-                안녕하세요, 소프트웨어 개발자 김동현입니다.<br /><br />
-
-                저는 플랫폼 개발에 자신있습니다. 또한 저의 최대 강점은 개발
+                안녕하세요, 소프트웨어 개발자 김동현입니다.
+                <br />
+                <br />저는 플랫폼 개발에 자신있습니다. 또한 저의 최대 강점은 개발
                 속도가 빠르다는 것입니다. 지금까지 소규모 인원의 스타트업에서
                 오랫동안 개발자로 일을 해왔기 때문에, 누구보다 빠르게 MVP를
-                만들어내는 법을 잘 알고 있습니다.<br /><br />
-
-                보통 개발이 빠르면 유지보수하기 어려운 코드를 작성할거라고
+                만들어내는 법을 잘 알고 있습니다.
+                <br />
+                <br />보통 개발이 빠르면 유지보수하기 어려운 코드를 작성할거라고
                 생각십니다. 하지만 제가 개발이 빠른 이유는 Vue.js와 Node.js
                 프레임워크를 오랫동안 사용했기 때문입니다. 결코 유지보수가
-                어려운 코드는 작성하지 않습니다. <br /><br />
-
-                또한 스스로 웹 디자인에 대한 감각이 있다고 생각해서 프론트엔드
+                어려운 코드는 작성하지 않습니다.
+                <br />
+                <br />또한 스스로 웹 디자인에 대한 감각이 있다고 생각해서 프론트엔드
                 개발을 좋아합니다. 웹의 장점인 프론트엔드에 대한 소스코드가
                 개방되어 있다는 점을 이용해 다른 웹사이트의 디자인을 참고하여
                 해당 서비스에게 맞는 새로운 디자인을 잘 창조해냅니다.
@@ -79,65 +63,43 @@
         </div>
 
         <div class="space-y-10">
-          <vue-definition
-            sub-label="Front-end"
-            label="프론트엔드"
-            class="items-start"
-          >
+          <vue-definition sub-label="Front-end" label="프론트엔드" class="items-start">
             <ul class="list-disc pl-12 space-y-2">
               <li>Vue.js (Nuxt.js)</li>
               <li>Chrome Extension</li>
-            </ul></vue-definition
-          >
-          <vue-definition
-            sub-label="Back-end"
-            label="백엔드"
-            class="items-start"
-          >
+            </ul>
+          </vue-definition>
+          <vue-definition sub-label="Back-end" label="백엔드" class="items-start">
             <ul class="list-disc pl-12 space-y-2">
               <li>Node.js</li>
               <li>Docker</li>
               <li>NginX</li>
-            </ul></vue-definition
-          >
-          <vue-definition
-            sub-label="Database"
-            label="데이터베이스"
-            class="items-start"
-          >
+            </ul>
+          </vue-definition>
+          <vue-definition sub-label="Database" label="데이터베이스" class="items-start">
             <ul class="list-disc pl-12 space-y-2">
               <li>MySQL</li>
               <li>Elasticsearch</li>
-            </ul></vue-definition
-          >
-          <vue-definition
-            sub-label="Cloud platform"
-            label="클라우드 플랫폼"
-            class="items-start"
-          >
+            </ul>
+          </vue-definition>
+          <vue-definition sub-label="Cloud platform" label="클라우드 플랫폼" class="items-start">
             <ul class="list-disc pl-12 space-y-2">
               <li>AWS</li>
               <li>GCP, Firebase</li>
-            </ul></vue-definition
-          >
+            </ul>
+          </vue-definition>
         </div>
       </section>
 
       <!-- Expreiences -->
       <section>
         <div class="mb-10">
-          <h3 class="text-sm font-medium text-gray-500 uppercase">
-            Expreiences
-          </h3>
+          <h3 class="text-sm font-medium text-gray-500 uppercase">Expreiences</h3>
           <h2 class="text-2xl text-gray-200 font-semibold">경력</h2>
         </div>
 
         <div class="space-y-10">
-          <vue-resume-item
-            v-for="exp in experiences"
-            :key="exp.org"
-            :label="exp.duration"
-          >
+          <vue-resume-item v-for="exp in experiences" :key="exp.org" :label="exp.duration">
             <div slot="title" class="flex items-center">
               <span class="font-semibold">{{ exp.org }}</span>
               <span class="ml-2 text-cyan-500">{{ exp.bio }}</span>
@@ -168,8 +130,7 @@
                 rel="noopener noreferrer"
                 target="_blank"
                 class="text-cyan-500 underline"
-                >{{ project.title }}</a
-              >
+              >{{ project.title }}</a>
               <span v-else>{{ project.title }}</span>
             </div>
             <p v-html="project.desc"></p>
@@ -180,12 +141,8 @@
       <!-- Open Source Projects -->
       <section>
         <div class="mb-10">
-          <h3 class="text-sm font-medium text-gray-500 uppercase">
-            Open Source Projects
-          </h3>
-          <h2 class="text-2xl text-gray-200 font-semibold">
-            오픈 소스 프로젝트
-          </h2>
+          <h3 class="text-sm font-medium text-gray-500 uppercase">Open Source Projects</h3>
+          <h2 class="text-2xl text-gray-200 font-semibold">오픈 소스 프로젝트</h2>
         </div>
 
         <div class="space-y-10">
@@ -202,8 +159,7 @@
                 rel="noopener noreferrer"
                 target="_blank"
                 class="text-cyan-500 underline"
-                >{{ project.title }}</a
-              >
+              >{{ project.title }}</a>
               <span v-else>{{ project.title }}</span>
             </div>
             <p v-html="project.desc"></p>
@@ -224,7 +180,7 @@
             label="2012년 03월 - 2018년 03월"
           >
             <div slot="title" class="flex items-center">
-              <span> 가천대학교 전자공학과 </span>
+              <span>가천대학교 전자공학과</span>
             </div>
             <p>
               전자공학과 4학기를 다녔고, 군 전역 이후 컴퓨터공학과로 전과했지만
@@ -249,8 +205,7 @@
                 rel="noopener noreferrer"
                 target="_blank"
                 class="underline text-cyan-500"
-                >클라우드 빌드·배포 등 단순업무, 오픈소스로 한 번에 해결</a
-              >
+              >클라우드 빌드·배포 등 단순업무, 오픈소스로 한 번에 해결</a>
             </div>
             <p>앰포 김동현 개발자, 원격 클라우드 자동화 도구 오픈소스 공개</p>
           </vue-resume-item>
@@ -277,8 +232,7 @@
                 :href="award.href"
                 target="_blank"
                 :class="[award.href ? 'text-cyan-500 underline' : '']"
-                >{{ award.title }}</a
-              >
+              >{{ award.title }}</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -305,9 +259,7 @@
         </div>
 
         <div>
-          <vue-definition sub-label="English" label="영어"
-            >기초 회화</vue-definition
-          >
+          <vue-definition sub-label="English" label="영어">기초 회화</vue-definition>
         </div>
       </section>
     </main>

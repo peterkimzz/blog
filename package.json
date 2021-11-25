@@ -10,7 +10,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "1.14.0",
+    "@nuxt/content": "1.15.1",
     "@nuxtjs/dayjs": "1.4.1",
     "@nuxtjs/feed": "2.0.0",
     "@nuxtjs/sitemap": "2.4.0",
@@ -28,6 +28,6 @@
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxtjs/device": "2.1.0",
     "@nuxtjs/tailwindcss": "4.2.1",
-    "postcss": "8.3.9"
+    "postcss": "8.4.1"
   }
 }
