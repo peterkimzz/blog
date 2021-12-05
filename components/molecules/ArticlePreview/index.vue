@@ -2,7 +2,7 @@
   <li>
     <n-link :to="`/${slug}/`" class="group">
       <span
-        class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase"
+        class="inline-flex items-center rounded-full font-semibold uppercase px-2.5 py-[0.08rem] text-[0.65rem] md:px-3 md:py-1 md:text-xs"
         :class="GetCategoryColor"
       >{{ category }}</span>
 
@@ -10,7 +10,7 @@
         class="text-base md:text-lg mt-2 font-semibold text-gray-100 group-hover:underline"
       >{{ title }}</h2>
       <p
-        class="text-sm md:text-base mt-3 md:mt-4 text-gray-400 leading-normal md:leading-normal line-clamp-3"
+        class="text-sm md:text-base mt-2.5 md:mt-3 text-gray-400 leading-normal md:leading-normal line-clamp-3"
       >{{ description }}</p>
       <div class="text-sm mt-2">
         <span>{{ $dayjs(updated).format('YYYY년 MM월 DD일') }}</span>
