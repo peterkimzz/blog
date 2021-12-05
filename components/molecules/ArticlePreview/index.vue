@@ -2,50 +2,18 @@
   <li>
     <n-link :to="`/${slug}/`" class="group">
       <span
-        class="
-          inline-flex
-          items-center
-          px-3
-          py-1
-          rounded-full
-          text-xs
-          font-semibold
-          uppercase
-        "
+        class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase"
         :class="GetCategoryColor"
-      >
-        {{ category }}
-      </span>
+      >{{ category }}</span>
 
       <h2
-        class="
-          text-base
-          md:text-lg
-          mt-2
-          font-semibold
-          text-gray-100
-          group-hover:underline
-        "
-      >
-        {{ title }}
-      </h2>
+        class="text-base md:text-lg mt-2 font-semibold text-gray-100 group-hover:underline"
+      >{{ title }}</h2>
       <p
-        class="
-          text-sm
-          md:text-base
-          mt-3
-          md:mt-4
-          text-gray-400
-          leading-7
-          line-clamp-3
-        "
-      >
-        {{ description }}
-      </p>
+        class="text-sm md:text-base mt-3 md:mt-4 text-gray-400 leading-normal md:leading-normal line-clamp-3"
+      >{{ description }}</p>
       <div class="text-sm mt-2">
-        <span>
-          {{ $dayjs(updated).format('YYYY년 MM월 DD일') }}
-        </span>
+        <span>{{ $dayjs(updated).format('YYYY년 MM월 DD일') }}</span>
         <svg
           v-if="!published"
           xmlns="http://www.w3.org/2000/svg"

@@ -28,6 +28,6 @@
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxtjs/device": "2.1.0",
     "@nuxtjs/tailwindcss": "4.2.1",
-    "postcss": "8.4.1"
+    "postcss": "8.4.4"
   }
 }
