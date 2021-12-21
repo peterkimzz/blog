@@ -1,4 +1,5 @@
 ---
+category: life
 title: 아티클 템플릿 1
 updated: 2000-01-01
 created: 2000-01-01
