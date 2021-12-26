@@ -22,9 +22,15 @@ published: false
 
 먼저 파이브스팟 용산의 위치입니다. 용산역, 신용산역과 이촌역에서 모두 가깝습니다. 이촌에서는 사실 걸어가기는 약간 멉니다.
 
+파이브스팟은 용산 센트럴타워 23층입니다. 1층 로비 엘리베이터는 저층부와 고층부가 나뉘어있으니 참고해주세요.
+
+일단 파이브스팟의 장점은 모바일 출입증입니다.
+
 ![IMG_1719](https://user-images.githubusercontent.com/20244536/146870075-d61749b0-9b9b-4476-a039-8c1e1dafdda0.JPEG)
 
 정문으로 들어오자마자 오른쪽에 위치한 4인석 소파 자리입니다. 각 소파측 아래에 콘센트가 있습니다.
+
+파이브스팟의 장점 두 번째인 바 입니다.
 
 ![IMG_1327](https://user-images.githubusercontent.com/20244536/146869828-340845b3-9146-477a-8494-25767e88cb59.JPEG)
 ![IMG_1326](https://user-images.githubusercontent.com/20244536/146869950-6bbcfb89-b34c-4fce-8131-5a0d12284bac.JPEG)
