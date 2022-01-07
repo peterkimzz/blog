@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Fri, 07 Jan 2022 08:58:17 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Jan 2022 09:03:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -99,7 +99,7 @@
             <title><![CDATA[무료로 반응형 이메일 템플릿 무한대로 만들기 - mjml.io]]></title>
             <link>https://www.peterkimzz.com/introduce-free-responsive-email-template-mjml</link>
             <guid>https://www.peterkimzz.com/introduce-free-responsive-email-template-mjml</guid>
-            <pubDate>Thu, 07 Jan 2021 00:00:00 GMT</pubDate>
+            <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[저는 이메일을 데스크톱과 모바일 환경에서 매일매일 확인합니다. 그런데 아직도 모바일 디스플레이에 최적화되지 않은 이메일을 받을 때가 많습니다.
 어차피 확대해서 보면 되니까 크게 상관 없긴하지만, 누군가는 이메일 열었는데 잘 안보이면 짜증나서 이메일을 바로 닫아버릴 수도 있겠죠. 안그래도 내가 보낸 이메일 열게 하는 것도 힘든데 말이죠.
 그래서 준비했습니다. 이메일을 좀 더 있어보이게 만들고 싶은 분들을 위해 이번엔 무료로 반응형 이메일 템플릿을 무한으로 즐기는 방법을 소개해드리려고 합니다. (명륜진사메일)]]></description>
