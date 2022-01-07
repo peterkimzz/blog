@@ -1,8 +1,8 @@
 ---
 category: tech
 title: 무료로 반응형 이메일 템플릿 무한대로 만들기 - mjml.io
-updated: 2021-01-07
-created: 2021-01-07
+updated: 2022-01-07
+created: 2022-01-07
 thumbnail:
 published: true
 ---
