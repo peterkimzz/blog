@@ -318,7 +318,7 @@ export default {
           src: 'https://user-images.githubusercontent.com/20244536/132115703-23e117c2-db45-46a8-b9e0-4e3f655f8f7e.png',
           duration: '2021년 1월 - 현재',
           title: '브리아나',
-          href: 'https://store.whale.naver.com/detail/hkipiplimgkfnhbimapmehjohnialiec',
+          href: 'https://www.brianalabs.com/',
           desc: `
             가상화폐를 거래할 때 도움을 주는 크롬 확장 프로그램입니다.<br><br>
 
