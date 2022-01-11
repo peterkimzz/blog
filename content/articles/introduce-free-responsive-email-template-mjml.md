@@ -308,7 +308,7 @@ $ yarn add -D @types/mjml # typescript인 경우
 
 사실 이러면 끝입니다.
 
-```ts [ts]
+```ts [typescript]
 import mjml2html from 'mjml'
 
 const { html } = mjml2html(`아까 작성했던 mjml코드`)
@@ -318,7 +318,7 @@ const { html } = mjml2html(`아까 작성했던 mjml코드`)
 
 `Nodemailer`를 활용하면 아래처럼 작성 가능합니다.
 
-```ts [ts]
+```ts [typescript]
 import nodemailer from 'nodemailer'
 import mjml2html from 'mjml'
 
@@ -340,7 +340,11 @@ transporter.sendMail({
 
 ## 마무리
 
-근데 이것저것 따지다보면 돈이 없는 1인 기업, 프리랜서 개발자나 소규모 기업에선 반응형 이메일 만드는 게 사치인 것 같기도 합니다. 텍스트로만 보내도 전달하고 싶은 말은 충분히 전달할 수 있거든요.
+반응형 이메일을 만드는 게 생각보다 어렵지 않았죠?
+
+근데 사실 시간과 돈이 없는 1인 기업, 프리랜서 개발자나 소규모 기업에선 반응형 이메일 만드는 게 사치인 것 같기도 합니다. 텍스트로만 보내도 전달하고 싶은 말은 충분히 전달할 수 있거든요.
+
+AWS 같은 큰 서비스도 어떤 메일은 아직도 그냥 텍스트로만 보내기도 합니다. 그러니까 이메일을 예쁘게 만드는 것에 대해 너무 부담갖지 마시길 바랍니다!
 
 ### 참고
 
