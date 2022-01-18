@@ -1,5 +1,3 @@
 User-agent: *
 
-Allow: /
-
 sitemap:https://www.peterkimzz.com/sitemap.xml
