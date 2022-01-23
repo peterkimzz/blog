@@ -4,9 +4,21 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Tue, 18 Jan 2022 05:39:39 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Jan 2022 07:04:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[2021 회고]]></title>
+            <link>https://www.peterkimzz.com/1-year-review-of-blog-operation-and-2021</link>
+            <guid>https://www.peterkimzz.com/1-year-review-of-blog-operation-and-2021</guid>
+            <pubDate>Sun, 23 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[다들 새해 다짐 잘 실천하고 계신가요? 전 아직 다짐을 못했습니다. 약간의 업무 슬럼프가 오는 것 같아서 뭘 해야할지 아직 계획이 없네요. 날 좀 풀리면 운동부터 다시 시작해야할 것 같습니다. 코로나가 얼른 끝났으면 좋겠습니다.
+개인 블로그
+이 블로그를 운영한지 1년 조금 넘었습니다. 처음에는 정보 공유 + 추억 소장용으로 작성하기 시작했는데, 트래픽이 점점 늘어나서 이제는 글을 써야한다는 기분 좋은 스트레스와 압박감이 생겼습니다.]]></description>
+            <content:encoded><![CDATA[다들 새해 다짐 잘 실천하고 계신가요? 전 아직 다짐을 못했습니다. 약간의 업무 슬럼프가 오는 것 같아서 뭘 해야할지 아직 계획이 없네요. 날 좀 풀리면 운동부터 다시 시작해야할 것 같습니다. 코로나가 얼른 끝났으면 좋겠습니다.
+개인 블로그
+이 블로그를 운영한지 1년 조금 넘었습니다. 처음에는 정보 공유 + 추억 소장용으로 작성하기 시작했는데, 트래픽이 점점 늘어나서 이제는 글을 써야한다는 기분 좋은 스트레스와 압박감이 생겼습니다.]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[브라우저 확장 프로그램을 10개월동안 운영하면서 느낀 것들]]></title>
             <link>https://www.peterkimzz.com/briana-extension-review</link>
