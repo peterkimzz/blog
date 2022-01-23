@@ -3,7 +3,7 @@ category: review
 title: 2021 회고
 updated: 2022-01-23
 created: 2022-01-23
-thumbnail: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
+thumbnail: https://user-images.githubusercontent.com/20244536/150673916-c7d30dcb-e458-40d3-aaf0-2cd38030c29b.png
 published: true
 ---
 
