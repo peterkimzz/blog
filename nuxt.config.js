@@ -1,7 +1,7 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+// import { defineNuxtConfig } from '@nuxt/bridge'
 import 'dotenv/config'
 
-export default defineNuxtConfig({
+export default {
   target: 'static',
   bridge: false,
   server: {
@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/sitemap',
   ],
-  // css: ['@/assets/css/tailwind.css'],
+  css: ['@/assets/css/tailwind.css'],
   build: {
     postcss: {
       plugins: {
@@ -113,4 +113,4 @@ export default defineNuxtConfig({
       return articles.map((article) => article.path.replace(/\/articles/gi, ''))
     },
   },
-})
+}
