@@ -142,4 +142,9 @@ export default {
 .nuxt-content .token.deleted {
   @apply bg-red-900;
 }
+
+.nuxt-content pre code::before,
+.nuxt-content pre code::after {
+  @apply !content-none;
+}
 </style>
