@@ -33,7 +33,7 @@
 
       <nuxt-content
         :document="article"
-        class="w-full max-w-full prose prose-sm md:prose-lg prose-cyan"
+        class="w-full max-w-full prose prose-sm md:prose-lg prose-cyan after:"
       />
 
       <vue-divider class="my-10" />

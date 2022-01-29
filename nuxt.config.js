@@ -1,7 +1,7 @@
-// import { defineNuxtConfig } from '@nuxt/bridge'
+import { defineNuxtConfig } from '@nuxt/bridge'
 import 'dotenv/config'
 
-export default {
+export default defineNuxtConfig({
   target: 'static',
   bridge: false,
   server: {
@@ -113,4 +113,4 @@ export default {
       return articles.map((article) => article.path.replace(/\/articles/gi, ''))
     },
   },
-}
+})
