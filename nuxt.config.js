@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/sitemap',
   ],
-  css: ['@/assets/css/tailwind.css'],
+  // css: ['@/assets/css/tailwind.css'],
   build: {
     postcss: {
       plugins: {
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  buildModules: ['@nuxt/postcss8', '@nuxtjs/device'],
+  buildModules: ['@nuxtjs/device', '@nuxt/postcss8'],
   content: {
     liveEdit: false,
     markdown: {
