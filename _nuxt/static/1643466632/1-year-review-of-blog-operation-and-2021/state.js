@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1643466632",layout:"article",error:a,serverRendered:true,routePath:"\u002F1-year-review-of-blog-operation-and-2021",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"86a81240"}}}}(null));
