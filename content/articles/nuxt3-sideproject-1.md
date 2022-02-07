@@ -3,7 +3,7 @@ category: tech
 title: '[Nuxt 3] 사이드 프로젝트 만들기 - 기획편'
 updated: 2022-02-07
 created: 2022-02-07
-thumbnail: https://user-images.githubusercontent.com/20244536/152789589-336471d6-477f-4350-aa95-4da097da2c59.png
+thumbnail: https://user-images.githubusercontent.com/20244536/152790650-a6a1e68b-41a3-47c2-9c5b-6f0f117da468.png
 published: true
 ---
 
