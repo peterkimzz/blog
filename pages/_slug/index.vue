@@ -9,19 +9,20 @@
     <article class="relative">
       <header class="mt-10 mb-10">
         <div class="flex flex-col items-center">
-          <span class="text-cyan-500 font-semibold tracking-wider uppercase">
+          <p class="text-center text-sm md:text-sm text-gray-400 font-semibold">
+            <time :datetime="article.updated">{{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}</time>
+          </p>
+
+          <!-- <span class="text-cyan-500 font-semibold tracking-wider uppercase">
             {{
               article.category
             }}
-          </span>
+          </span>-->
 
           <h1
-            class="mt-1.5 text-center text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
+            class="mt-4 text-center max-w-[18rem] md:max-w-full text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >{{ article.title }}</h1>
         </div>
-        <p class="mt-6 text-center text-sm md:text-sm text-gray-500 font-semibold">
-          <time :datetime="article.updated">{{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}</time>
-        </p>
 
         <vue-share
           :title="article.title"
@@ -33,7 +34,7 @@
 
       <nuxt-content
         :document="article"
-        class="w-full max-w-full prose prose-sm md:prose-lg prose-cyan after:"
+        class="w-full max-w-full prose prose-cyan prose-base md:prose-lg"
       />
 
       <vue-divider class="my-10" />
@@ -110,16 +111,7 @@ export default {
 
 .nuxt-content img + em {
   @apply block;
-  @apply text-gray-400;
-  @apply text-sm;
-  @apply text-center;
-  @apply -mt-4;
-  @apply not-italic;
-}
-
-.nuxt-content img + em {
-  @apply block;
-  @apply text-gray-400;
+  @apply text-zinc-400;
   @apply text-sm;
   @apply text-center;
   @apply -mt-4;
