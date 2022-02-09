@@ -37,7 +37,7 @@
         class="w-full max-w-full prose prose-cyan prose-base md:prose-lg"
       />
 
-      <vue-divider class="my-10" />
+      <vue-divider class="mt-20 mb-10" />
 
       <vue-prev-next :prev="prev" :next="next" class="mb-14" />
 
