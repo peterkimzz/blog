@@ -280,7 +280,7 @@ const coins = ref([
     price: 394,
     change: -0.76,
     change_price: -3.0,
-    volume: 1783783
+    volume: 1783783,
   },
   {
     symbol: 'XRP',
@@ -288,7 +288,7 @@ const coins = ref([
     price: 1500,
     change: 0.67,
     change_price: 10.0,
-    volume: 1159312
+    volume: 1159312,
   },
   {
     symbol: 'ETC',
@@ -296,8 +296,8 @@ const coins = ref([
     price: 85340,
     change: -2.33,
     change_price: -2040,
-    volume: 933497
-  }
+    volume: 933497,
+  },
 ])
 </script>
 ```
@@ -389,7 +389,7 @@ function GetSymbols() {
 
 function GetTickers(markets = []) {
   return axios.get('https://api.upbit.com/v1/ticker', {
-    params: { markets: markets.join(',') }
+    params: { markets: markets.join(',') },
   })
 }
 
@@ -398,7 +398,7 @@ onMounted(async () => {
   try {
     const { data: symbols } = await GetSymbols()
 
-    const markets = symbols.map(symbol => symbol.market)
+    const markets = symbols.map((symbol) => symbol.market)
     const { data: tickers } = await GetTickers(markets)
 
     coins.value = tickers
@@ -435,14 +435,14 @@ onMounted(async () => {
 onMounted(async () => {
   try {
     const { data: symbols } = await GetSymbols()
-    symbols.forEach(symbol => {
+    symbols.forEach((symbol) => {
       coins.value[symbol.market] = symbol
     })
 
-    const markets = symbols.map(symbol => symbol.market)
+    const markets = symbols.map((symbol) => symbol.market)
     const { data: tickers } = await GetTickers(markets)
 
-    tickers.forEach(ticker => {
+    tickers.forEach((ticker) => {
       coins.value[ticker.market] = Object.assign(
         coins.value[ticker.market],
         ticker
@@ -506,7 +506,7 @@ function GetSymbols() {
 
 function GetTickers(markets = []) {
   return axios.get('https://api.upbit.com/v1/ticker', {
-    params: { markets: markets.join(',') }
+    params: { markets: markets.join(',') },
   })
 }
 
@@ -517,7 +517,7 @@ onMounted(async () => {
 
     const { data: symbols } = await GetSymbols()
 
-    symbols.forEach(symbol => {
+    symbols.forEach((symbol) => {
       /** `KRW-` 으로 시작하는 마켓만 핕터링 */
       if (symbol.market.indexOf('KRW-') === -1) {
         return
@@ -529,7 +529,7 @@ onMounted(async () => {
 
     const { data: tickers } = await GetTickers(markets)
 
-    tickers.forEach(ticker => {
+    tickers.forEach((ticker) => {
       coins.value[ticker.market] = Object.assign(
         coins.value[ticker.market],
         ticker
@@ -606,9 +606,7 @@ createApp(App).mount('#app')
     코인시세보기프로그램
   </nav>
 
-  <div class="p-2">
-    // ...
-  </div>
+  <div class="p-2">// ...</div>
 
   <footer class="font-[0.9rem] text-gray-600 p-2 border-t border-gray-300">
     peterkimzz.com
@@ -836,7 +834,7 @@ function GetSymbols() {
 }
 function GetTickers(markets = []) {
   return axios.get('https://api.upbit.com/v1/ticker', {
-    params: { markets: markets.join(',') }
+    params: { markets: markets.join(',') },
   })
 }
 
@@ -847,7 +845,7 @@ onMounted(async () => {
 
     const { data: symbols } = await GetSymbols()
 
-    symbols.forEach(symbol => {
+    symbols.forEach((symbol) => {
       /** `KRW-` 으로 시작하는 마켓만 핕터링 */
       if (symbol.market.indexOf('KRW-') === -1) {
         return
@@ -859,7 +857,7 @@ onMounted(async () => {
 
     const { data: tickers } = await GetTickers(markets)
 
-    tickers.forEach(ticker => {
+    tickers.forEach((ticker) => {
       if (ticker.change === 'FALL') {
         ticker.trade_price = -ticker.trade_price
         ticker.change_price = -ticker.change_price
@@ -954,7 +952,7 @@ onMounted(async () => {
   try {
     const { data: symbols } = await GetSymbols()
 
-    symbols.forEach(symbol => {
+    symbols.forEach((symbol) => {
       if (symbol.market.indexOf('KRW-') === -1) {
         return
       }
@@ -983,16 +981,16 @@ onMounted(async () => {
 
     const ws = new WebSocket('wss://api.upbit.com/websocket/v1')
 
-    ws.onopen = e => {
+    ws.onopen = (e) => {
       ws.send(
         `${JSON.stringify([
           { ticket: uuidv4() },
-          { type: 'ticker', codes: markets.value }
+          { type: 'ticker', codes: markets.value },
         ])}`
       )
     }
 
-    ws.onmessage = async payload => {
+    ws.onmessage = async (payload) => {
       const ticker = await new Response(payload.data).json()
 
       if (!coins.value[ticker.code]) {
@@ -1034,9 +1032,7 @@ onMounted(async () => {
 
 ```vue [App.vue]
 <template>
-  <div class="min-w-[30rem]">
-    // ...
-  </div>
+  <div class="min-w-[30rem]">// ...</div>
 </template>
 ```
 

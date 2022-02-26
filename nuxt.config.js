@@ -1,5 +1,13 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
 import 'dotenv/config'
+import Prism from 'prismjs'
+import escapeHtml from 'escape-html'
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+const u = require('unist-builder')
+require('prismjs/components/index')()
+// enable syntax highlighting on diff language
+require('prismjs/components/prism-diff')
+require('prismjs/plugins/diff-highlight/prism-diff-highlight')
 
 export default defineNuxtConfig({
   target: 'static',
@@ -51,7 +59,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/sitemap',
   ],
-  css: ['@/assets/css/tailwind.css'],
+  css: [
+    '@/assets/css/tailwind.css',
+    '@/assets/css/prism-github-dark-theme.css',
+  ],
   build: {
     postcss: {
       plugins: {
@@ -61,11 +72,83 @@ export default defineNuxtConfig({
     },
   },
   buildModules: ['@nuxtjs/device', '@nuxt/postcss8'],
+  // hooks: {
+  //   'content:options': (options) => {
+  //     console.log('Content options:', options)
+  //   },
+  // },
   content: {
     liveEdit: false,
     markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-darcula.css',
+      highlighter(
+        rawCode,
+        language,
+        { lineHighlights, fileName },
+        { h, node }
+      ) {
+        const DIFF_HIGHLIGHT_SYNTAX = /^(diff)-([\w-]+)/i
+
+        let grammer
+        let lang = language || 'text'
+
+        const isDiff = lang.match(DIFF_HIGHLIGHT_SYNTAX)
+        if (isDiff) {
+          lang = lang.substr(5)
+          grammer = Prism.languages.diff
+        }
+
+        if (lang === 'vue' || lang === 'mjml') {
+          lang = 'html'
+        }
+        if (lang === 'ts') {
+          lang = 'js'
+        }
+
+        if (!grammer) {
+          grammer = Prism.languages[lang]
+        }
+
+        /** Tokenize by Prism.js */
+        let code = grammer
+          ? Prism.highlight(rawCode, grammer, isDiff ? `diff-${lang}` : lang)
+          : escapeHtml(rawCode)
+
+        const childs = []
+        const props = {
+          className: [`language-${lang}`, 'line-numbers'],
+        }
+
+        /**
+         * If filename, then set span as a first child
+         */
+        if (fileName) {
+          childs.push(
+            h(node, 'span', { className: ['filename'] }, [u('text', fileName)])
+          )
+        }
+
+        /**
+         * Inline HTML Token Highlight
+         */
+        const INLINE_HTML_TOKEN_SYNTAX = /\*\*(.*?)\*\*/g
+        if (lang === 'html') {
+          code = code.replace(
+            INLINE_HTML_TOKEN_SYNTAX,
+            (_, text) =>
+              `<span class="code-highlight bg-code-highlight bg-gray-700">${text}</span>`
+          )
+        }
+
+        // return `<div class="nuxt-content-highlight"><pre class="language-${lang}"><code>${code}</code></pre></div>`
+
+        childs.push(h(node, 'pre', props, [h(node, 'code', [u('raw', code)])]))
+
+        return h(
+          node.position,
+          'div',
+          { className: ['nuxt-content-highlight'] },
+          childs
+        )
       },
     },
   },

@@ -51,7 +51,7 @@ $ git clone https://github.com/USERNAME/REPOSITORY.git
 
 다음, 루트 폴더에 HTML 파일을 만든다.
 
-```html[index.html]
+```html [index.html]
 <!DOCTYPE html>
 <html lang="en">
   <head>

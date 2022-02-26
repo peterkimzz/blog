@@ -49,13 +49,16 @@
 </template>
 
 <script>
+import Prism from 'prismjs'
+
 const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
   layout: 'article',
   head() {
     return {
-      script: [
+      // Load `giscus` when production mode is on
+      script: IS_PROD ? [
         {
           src: 'https://giscus.app/client.js',
           crossorigin: 'anonymous',
@@ -73,7 +76,7 @@ export default {
           //   this.isGiscusReady = true
           // },
         },
-      ],
+      ] : [],
     }
   },
   async asyncData({ $content, params, error }) {
@@ -101,6 +104,9 @@ export default {
       return process.env.BASE_URL + '/' + this.article.slug + '/'
     },
   },
+  mounted() {
+    Prism.highlightAll()
+  }
 }
 </script>
 
@@ -133,6 +139,9 @@ export default {
 }
 .nuxt-content .token.deleted {
   @apply bg-red-900;
+}
+.nuxt-content .token.deleted::before {
+  content: "-";
 }
 
 .nuxt-content pre code::before,

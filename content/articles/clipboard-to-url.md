@@ -122,10 +122,10 @@ clipboard-to-url
 
 ```vue [NavigationBar/index.vue]
 <template>
-  <nav class="border-b border-gray-200 shadow-sm">
+  <nav class="**border-b** border-gray-200 shadow-sm">
     <div class="mx-auto max-w-4xl px-4">
       <div class="flex items-center justify-between">
-        <h1 class="font-bold text-2xl text-black">
+        <h1 class="text-2xl font-bold text-black">
           <a href="/" class="block py-3">Clipboard to URL</a>
         </h1>
       </div>
@@ -177,12 +177,12 @@ export default defineConfig({
     class="
       flex
       justify-center
-      px-6
+      rounded-md
+      border
+      border-dashed
+      border-gray-400 bg-white px-6
       pt-5
       pb-6
-      border border-gray-400 border-dashed
-      bg-white
-      rounded-md
       transition-colors
       hover:border-gray-600
     "
@@ -203,7 +203,7 @@ export default defineConfig({
         />
       </svg>
       <div class="flex text-sm text-gray-600">
-        <span class="text-indigo-600 font-semibold"
+        <span class="font-semibold text-indigo-600"
           >Paste a Clipboard Image</span
         >
       </div>

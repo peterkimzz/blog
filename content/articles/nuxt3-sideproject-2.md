@@ -14,9 +14,9 @@ published: false
 저는 웹 애플리케이션이면 프로젝트 이름을 보통 도메인 이름과 매칭해서 만듭니다. `www` 도메인은 이미 사용 중이니, `app.drawbeat.com` 이라는 이름으로 만들겠습니다. 여러분들은 아무거나 하셔도 됩니다.
 
 ```bash [bash]
-$ npx nuxi init app.drawbeat.com
-$ cd app.drawbeat.com
-$ yarn && yarn dev -o
+npx nuxi init app.drawbeat.com
+cd app.drawbeat.com
+yarn && yarn dev -o
 ```
 
 ![image](https://user-images.githubusercontent.com/20244536/153166157-fa49c657-fcc2-43da-bec4-9145a3fb1f92.png)
@@ -37,9 +37,9 @@ $ yarn && yarn dev -o
 
 근데 저희는 페이지를 여러개 만들거라 라우팅이 꼭 필요합니다. `pages/index.vue` 파일을 만들어주고, `app.vue` 파일을 수정해줍시다.
 
-```vue [app.vue]
+```html
 <template>
-  <div>
+  <div class="text-lg **font-bold**">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -142,11 +142,9 @@ $ yarn && yarn dev -o
 
 거의 대부분 웹사이트가 가장 상단에 주요 페이지들로 이동할 수 있는 링크들을 배치하고 있습니다. 국룰인 것 같으니 따라하면 됩니다.
 
-크게 나누면 왼쪽엔 서비스 로고, 오른쪽엔 링크를 배치하네요.
+크게 나누면 왼쪽엔 서비스 로고, 오른쪽엔 링크를 배치하네요. 보통 이 네비게이션 바는 모든 페이지에서 동일하게 보여지니까 컴포넌트로 만들면 좋겠다는 생각이 듭니다.
 
-보통 이 네비게이션 바는 모든 페이지에서 동일하게 보여지니까 컴포넌트로 만들면 좋겠다는 생각이 드네요.
-
-컴포넌트는 `components/` 폴더 아래에 넣어주면 자동으로 `import`가 됩니다. 예제를 보면 이해가 빠릅니다.
+`nuxt`는 `components/` 폴더 아래에 존재하는 모든 폴더, 파일을 자동으로 `import`합니다. 사용 방법은 예제를 아래 봐주세요.
 
 `components/` 폴더를 만들고, `NavigationBar` 라는 이름의 폴더도 만들어주겠습니다.
 
@@ -186,9 +184,7 @@ $ yarn && yarn dev -o
 
 잘 렌더링되고 있습니다.
 
-근데 한 가지 문제가 있습니다. 지금대로라면 새로운 페이지가 늘어날 때 마다 `<NavigationBar/>` 를 계속해서 페이지 상단에 불러야합니다.
-
-이건 `layouts` 폴더를 활용하면 쉽게 해결 가능합니다. `layouts/` 폴더를 만들고, `default.vue` 파일을 만들어주세요.
+근데 한 가지 문제가 있습니다. 지금대로라면 새로운 페이지가 늘어날 때 마다 `<NavigationBar/>` 를 계속해서 페이지 상단에 불러야합니다. 어떻게 하면 코드 중복을 피할 수 있을까요? 이건 `layouts` 폴더를 활용하면 쉽게 해결 가능합니다. `layouts/` 폴더를 만들고, `default.vue` 파일을 만들어주세요.
 
 ```vue [layouts/default.vue]
 <template>
@@ -267,13 +263,39 @@ module.exports = {
 ```vue [pages/index.vue]
 <template>
   <div>
-    <h1 class="text-3xl font-bold">Home</h1>
+    <h1 class="text-3xl **font-bold**">Home</h1>
   </div>
 </template>
 ```
 
 ![image](https://user-images.githubusercontent.com/20244536/153184535-3619e9ea-4a9b-47a8-b788-225e5bed46ce.png)
 
-`tailwindcss` 가 잘 적용됐네요! `tailwindcss`
+`tailwindcss` 가 잘 적용됐네요!
 
-## 마무리
+그럼 네비게이션 바를 만들어보도록 하겠습니다.
+
+```vue [components/NavigationBar/index.vue]
+<template>
+  <nav>
+    <div class="flex justify-between">
+      <NuxtLink to="/">
+        <img
+          src="https://pbsmtipexzqvbentyzuw.supabase.co/storage/v1/object/public/drawbeat.com/public/logo1.svg"
+          alt="app.drawbeat.com"
+          class="w-[180px]"
+        />
+      </NuxtLink>
+
+      <ul>
+        <li>
+          <NuxtLink to="/login">Login</NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</template>
+```
+
+![image](https://user-images.githubusercontent.com/20244536/153410898-ededa981-3600-4225-b56d-58fb4353cb02.png)
+
+로고를 누르면 홈으로 가도록 `<NuxtLink>` 태그로 감싸주었고, 로그인 페이지로 가는 메뉴는 오른쪽에 붙여서 배치했습니다. 아 참고로 `<NuxtLink>`는 브라우저에는 `<a>` 태그로 대치됩니다.

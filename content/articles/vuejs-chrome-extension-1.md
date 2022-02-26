@@ -86,7 +86,7 @@ $ touch index.html
 
 그럼 바로 `html` 코드를 작성하겠습니다.
 
-```html[index.html]
+```html [index.html]
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -94,9 +94,7 @@ $ touch index.html
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Vue extension
-    </title>
+    <title>Vue extension</title>
   </head>
 
   <body>
