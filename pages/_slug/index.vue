@@ -144,8 +144,8 @@ export default {
   content: "-";
 }
 
-/* .nuxt-content pre code::before,
+.nuxt-content pre code::before,
 .nuxt-content pre code::after {
   @apply !content-none;
-} */
+}
 </style>

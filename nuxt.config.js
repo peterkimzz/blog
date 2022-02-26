@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import Prism from 'prismjs'
 import escapeHtml from 'escape-html'
-import { defineNuxtConfig } from '@nuxt/bridge'
 
 require('prismjs/components/index')()
 require('prismjs/components/prism-diff')
@@ -9,7 +8,7 @@ require('prismjs/plugins/diff-highlight/prism-diff-highlight')
 require('prismjs/plugins/command-line/prism-command-line')
 require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
 
-export default defineNuxtConfig({
+export default {
   target: 'static',
   bridge: false,
   server: {
@@ -192,4 +191,4 @@ export default defineNuxtConfig({
       return articles.map((article) => article.path.replace(/\/articles/gi, ''))
     },
   },
-})
+}

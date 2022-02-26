@@ -22,7 +22,7 @@
     "clipboard": "2.0.10",
     "dotenv": "16.0.0",
     "highlight.js": "11.4.0",
-    "nuxt-edge": "latest",
+    "nuxt": "2.15.8",
     "prism-themes": "1.9.0",
     "rehype-parse": "8.0.4",
     "rehype-remark": "9.1.2",
@@ -31,7 +31,6 @@
     "vue-gtag": "1.16.1"
   },
   "devDependencies": {
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxt/postcss8": "1.1.3",
     "@nuxtjs/device": "2.1.0",
     "autoprefixer": "10.4.2",
