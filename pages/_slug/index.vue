@@ -139,10 +139,10 @@ export default {
 }
 .nuxt-content .token.deleted {
   @apply bg-red-900;
-}
+} */
 .nuxt-content .token.deleted::before {
   content: "-";
-} */
+}
 
 /* .nuxt-content pre code::before,
 .nuxt-content pre code::after {

@@ -2,11 +2,12 @@ import 'dotenv/config'
 import Prism from 'prismjs'
 import escapeHtml from 'escape-html'
 import { defineNuxtConfig } from '@nuxt/bridge'
-// require('prismjs/components/index')()
-// require('prismjs/components/prism-diff')
-// require('prismjs/plugins/diff-highlight/prism-diff-highlight')
-// require('prismjs/plugins/command-line/prism-command-line')
-// require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
+
+require('prismjs/components/index')()
+require('prismjs/components/prism-diff')
+require('prismjs/plugins/diff-highlight/prism-diff-highlight')
+require('prismjs/plugins/command-line/prism-command-line')
+require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
 
 export default defineNuxtConfig({
   target: 'static',
@@ -138,7 +139,12 @@ export default defineNuxtConfig({
 
         childs.push(h(node, 'pre', props, [h(node, 'code', [u('raw', code)])]))
 
-        return h(node, 'div', { className: ['nuxt-content-highlight'] }, childs)
+        return h(
+          node.position,
+          'div',
+          { className: ['nuxt-content-highlight'] },
+          childs
+        )
       },
     },
   },
