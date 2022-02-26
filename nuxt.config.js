@@ -2,12 +2,11 @@ import 'dotenv/config'
 import Prism from 'prismjs'
 import escapeHtml from 'escape-html'
 import { defineNuxtConfig } from '@nuxt/bridge'
-
-const u = require('unist-builder')
-require('prismjs/components/index')()
-// enable syntax highlighting on diff language
-require('prismjs/components/prism-diff')
-require('prismjs/plugins/diff-highlight/prism-diff-highlight')
+// require('prismjs/components/index')()
+// require('prismjs/components/prism-diff')
+// require('prismjs/plugins/diff-highlight/prism-diff-highlight')
+// require('prismjs/plugins/command-line/prism-command-line')
+// require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
 
 export default defineNuxtConfig({
   target: 'static',
@@ -72,11 +71,6 @@ export default defineNuxtConfig({
     },
   },
   buildModules: ['@nuxtjs/device', '@nuxt/postcss8'],
-  // hooks: {
-  //   'content:options': (options) => {
-  //     console.log('Content options:', options)
-  //   },
-  // },
   content: {
     liveEdit: false,
     markdown: {
@@ -84,7 +78,7 @@ export default defineNuxtConfig({
         rawCode,
         language,
         { lineHighlights, fileName },
-        { h, node }
+        { h, node, u }
       ) {
         const DIFF_HIGHLIGHT_SYNTAX = /^(diff)-([\w-]+)/i
 
@@ -117,6 +111,9 @@ export default defineNuxtConfig({
         const props = {
           className: [`language-${lang}`, 'line-numbers'],
         }
+        if (lineHighlights) {
+          props.dataLine = lineHighlights
+        }
 
         /**
          * If filename, then set span as a first child
@@ -139,16 +136,9 @@ export default defineNuxtConfig({
           )
         }
 
-        // return `<div class="nuxt-content-highlight"><pre class="language-${lang}"><code>${code}</code></pre></div>`
-
         childs.push(h(node, 'pre', props, [h(node, 'code', [u('raw', code)])]))
 
-        return h(
-          node.position,
-          'div',
-          { className: ['nuxt-content-highlight'] },
-          childs
-        )
+        return h(node, 'div', { className: ['nuxt-content-highlight'] }, childs)
       },
     },
   },

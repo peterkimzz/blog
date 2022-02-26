@@ -134,7 +134,7 @@ export default {
   @apply pointer-events-none;
 }
 
-.nuxt-content .token.inserted {
+/* .nuxt-content .token.inserted {
   @apply bg-green-900;
 }
 .nuxt-content .token.deleted {
@@ -142,10 +142,10 @@ export default {
 }
 .nuxt-content .token.deleted::before {
   content: "-";
-}
+} */
 
-.nuxt-content pre code::before,
+/* .nuxt-content pre code::before,
 .nuxt-content pre code::after {
   @apply !content-none;
-}
+} */
 </style>

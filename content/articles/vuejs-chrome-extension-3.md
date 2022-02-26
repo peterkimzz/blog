@@ -563,19 +563,19 @@ npx tailwindcss init -p
 
 `tailwind.config.js` 파일만 조금 수정해줍시다.
 
-```json [tailwind.config.js]
+```js [tailwind.config.js]
 module.exports = {
-  "mode": "jit",
-  "purge": ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  "darkMode": false,
-  "theme": {
-    "extend": {},
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: false,
+  theme: {
+    extend: {},
   },
-  "variants": {
-    "extend": {},
+  variants: {
+    extend: {},
   },
-  "plugins": [],
-};
+  plugins: [],
+}
 ```
 
 그리고 `tailwindcss` 를 우리 프로젝트에서 사용할 수 있도록 전역 `.css` 파일을 만들고, import 해주도록 합시다.
@@ -602,13 +602,13 @@ createApp(App).mount('#app')
 
 ```vue [App.vue]
 <template>
-  <nav class="text-[1.1rem] font-bold p-2 border-b border-gray-300">
+  <nav class="border-b border-gray-300 p-2 text-[1.1rem] font-bold">
     코인시세보기프로그램
   </nav>
 
   <div class="p-2">// ...</div>
 
-  <footer class="font-[0.9rem] text-gray-600 p-2 border-t border-gray-300">
+  <footer class="font-[0.9rem] border-t border-gray-300 p-2 text-gray-600">
     peterkimzz.com
   </footer>
 </template>
@@ -620,12 +620,12 @@ createApp(App).mount('#app')
 
 ```vue [App.vue]
 <template>
-  <nav class="text-[1.1rem] font-bold p-4">코인시세보기프로그램</nav>
+  <nav class="p-4 text-[1.1rem] font-bold">코인시세보기프로그램</nav>
 
   <div>
     <table class="table w-full">
       <thead>
-        <tr class="text-sm text-gray-500 border-b border-gray-100">
+        <tr class="border-b border-gray-100 text-sm text-gray-500">
           <th class="py-2 px-4 text-left">한글명</th>
           <th class="py-2 px-4 text-right">현재가(원)</th>
           <th class="py-2 px-4 text-right">전일대비</th>
@@ -640,7 +640,7 @@ createApp(App).mount('#app')
             </div>
             <div class="text-sm text-gray-500">{{ coin.market }}/KRW</div>
           </td>
-          <td class="py-1 px-4 text-right font-semibold align-top">
+          <td class="py-1 px-4 text-right align-top font-semibold">
             {{ coin.trade_price }}
           </td>
           <td class="py-1 px-4 text-right">
@@ -655,7 +655,7 @@ createApp(App).mount('#app')
     </table>
   </div>
 
-  <footer class="font-[0.9rem] text-gray-600 p-4 border-t border-gray-300">
+  <footer class="font-[0.9rem] border-t border-gray-300 p-4 text-gray-600">
     peterkimzz.com
   </footer>
 </template>
@@ -758,12 +758,12 @@ function getVolume(volume) {
 
 ```vue [App.vue]
 <template>
-  <nav class="text-[1.1rem] font-bold p-4">코인시세보기프로그램</nav>
+  <nav class="p-4 text-[1.1rem] font-bold">코인시세보기프로그램</nav>
 
   <div>
     <table class="table w-full">
       <thead>
-        <tr class="text-sm text-gray-500 border-b border-gray-100">
+        <tr class="border-b border-gray-100 text-sm text-gray-500">
           <th class="py-2 px-4 text-left">한글명</th>
           <th class="py-2 px-4 text-right">현재가(원)</th>
           <th class="py-2 px-4 text-right">전일대비</th>
@@ -789,7 +789,7 @@ function getVolume(volume) {
               {{ GetRatePrefix(coin) }}{{ GetCurrency(coin.change_price) }}
             </div>
           </td>
-          <td class="py-1 px-4 text-right text-gray-500 font-semibold">
+          <td class="py-1 px-4 text-right font-semibold text-gray-500">
             {{ getVolume(coin.acc_trade_price_24h) }}
           </td>
         </tr>
@@ -797,7 +797,7 @@ function getVolume(volume) {
     </table>
   </div>
 
-  <footer class="font-[0.9rem] text-gray-600 p-4 border-t border-gray-300">
+  <footer class="font-[0.9rem] border-t border-gray-300 p-4 text-gray-600">
     peterkimzz.com
   </footer>
 </template>
