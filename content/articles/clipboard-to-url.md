@@ -122,7 +122,7 @@ clipboard-to-url
 
 ```vue [NavigationBar/index.vue]
 <template>
-  <nav class="**border-b** border-gray-200 shadow-sm">
+  <nav class="border-b border-gray-200 shadow-sm">
     <div class="mx-auto max-w-4xl px-4">
       <div class="flex items-center justify-between">
         <h1 class="text-2xl font-bold text-black">
@@ -473,14 +473,13 @@ clipboard-to-url/
 
 마지막으로 `package.json` 파일의 `scripts` 부분도 수정해줍시다.
 
-```diff-json [package.json]
+```json [package.json]
 {
   "scripts": {
--   "dev": "vite",
-+   "dev": "vite build --watch --mode=development",
+    "dev": "vite build --watch --mode=development",
     "build": "vite build",
     "serve": "vite preview"
-  },
+  }
 }
 ```
 

@@ -63,16 +63,13 @@
 .token.unchanged {
   @apply block;
 }
-
 .token.deleted,
 .token.inserted {
   @apply relative -mx-9 block border-l-4 pl-8 pr-5 before:absolute before:top-0 before:left-4;
 }
-
 .token.inserted {
   @apply border-teal-400 bg-teal-400/[0.15] before:text-teal-400 before:content-['+'];
 }
-
 .token.deleted {
   @apply border-rose-400 bg-rose-500/[0.15] before:text-rose-400 before:content-['-'];
 }
@@ -80,7 +77,15 @@
 pre[class^='language-diff-'] {
   @apply flex px-9;
 }
-
 pre[class^='language-diff-'] > code {
   @apply min-w-full flex-none;
+}
+
+.bg-code-highlight {
+  @apply bg-sky-300/10;
+}
+.code-highlight {
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.1875rem;
+  margin: 0 -0.1875rem;
 }

@@ -3,10 +3,10 @@ import Prism from 'prismjs'
 import escapeHtml from 'escape-html'
 
 require('prismjs/components/index')()
-require('prismjs/components/prism-diff')
-require('prismjs/plugins/diff-highlight/prism-diff-highlight')
-require('prismjs/plugins/command-line/prism-command-line')
-require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
+// require('prismjs/components/prism-diff')
+// require('prismjs/plugins/diff-highlight/prism-diff-highlight')
+// require('prismjs/plugins/command-line/prism-command-line')
+// require('prismjs/plugins/jsonp-highlight/prism-jsonp-highlight')
 
 export default {
   target: 'static',
@@ -81,10 +81,14 @@ export default {
         { h, node, u }
       ) {
         const DIFF_HIGHLIGHT_SYNTAX = /^(diff)-([\w-]+)/i
+        const DIFF_LINE_PREFIX_SYNTAX = /(?:^[+\- ] |^[+-]$)/gm
 
+        let code
         let grammer
         let lang = language || 'text'
 
+        let addedLines = []
+        let removedLines = []
         const isDiff = lang.match(DIFF_HIGHLIGHT_SYNTAX)
         if (isDiff) {
           lang = lang.substr(5)
@@ -94,18 +98,30 @@ export default {
         if (lang === 'vue' || lang === 'mjml') {
           lang = 'html'
         }
-        if (lang === 'ts') {
-          lang = 'js'
-        }
+        // if (lang === 'ts') {
+        //   lang = 'js'
+        // }
 
         if (!grammer) {
           grammer = Prism.languages[lang]
         }
 
         /** Tokenize by Prism.js */
-        let code = grammer
+        code = grammer
           ? Prism.highlight(rawCode, grammer, isDiff ? `diff-${lang}` : lang)
           : escapeHtml(rawCode)
+
+        if (isDiff) {
+          code = code
+            .split('\n')
+            .map((line) =>
+              line
+                .replace('<span class="token prefix unchanged"> </span>', '')
+                .replace('<span class="token prefix inserted">+</span>', '')
+                .replace('<span class="token prefix deleted">-</span>', '')
+            )
+            .join('\n')
+        }
 
         const childs = []
         const props = {
@@ -132,18 +148,13 @@ export default {
           code = code.replace(
             INLINE_HTML_TOKEN_SYNTAX,
             (_, text) =>
-              `<span class="code-highlight bg-code-highlight bg-gray-700">${text}</span>`
+              `<span class="code-highlight bg-code-highlight">${text}</span>`
           )
         }
 
-        childs.push(h(node, 'pre', props, [h(node, 'code', [u('raw', code)])]))
+        childs.push(h(node, 'pre', [h(node, 'code', props, [u('raw', code)])]))
 
-        return h(
-          node.position,
-          'div',
-          { className: ['nuxt-content-highlight'] },
-          childs
-        )
+        return h(node, 'div', { className: 'nuxt-content-highlight' }, childs)
       },
     },
   },

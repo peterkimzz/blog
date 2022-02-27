@@ -49,8 +49,6 @@
 </template>
 
 <script>
-import Prism from 'prismjs'
-
 const IS_PROD = process.env.NODE_ENV === 'production'
 
 export default {
@@ -103,9 +101,6 @@ export default {
     PageURL() {
       return process.env.BASE_URL + '/' + this.article.slug + '/'
     },
-  },
-  mounted() {
-    Prism.highlightAll()
   }
 }
 </script>
@@ -140,9 +135,9 @@ export default {
 .nuxt-content .token.deleted {
   @apply bg-red-900;
 } */
-.nuxt-content .token.deleted::before {
+/* .nuxt-content .token.deleted::before {
   content: "-";
-}
+} */
 
 .nuxt-content pre code::before,
 .nuxt-content pre code::after {
