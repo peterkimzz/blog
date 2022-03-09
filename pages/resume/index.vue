@@ -5,7 +5,7 @@
     <header>
       <p class="text-gray-500 font-medium uppercase">Résumé</p>
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-100">개발자 김동현 이력서</h1>
-      <p class="mt-4 text-gray-500 text-sm">2021년 8월 18일에 마지막으로 업데이트 됨.</p>
+      <p class="mt-4 text-gray-500 text-sm">2022년 3월 9일에 마지막으로 업데이트 됨.</p>
     </header>
 
     <main class="mt-16 space-y-28">
@@ -273,15 +273,23 @@ export default {
     return {
       experiences: [
         {
-          duration: '2019년 11월 - 현재',
-          org: 'Empo Inc.',
-          bio: 'Backend Developer',
+          duration: '2022년 3월 - 현재',
+          org: 'XL8, Inc.',
+          bio: 'Front-end Engineer',
           desc: `
-            본 엔젤스 시드 투자와 TIPS 프로그램에 선정된 모바일 데이터 공유 플랫폼 앰포 서비스의 서버 개발자로 입사했습니다.<br><br>
+            기계 번역 기술을 이용해 미디어 콘텐츠의 텍스트 및 음성 데이터를 가공하는 서비스의 프론트엔드 팀으로 합류했습니다.
+            `,
+        },
+        {
+          duration: '2019년 11월 - 2022년 3월',
+          org: 'Empo Inc.',
+          bio: 'Back-end Engineer',
+          desc: `
+            인도 유저를 타겟으로하는 모바일 데이터 공유 플랫폼 앰포 서비스의 서버 개발자로 입사했습니다.<br><br>
             
-            기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행하고 있습니다.<br><br>
+            기존 PHP로 작성된 서버와, 기존 데이터베이스의 정규화 작업을 포함한 서버 마이그레이션 작업을 진행했습니다.<br><br>
 
-            이후 현재 앰포 앱의 서버 유지 보수 작업과, 사내 새로운 프로젝트 "데이터스캐너"와 "마릴"의 프론트엔드와 백엔드를 담당하고 있습니다.
+            이후 현재 앰포 앱의 서버 유지 보수 작업과, 사내 새로운 프로젝트 "데이터스캐너"와 "마릴"의 프론트엔드와 백엔드를 담당했습니다.
             `,
         },
         {
@@ -293,7 +301,7 @@ export default {
             
             이후 총 3명의 개발자를 직접 채용했고 점점 커지는 프로젝트를 관리해야 했기 때문에 자연스럽게 PM 역할을 맡았습니다.<br><br>
             
-            웹 개발 뿐만 아니라 디자인과 기획도 주도적으로 진행했으며, 입사 당시 MAU 3-4만이었던 트래픽이 퇴사 직전에는 약 8만 정도로 상승했습니다. 이후 회사 경영난으로 퇴사하게 되었습니다.`,
+            웹 개발 뿐만 아니라 디자인과 기획도 주도적으로 진행했으며, 입사 당시 MAU 3-4만이었던 트래픽이 퇴사 직전에는 약 8만 정도로 상승했습니다.`,
         },
         {
           duration: '2017년 2월 - 2018년 7월',
@@ -332,18 +340,29 @@ export default {
             `,
         },
         {
+          src: 'https://user-images.githubusercontent.com/20244536/157413934-05e15112-ef33-40bd-a156-7671e3ffd643.svg',
+          duration: '2022년 1월 - 3월',
+          title: 'Mareel VPN',
+          href: 'https://vpn.mareel.io',
+          desc: `
+            Mareel VPN은 현재 가장 빠른 VPN 프로토콜인 WireGuard를 이용해 만들어진 Empo가 만든 VPN 애플리케이션입니다.<br><br>
+            
+            Electron과 Vue를 이용해 데스크톱 애플리케이션을 개발했고, 원활한 VPN 서버 연결을 위한 클라이언트 피어 관리와 관련된 API 기능을 주로 개발했습니다.
+            `,
+        },
+        {
           src: 'https://user-images.githubusercontent.com/20244536/132115737-c4e9f7fc-85c9-4900-9f69-e440cc21c2e5.png',
-          duration: '2019년 11월 - 현재',
+          duration: '2019년 11월 - 2021년 11월',
           title: 'Empo',
           href: 'https://empo.im',
           desc: `
             앰포는 모바일 데이터 직거래 플랫폼입니다.<br><br>
 
-            전 세계의 심각한 대역폭 공급 불균형을 해소하기 위해 글로벌 시장을 타겟으로 서비스 중입니다. 현재는 인도가 메인 타겟이고, 안드로이드 OS만 서비스 중입니다.<br><br>
+            전 세계의 대역폭 공급 불균형을 해소하기 위해 글로벌 시장을 타겟으로 서비스 중입니다. 현재는 인도가 메인 타겟이고, 안드로이드 OS만 서비스 중입니다.<br><br>
 
             기존 PHP 언어로 개발되어있던 서버 코드를 Node.js로 변경하면서 데이터베이스 정규화 작업 및 마이그레이션을 진행했습니다.<br><br>
 
-            데이터를 거래하는 앱이라, 은행처럼 데이터 거래 기록을 주고 받는 Data transaction에 신경을 많이 썼습니다.
+            데이터를 거래하는 앱이라 은행처럼 데이터 거래 기록을 주고 받는 Data transaction을 웹소켓을 이용해 관리했고, 실시간 유저 위치를 지도에 표시하기 위한 API도 개발했습니다.
             `,
         },
         {
