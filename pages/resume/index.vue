@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20 text-sm md:text-lg">
+  <div class="pb-20 md:text-lg">
     <vue-s-e-o title="개발자 김동현 이력서" :title-template-visible="false" />
 
     <header>
