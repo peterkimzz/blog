@@ -3,7 +3,7 @@ category: tech
 title: '[Nuxt 3] 사이드 프로젝트 만들기 - 개발 환경 설정편'
 updated: 2022-03-12
 created: 2022-03-12
-thumbnail: https://user-images.githubusercontent.com/20244536/152959346-43168905-d155-4e46-b812-9dc5eed12951.png
+thumbnail: https://user-images.githubusercontent.com/20244536/158020130-9fbf9873-9bdf-43ca-81a8-45cbe5ac900b.png
 published: true
 ---
 
