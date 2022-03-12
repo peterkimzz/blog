@@ -13,12 +13,6 @@
             <time :datetime="article.updated">{{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}</time>
           </p>
 
-          <!-- <span class="text-cyan-500 font-semibold tracking-wider uppercase">
-            {{
-              article.category
-            }}
-          </span>-->
-
           <h1
             class="mt-4 text-center max-w-[18rem] md:max-w-full text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
           >{{ article.title }}</h1>

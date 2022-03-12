@@ -125,7 +125,10 @@ export default {
 
         const childs = []
         const props = {
-          className: [`language-${lang}`, 'line-numbers'],
+          className: [
+            isDiff ? `language-diff-${lang}` : `language-${lang}`,
+            'line-numbers',
+          ],
         }
         if (lineHighlights) {
           props.dataLine = lineHighlights
