@@ -31,13 +31,11 @@
         :class="['w-full max-w-full prose prose-cyan prose-base prose-a:!text-cyan-500 prose-a:underline-offset-[3px]', 'md:prose-lg']"
       />
 
-      <vue-divider class="mt-20 mb-10" />
+      <VueDivider class="mt-20 mb-10" />
 
-      <vue-prev-next :prev="prev" :next="next" class="mb-14" />
+      <VuePrevNext :prev="prev" :next="next" class="mb-14" />
 
-      <vue-divider class="my-10" />
-
-      <div class="giscus"></div>
+      <div class="giscus mt-10"></div>
     </article>
   </main>
 </template>
@@ -80,6 +78,8 @@ export default {
         .where(IS_PROD ? { published: true } : {})
         .surround(params.slug)
         .fetch()
+
+      console.log(prev)
 
       return { article, prev, next }
     } catch (err) {

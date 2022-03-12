@@ -43,7 +43,7 @@
               <li>
                 <a
                   href="mailto:peterkimzz69@gmail.com"
-                  class="flex text-gray-500 items-center underline-offset-2 gap-1.5 hover:underline"
+                  class="flex py-1 text-gray-500 items-center underline-offset-2 gap-1.5 hover:underline"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@
                 <a
                   target="_blank"
                   href="https://whattime.co.kr/peterkimzz"
-                  class="flex text-gray-500 items-center underline-offset-2 gap-1.5 hover:underline"
+                  class="flex py-1 text-gray-500 items-center underline-offset-2 gap-1.5 hover:underline"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ export default {
 <style>
 .category-link {
   @apply block;
-  @apply transition-all border-b-2 border-gray-700/50 pl-4 pr-2 py-0.5 text-gray-600 hover:text-gray-400;
+  @apply transition-all border-b-2 border-gray-700/50 pl-4 pr-2 py-1 text-gray-600 hover:text-gray-400;
   @apply border-l-2 border-b-0;
 }
 
