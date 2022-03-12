@@ -34,7 +34,7 @@
 
       <nuxt-content
         :document="article"
-        class="w-full max-w-full prose prose-cyan prose-base md:prose-lg"
+        :class="['w-full max-w-full prose prose-cyan prose-base prose-a:!text-cyan-500 prose-a:underline-offset-[3px]', 'md:prose-lg']"
       />
 
       <vue-divider class="mt-20 mb-10" />
@@ -143,4 +143,9 @@ export default {
 .nuxt-content pre code::after {
   @apply !content-none;
 }
+
+/* .nuxt-content .prose a {
+  @apply !text-cyan-500;
+  @apply underline-offset-2;
+} */
 </style>

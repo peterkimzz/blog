@@ -37,9 +37,9 @@ yarn && yarn dev -o
 
 근데 저희는 페이지를 여러개 만들거라 라우팅이 꼭 필요합니다. `pages/index.vue` 파일을 만들어주고, `app.vue` 파일을 수정해줍시다.
 
-```html
+```vue
 <template>
-  <div class="text-lg **font-bold**">
+  <div class="text-lg">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -61,7 +61,7 @@ yarn && yarn dev -o
 
 여기서 또 하나 추가 변경사항이 있다면 `app.vue`가 모든 페이지의 진입점이 되는 **컴포넌트** 역할을 하기 때문에 전역적으로 `js` 파일이나 `css` 파일을 적용하고 싶다면 `app.vue` 에 적용해도 됩니다.
 
-기존에는 전역적인 코드를 넣기 위해 `nuxt.config` 파일에 명시하거나, `plugin` 을 사용하기도 했었는데 이 부분은 `.vue` 파일을 이용해 컴포넌트를 활용한다는 점에서 더 좋아진 것 같습니다.
+기존에는 전역으로 적용되는 코드를 넣기 위해 `nuxt.config` 파일에 명시하거나 `plugin` 을 사용하기도 했었는데, 이 부분은 `.vue` 파일을 이용해 컴포넌트를 활용한다는 점에서 기존보다 조금 더 일관적으로 프로젝트를 관리할 수 있어서 좋아진 것 같습니다.
 
 그러면 라우팅이 잘 되는지 확인을 위해 로그인 페이지도 만들어보고, 라우팅을 위한 `a` 태그도 만들어보겠습니다.
 
@@ -263,7 +263,7 @@ module.exports = {
 ```vue [pages/index.vue]
 <template>
   <div>
-    <h1 class="text-3xl **font-bold**">Home</h1>
+    <h1 class="**font-bold** text-3xl">Home</h1>
   </div>
 </template>
 ```
@@ -298,4 +298,4 @@ module.exports = {
 
 ![image](https://user-images.githubusercontent.com/20244536/153410898-ededa981-3600-4225-b56d-58fb4353cb02.png)
 
-로고를 누르면 홈으로 가도록 `<NuxtLink>` 태그로 감싸주었고, 로그인 페이지로 가는 메뉴는 오른쪽에 붙여서 배치했습니다. 아 참고로 `<NuxtLink>`는 브라우저에는 `<a>` 태그로 대치됩니다.
+로고를 누르면 홈으로 가도록 `<NuxtLink>` 태그로 감싸주었고, 로그인 페이지로 가는 메뉴는 오른쪽에 붙여서 배치했습니다. 아 참고로 `<NuxtLink>`는 실제 DOM 트리엔 `<a>` 태그로 렌더링됩니다.
