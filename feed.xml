@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Sat, 12 Mar 2022 08:33:37 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Mar 2022 10:55:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -152,6 +152,30 @@
 신기술로 알아볼 것은 바로 Nuxt 3입니다. 아직 베타 버전이기는 하지만, 클라우드 플랫폼인 Vercel과 조합해서 사용해보니 아주 쉽게 서버 없이 서버 사이드 렌더링을 구현할 수가 있더라구요. 서버 없이 서버 사이드 렌더링을 한다는 게 이해가 안가실 수도 있어서 간단히 설명해드리면, 그냥 서버리스 함수 1개로 기존 서버를 대체한다는 말입니다. 뭐 이해 안가셔도 괜찮습니다.]]></description>
             <content:encoded><![CDATA[올해 첫 개발 관련 주제를 뭘로할까 고민하다가 사이드 프로젝트 아이디어가 떠올라서 그걸 같이 만들어볼까 합니다. 하지만 이미 잘 알고 있던 기술을 사용해서 만들면 재미없겠죠. 사이드 프로젝트는 역시 신기술을 이용해서 만드는게 가장 좋습니다. 나만의 프로젝트를 만들면서 최신 기술도 마음껏 써볼 수 있으니까요.
 신기술로 알아볼 것은 바로 Nuxt 3입니다. 아직 베타 버전이기는 하지만, 클라우드 플랫폼인 Vercel과 조합해서 사용해보니 아주 쉽게 서버 없이 서버 사이드 렌더링을 구현할 수가 있더라구요. 서버 없이 서버 사이드 렌더링을 한다는 게 이해가 안가실 수도 있어서 간단히 설명해드리면, 그냥 서버리스 함수 1개로 기존 서버를 대체한다는 말입니다. 뭐 이해 안가셔도 괜찮습니다.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[[Nuxt 3] 사이드 프로젝트 만들기 - 개발 환경 설정편]]></title>
+            <link>https://www.peterkimzz.com/nuxt3-sideproject-2</link>
+            <guid>https://www.peterkimzz.com/nuxt3-sideproject-2</guid>
+            <pubDate>Sat, 12 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[저번 사이드 프로젝트 만들기 - 기획편의 다음 편입니다. 이번엔 nuxt3의 주요 변경사항 일부를 알아보고, 쾌적한 개발 환경을 위해 몇 가지 세팅을 해보도록 하겠습니다.
+일단 새로운 Nuxt3 프로젝트를 생성합시다. 터미널을 열고 아래 명령어를 입력합시다.
+저는 웹 애플리케이션이면 프로젝트 이름을 보통 도메인 이름과 매칭해서 만듭니다. www 도메인은 이미 사용 중이니, app.drawbeat.com 이라는 이름으로 만들겠습니다. 여러분들은 아무거나 하셔도 됩니다.
+bashnpx nuxi init app.drawbeat.com
+cd app.drawbeat.com
+yarn && yarn dev -o
+
+
+이렇게 하면 개발 서버가 열리게 되고, nuxt3의 첫 화면이 보이게 됩니다.]]></description>
+            <content:encoded><![CDATA[저번 사이드 프로젝트 만들기 - 기획편의 다음 편입니다. 이번엔 nuxt3의 주요 변경사항 일부를 알아보고, 쾌적한 개발 환경을 위해 몇 가지 세팅을 해보도록 하겠습니다.
+일단 새로운 Nuxt3 프로젝트를 생성합시다. 터미널을 열고 아래 명령어를 입력합시다.
+저는 웹 애플리케이션이면 프로젝트 이름을 보통 도메인 이름과 매칭해서 만듭니다. www 도메인은 이미 사용 중이니, app.drawbeat.com 이라는 이름으로 만들겠습니다. 여러분들은 아무거나 하셔도 됩니다.
+bashnpx nuxi init app.drawbeat.com
+cd app.drawbeat.com
+yarn && yarn dev -o
+
+
+이렇게 하면 개발 서버가 열리게 되고, nuxt3의 첫 화면이 보이게 됩니다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Rollup.js - 번들링, 파일을 하나로 합쳐보자]]></title>
