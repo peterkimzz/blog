@@ -423,6 +423,68 @@ export default (url: string) => {
 
 아까 컴포넌트쪽에서 말했듯이 `useFetch` 같은건 `nuxt` 프레임워크에서 전역으로 사용 가능하니까 이대로도 `import` 오류가 발생하진 않습니다.
 
+## 상태 관리
+
+모든 페이지, 컴포넌트에서 같은 데이터를 참조하고 싶을 수 있습니다. 대표적으로 로그인을 한 유저의 정보를 어디서든 가져오고 싶은 경우죠. 기존에는 `Vuex`를 공식 라이브러리로 사용했지만, 이제는 레거시가 되었습니다.
+
+새로운 뷰 코어 팀이 준비한 상태 관리 라이브러리는 바로 [`Pinia`](https://pinia.vuejs.org/) 입니다. `Vuex`도 이미 너무 잘 만든 상태 관리 라이브러리지만 새로 만든 이유는 공식 문서에 따르면 다음과 같습니다.
+
+> Compared to Vuex, Pinia provides a simpler API with less ceremony, offers Composition-API-style APIs, and most importantly, has solid type inference support when used with TypeScript.
+
+요약하자면 컴포지션 API와 타입스크립트를 더 잘 지원하기 위함입니다. 직접 사용해보니까 더 사용하기 편리한 것도 맞고, 타입스크립트 친화적인 것도 맞습니다. 기존에도 좋았는데 지금은 더 좋아졌습니다. 도입하지 않을 이유가 없습니다. 간단하게 사용하기 위해 프로젝트 루트 폴더에 `stores/` 폴더를 만들고 `user.ts` 파일을 만들어줍니다.
+
+`Pinia`의 주요 변경 사항 중 하나는 기존에는 데이터에 변화를 줄 때 비동기 여부에 따라 `actions`와 `commit` 함수를 나누어 사용했는데, 이제는 `actions`에 모두 통합되었습니다. 그거 말고는 똑같습니다.
+
+```ts [stores/user.ts]
+import { defineStore } from 'pinia'
+
+export const useUserStore = defineStore('user', {
+  state: () => ({
+    user: null,
+  }),
+  getters: {
+    doubleCount: (state) => state.user,
+  },
+  actions: {
+    save(user?: any) {
+      this.user = user
+    },
+  },
+})
+```
+
+사용하는 방법도 조금 다른데요, 기존에는 최상위 `store` 객체를 가져와서 미리 정의된 고유한 문자열을 키로 삼아 전역 상태 값을 가져오거나 변경했었습니다.
+
+이제는 타입스크립트를 통해 완벽한 자동완성을 지원받을 수 있고, 각 모듈화된 `store`를 개별적으로 가져오면 됩니다. 이건 정말 좋아진 것 같습니다.
+
+```diff-vue [pages/index.vue]
+   <template>
+     <div>
+       <h1 class="font-bold text-3xl">Home</h1>
+       <div v-if="pending">Loading..</div>
+       <template v-else>
+         <div v-if="error">Sorry, error occured.</div>
+         <div v-else>{{ data }}</div>
+       </template>
+
++      <div>{{ userStore.user }}</div>
+
+       <button @click="refresh()">Refresh</button>
++      <button @click="userStore.save({ email: 'peterkimzz69@gmail.com' })">Increment</button>
+     </div>
+   </template>
+```
+
+```diff-vue [pages/index.vue]
+   <script setup lang="ts">
++  import { useUserStore } from '~~/stores/users'
+
+   const { data, pending, error, refresh } = await useApi('/todos/1')
+
++  const userStore = useUserStore()
+   </script>
+```
+
 ## 마무리
 
 이번 글에서는 스타일링 도구인 `tailwindcss`와 HTTP 통신을 위한 `ohmyfetch`에 대해 알아봤습니다. 그리고 `nuxt3`의 주요 변경점도 알아봤습니다.
