@@ -9,16 +9,20 @@
     <article class="relative">
       <header class="mt-10 mb-10">
         <div class="flex flex-col items-center">
-          <p class="text-center text-sm md:text-sm text-gray-400 font-semibold">
-            <time :datetime="article.updated">{{ $dayjs(article.updated).format('YYYY년 MM월 DD일') }}</time>
+          <p class="text-center text-sm font-semibold text-gray-400 md:text-sm">
+            <time :datetime="article.updated">{{
+              $dayjs(article.updated).format('YYYY년 MM월 DD일')
+            }}</time>
           </p>
 
           <h1
-            class="mt-4 text-center max-w-[18rem] md:max-w-full text-2xl md:text-3xl font-extrabold tracking-tight text-gray-100"
-          >{{ article.title }}</h1>
+            class="mt-4 max-w-[18rem] text-center text-2xl font-extrabold tracking-tight text-gray-100 md:max-w-full md:text-3xl"
+          >
+            {{ article.title }}
+          </h1>
         </div>
 
-        <vue-share
+        <VueShare
           :title="article.title"
           :description="article.description"
           :thumbnail="article.thumbnail"
@@ -28,7 +32,10 @@
 
       <nuxt-content
         :document="article"
-        :class="['w-full max-w-full prose prose-cyan prose-base prose-a:!text-cyan-500 prose-a:underline-offset-[3px]', 'md:prose-lg']"
+        :class="[
+          'prose prose-base prose-cyan w-full max-w-full prose-a:!text-cyan-500 prose-a:underline-offset-[3px]',
+          'md:prose-lg',
+        ]"
       />
 
       <VueDivider class="mt-20 mb-10" />
@@ -48,25 +55,27 @@ export default {
   head() {
     return {
       // Load `giscus` when production mode is on
-      script: IS_PROD ? [
-        {
-          src: 'https://giscus.app/client.js',
-          crossorigin: 'anonymous',
-          async: true,
-          'data-repo': 'peterkimzz/blog',
-          'data-repo-id': 'MDEwOlJlcG9zaXRvcnkzMjAyNTkyMTY=',
-          'data-category': 'Blog Comments',
-          'data-category-id': 'DIC_kwDOExbEkM4B-8Mf',
-          'data-mapping': 'title',
-          'data-reactions-enabled': 1,
-          'data-emit-metadata': 0,
-          'data-theme': 'dark',
-          // callback: () => {
-          //   console.log('reday', this.isGiscusReady)
-          //   this.isGiscusReady = true
-          // },
-        },
-      ] : [],
+      script: IS_PROD
+        ? [
+            {
+              src: 'https://giscus.app/client.js',
+              crossorigin: 'anonymous',
+              async: true,
+              'data-repo': 'peterkimzz/blog',
+              'data-repo-id': 'MDEwOlJlcG9zaXRvcnkzMjAyNTkyMTY=',
+              'data-category': 'Blog Comments',
+              'data-category-id': 'DIC_kwDOExbEkM4B-8Mf',
+              'data-mapping': 'title',
+              'data-reactions-enabled': 1,
+              'data-emit-metadata': 0,
+              'data-theme': 'dark',
+              // callback: () => {
+              //   console.log('reday', this.isGiscusReady)
+              //   this.isGiscusReady = true
+              // },
+            },
+          ]
+        : [],
     }
   },
   async asyncData({ $content, params, error }) {
@@ -95,7 +104,7 @@ export default {
     PageURL() {
       return process.env.BASE_URL + '/' + this.article.slug + '/'
     },
-  }
+  },
 }
 </script>
 
@@ -117,7 +126,7 @@ export default {
   @apply relative;
 }
 .nuxt-content-highlight .filename {
-  @apply absolute right-0 text-gray-400 font-light z-10;
+  @apply absolute right-0 z-10 font-light text-gray-400;
   @apply text-xs md:text-sm;
   @apply mr-2.5 mt-1;
   @apply pointer-events-none;
