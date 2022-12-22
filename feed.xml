@@ -4,11 +4,11 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Wed, 13 Jul 2022 04:51:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Dec 2022 13:27:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
-            <title><![CDATA[2021 회고]]></title>
+            <title><![CDATA[2021년 회고]]></title>
             <link>https://www.peterkimzz.com/1-year-review-of-blog-operation-and-2021</link>
             <guid>https://www.peterkimzz.com/1-year-review-of-blog-operation-and-2021</guid>
             <pubDate>Sun, 23 Jan 2022 00:00:00 GMT</pubDate>
@@ -134,6 +134,16 @@
             <pubDate>Mon, 14 Dec 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[작년 말에 이직했으니 이제 곧 입사한지 1년이 다 되어간다. 근데 체감상 나에게 올 한 해는 "나 뭐 했지" 인 것 같다. 분명 기술적으로 굉장히 많이 성장했다.]]></description>
             <content:encoded><![CDATA[작년 말에 이직했으니 이제 곧 입사한지 1년이 다 되어간다. 근데 체감상 나에게 올 한 해는 "나 뭐 했지" 인 것 같다. 분명 기술적으로 굉장히 많이 성장했다.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[2022년 회고]]></title>
+            <link>https://www.peterkimzz.com/memoirs-by-2022</link>
+            <guid>https://www.peterkimzz.com/memoirs-by-2022</guid>
+            <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.]]></description>
+            <content:encoded><![CDATA[
+또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[평생 무료인 모니터링 도구 10분만에 만들기]]></title>
