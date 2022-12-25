@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Thu, 22 Dec 2022 13:27:45 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 25 Dec 2022 04:50:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -141,9 +141,13 @@
             <guid>https://www.peterkimzz.com/memoirs-by-2022</guid>
             <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[
-또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.]]></description>
+또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.
+겨울 야외 온수 풀
+올초 겨울에 그 동안 정말 해보고 싶었던 것을 해봤다. 겨울에 야외 온수 풀에 가보는 것이었다. 얼굴은 춥고 몸은 따뜻한 일본 겨울 온천 같은 느낌을 경험하고 싶었다.]]></description>
             <content:encoded><![CDATA[
-또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.]]></content:encoded>
+또 다시 돌아온 회고록이다. 아, 올해는 마스크 좀 벗길 기대했는데 언제쯤 실내 마스크를 해제할지 모르겠다.
+겨울 야외 온수 풀
+올초 겨울에 그 동안 정말 해보고 싶었던 것을 해봤다. 겨울에 야외 온수 풀에 가보는 것이었다. 얼굴은 춥고 몸은 따뜻한 일본 겨울 온천 같은 느낌을 경험하고 싶었다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[평생 무료인 모니터링 도구 10분만에 만들기]]></title>

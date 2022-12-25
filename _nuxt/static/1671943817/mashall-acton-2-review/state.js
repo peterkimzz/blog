@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1671943817",layout:"article",error:a,serverRendered:true,routePath:"\u002Fmashall-acton-2-review",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"f98508ad"}}}}(null));
