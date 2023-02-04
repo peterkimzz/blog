@@ -1,11 +1,15 @@
 ---
 category: tech
-title: 평생 무료로 연락처 인증 시스템 구축하기
+title: 평생 무료로 연락처 인증 시스템 구현하기
 thumbnail: https://user-images.githubusercontent.com/20244536/216748061-3fc46363-054d-4df4-b175-9f6d0375eebb.png
 updated: 2023-02-04
 created: 2023-02-04
 published: true
 ---
+
+이번 포스팅에선 `Twilio`를 이용해 `Node.js`에서 핸드폰 번호 인증을 아주 쉽게 구현하는 방법에 대해 소개해드리겠습니다.
+
+<!--more-->
 
 온라인 서비스를 확장하다보면 개인화된 경험을 위해 반드시 인증 서비스를 구현해야합니다. 구글,카톡으로 로그인하기 같은 OAuth도 있을거고, 이메일/패스워드 로그인도 있고, 아니면 연락처만 넣고 인증할 수도 있습니다. 운영하는 서비스에 맞게끔 잘 선택하면 되겠습니다.
 
@@ -13,17 +17,9 @@ published: true
 
 그리고 로그인 가능한 방법을 여러개 넣는 것도 좋아하지 않습니다. 구글로 로그인하기, 카톡으로 로그인하기, 이메일로 로그인하기, 연락처로 로그인하기.. 이런거 다 때려박는 서비스들이 가끔 있는데, 이러면 유저가 오랜만에 로그인하려고 하면 뭘로 했는지 기억이 안나서 로그인 시도를 여러번 해야하기 때문입니다. 일단 저부터가 뭘로 가입했었는지 기억이 안나서 중간에 앱 꺼버린 적이 생각보다 많았습니다.
 
-<!--more-->
-
-다른 평생 시리즈들은 여기 있습니다.
-
-- [평생 무료로 커스텀 이메일 사용하기](/custom-email-service-for-free-forever)
-- [평생 무료로 개인 블로그 운영하기](/github-pages-nuxtjs)
-- [평생 무료인 모니터링 도구 10분만에 만들기](/monitoring-tool-in-10-minutes)
-
 ## 시작하기
 
-인증 얘기로 서론이 길었는데, 이번 글의 주제는 **무료로 연락처 인증 시스템 만들기** 입니다. 아니 실제로 문자를 보내는데 어떻게 무료냐? 바로 미국 기업 [Twilio](https://www.twilio.com/)의 인증 API를 사용하면 매우매우 쉽게 가능합니다. 한국어 번역은 지원되지 않습니다만 매우 쉽습니다.
+아니 실제로 문자를 보내는데 어떻게 무료냐? 바로 미국 기업 [Twilio](https://www.twilio.com/)의 인증 API를 사용하면 매우매우 쉽게 가능합니다. 한국어 번역은 지원되지 않습니다만 매우 쉽습니다.
 
 [회원가입 페이지](https://www.twilio.com/try-twilio)로 접속하신 뒤 가입해주세요.
 
@@ -96,7 +92,7 @@ yarn add twilio phone
 ```ts
 import twilio from 'twilio'
 
-export class SMS {
+export class Twilio {
   private client: twilio.Twilio
   private accountSid = 'AC9400af563ea46b42b3255f287abXXXXX'
   private authToken = '65406c430c90d00268ef9bf0720XXXXX'
@@ -187,12 +183,12 @@ app.listen(3000, () => {
       "payee": null,
       "sendCodeAttempts": [
         {
-          "attempt_sid": "VLb759dde6804ba896b9cdb44748d7ce8a",
+          "attempt_sid": "VLb759dde6804ba896b9cdb44748dXXXXX",
           "channel": "sms",
           "time": "2023-02-04T03:36:03.000Z"
         },
         {
-          "attempt_sid": "VL6100bc660d2e825e3b8cfaacc15e2d44",
+          "attempt_sid": "VL6100bc660d2e825e3b8cfaacc15XXXXX",
           "channel": "sms",
           "time": "2023-02-04T03:38:05.798Z"
         }
@@ -248,10 +244,10 @@ app.post('/verify', async (req, res) => {
   "success": true,
   "data": {
     "result": {
-      "sid": "VEb7fbe1cfddfb5809d5e0874881669f6a",
-      "serviceSid": "VAaa47973652ccaabfc582ed8c1af463ad",
-      "accountSid": "AC9400af563ea46b42b3255f287abf8ced",
-      "to": "+821042735480",
+      "sid": "VEb7fbe1cfddfb5809d5e08748816XXXXX",
+      "serviceSid": "VAaa47973652ccaabfc582ed8c1afXXXXX",
+      "accountSid": "AC9400af563ea46b42b3255f287abXXXXX",
+      "to": "+821042730000",
       "channel": "sms",
       "status": "approved",
       "valid": true,
@@ -273,3 +269,9 @@ app.post('/verify', async (req, res) => {
 이제 비밀번호 수집 없이 연락처만 받고 최대한 가볍게 인증을 구현하는 것도 가능하겠죠?
 
 우리 모두 인증 때문에 스트레스 받지 맙시다.
+
+### 다른 평생 무료 시리즈
+
+- [평생 무료로 개인 블로그 운영하기](/github-pages-nuxtjs)
+- [평생 무료로 커스텀 이메일 사용하기](/custom-email-service-for-free-forever)
+- [평생 무료인 모니터링 도구 10분만에 만들기](/monitoring-tool-in-10-minutes)
