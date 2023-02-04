@@ -2,6 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './content/**/*.md',
@@ -15,7 +16,6 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.neutral,
-        cyan: colors.cyan,
       },
       fontFamily: {
         sans: ['Pretendard', ...defaultTheme.fontFamily.sans],
