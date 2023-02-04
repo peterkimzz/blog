@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Sun, 25 Dec 2022 04:50:21 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Feb 2023 04:16:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -90,14 +90,6 @@
 제가 검색했을 땐 용산, 종로쪽은 사실 파이브스팟 말고는 갈만한 곳이 딱히 없었습니다. 저는 주로 혼자서 일을 하기 때문에 굳이 패스트파이브나 위워크같이 너무 비싼 메이저 공유오피스로 갈 이유는 없기도 하구요.]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[평생 무료로 개인 블로그 운영하기]]></title>
-            <link>https://www.peterkimzz.com/github-pages-nuxtjs</link>
-            <guid>https://www.peterkimzz.com/github-pages-nuxtjs</guid>
-            <pubDate>Thu, 17 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[거의 대부분의 개발자들이 개인 블로그를 운영하라고 얘기한다. 나도 그렇게 생각한다. 왜냐면 분명히 내가 작성했던 코드인데도, 일주일만 지나도 기억이 안나기 때문이다. 그리고 웬만하면 공개해서 작성하라고 하고 싶다. 이미 우리는 누군가가 옛날에 썼던 글을 보고, 문제를 해결한 경험히 굉장히 많기 때문이다. 나는 이런 개발자들의 문화가 너무 좋다. 이런 개발자들의 문화가 다른 업종에도 접목된다면 정말 좋으련만.]]></description>
-            <content:encoded><![CDATA[거의 대부분의 개발자들이 개인 블로그를 운영하라고 얘기한다. 나도 그렇게 생각한다. 왜냐면 분명히 내가 작성했던 코드인데도, 일주일만 지나도 기억이 안나기 때문이다. 그리고 웬만하면 공개해서 작성하라고 하고 싶다. 이미 우리는 누군가가 옛날에 썼던 글을 보고, 문제를 해결한 경험히 굉장히 많기 때문이다. 나는 이런 개발자들의 문화가 너무 좋다. 이런 개발자들의 문화가 다른 업종에도 접목된다면 정말 좋으련만.]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[웹 폰트와 사이즈는 어떻게 결정해야할까?]]></title>
             <link>https://www.peterkimzz.com/how-to-pick-web-font-and-size</link>
             <guid>https://www.peterkimzz.com/how-to-pick-web-font-and-size</guid>
@@ -108,7 +100,15 @@
 이 폰트는 같은 Family라면 (Serif, Sans-serif 등) 얼핏보면 구분하기 어려울 정도로 미세하게 다릅니다. 하지만, 이 미세한 차이가 독자의 피로도를 크게 좌우하기 때문에 신중하게 선택해야합니다.]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[무료로 반응형 이메일 템플릿 무한대로 만들기 - mjml.io]]></title>
+            <title><![CDATA[평생 무료로 개인 블로그 운영하기]]></title>
+            <link>https://www.peterkimzz.com/github-pages-nuxtjs</link>
+            <guid>https://www.peterkimzz.com/github-pages-nuxtjs</guid>
+            <pubDate>Thu, 17 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[거의 대부분의 개발자들이 개인 블로그를 운영하라고 얘기한다. 나도 그렇게 생각한다. 왜냐면 분명히 내가 작성했던 코드인데도, 일주일만 지나도 기억이 안나기 때문이다. 그리고 웬만하면 공개해서 작성하라고 하고 싶다. 이미 우리는 누군가가 옛날에 썼던 글을 보고, 문제를 해결한 경험히 굉장히 많기 때문이다. 나는 이런 개발자들의 문화가 너무 좋다. 이런 개발자들의 문화가 다른 업종에도 접목된다면 정말 좋으련만.]]></description>
+            <content:encoded><![CDATA[거의 대부분의 개발자들이 개인 블로그를 운영하라고 얘기한다. 나도 그렇게 생각한다. 왜냐면 분명히 내가 작성했던 코드인데도, 일주일만 지나도 기억이 안나기 때문이다. 그리고 웬만하면 공개해서 작성하라고 하고 싶다. 이미 우리는 누군가가 옛날에 썼던 글을 보고, 문제를 해결한 경험히 굉장히 많기 때문이다. 나는 이런 개발자들의 문화가 너무 좋다. 이런 개발자들의 문화가 다른 업종에도 접목된다면 정말 좋으련만.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[평생 무료로 반응형 이메일 템플릿 무한대로 만들기 - mjml.io]]></title>
             <link>https://www.peterkimzz.com/introduce-free-responsive-email-template-mjml</link>
             <guid>https://www.peterkimzz.com/introduce-free-responsive-email-template-mjml</guid>
             <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
@@ -190,6 +190,18 @@ yarn && yarn dev -o
 
 
 이렇게 하면 개발 서버가 열리게 되고, nuxt3의 첫 화면이 보이게 됩니다.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[평생 무료로 연락처 인증 시스템 구축하기]]></title>
+            <link>https://www.peterkimzz.com/phone-validation-service-for-free-forever</link>
+            <guid>https://www.peterkimzz.com/phone-validation-service-for-free-forever</guid>
+            <pubDate>Sat, 04 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[온라인 서비스를 확장하다보면 개인화된 경험을 위해 반드시 인증 서비스를 구현해야합니다. 구글,카톡으로 로그인하기 같은 OAuth도 있을거고, 이메일/패스워드 로그인도 있고, 아니면 연락처만 넣고 인증할 수도 있습니다. 운영하는 서비스에 맞게끔 잘 선택하면 되겠습니다.
+저는 요즘 비밀번호를 수집하지 않는 것을 좋아합니다. 데이터베이스 유저 테이블에 password, password_salt 같은 항목을 넣기도 싫고, 보안에 더 신경을 써야할 것만 같은 느낌이 들기 때문입니다. 어렵진 않지만 굳이 암호화 로직도 추가해야하구요.
+그리고 로그인 가능한 방법을 여러개 넣는 것도 좋아하지 않습니다. 구글로 로그인하기, 카톡으로 로그인하기, 이메일로 로그인하기, 연락처로 로그인하기.. 이런거 다 때려박는 서비스들이 가끔 있는데, 이러면 유저가 오랜만에 로그인하려고 하면 뭘로 했는지 기억이 안나서 로그인 시도를 여러번 해야하기 때문입니다. 일단 저부터가 뭘로 가입했었는지 기억이 안나서 중간에 앱 꺼버린 적이 생각보다 많았습니다.]]></description>
+            <content:encoded><![CDATA[온라인 서비스를 확장하다보면 개인화된 경험을 위해 반드시 인증 서비스를 구현해야합니다. 구글,카톡으로 로그인하기 같은 OAuth도 있을거고, 이메일/패스워드 로그인도 있고, 아니면 연락처만 넣고 인증할 수도 있습니다. 운영하는 서비스에 맞게끔 잘 선택하면 되겠습니다.
+저는 요즘 비밀번호를 수집하지 않는 것을 좋아합니다. 데이터베이스 유저 테이블에 password, password_salt 같은 항목을 넣기도 싫고, 보안에 더 신경을 써야할 것만 같은 느낌이 들기 때문입니다. 어렵진 않지만 굳이 암호화 로직도 추가해야하구요.
+그리고 로그인 가능한 방법을 여러개 넣는 것도 좋아하지 않습니다. 구글로 로그인하기, 카톡으로 로그인하기, 이메일로 로그인하기, 연락처로 로그인하기.. 이런거 다 때려박는 서비스들이 가끔 있는데, 이러면 유저가 오랜만에 로그인하려고 하면 뭘로 했는지 기억이 안나서 로그인 시도를 여러번 해야하기 때문입니다. 일단 저부터가 뭘로 가입했었는지 기억이 안나서 중간에 앱 꺼버린 적이 생각보다 많았습니다.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Rollup.js - 번들링, 파일을 하나로 합쳐보자]]></title>
