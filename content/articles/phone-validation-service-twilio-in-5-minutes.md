@@ -1,8 +1,8 @@
 ---
 category: tech
-title: 평생 무료로 연락처 인증 시스템 구현하기
-thumbnail: https://user-images.githubusercontent.com/20244536/216748061-3fc46363-054d-4df4-b175-9f6d0375eebb.png
-updated: 2023-02-04
+title: Twilio로 연락처 인증 서비스 5분만에 구현하기
+thumbnail: https://user-images.githubusercontent.com/20244536/217119347-a66255f7-f5cd-436c-ae11-63bed3bff016.png
+updated: 2023-02-07
 created: 2023-02-04
 published: true
 ---
@@ -19,7 +19,7 @@ published: true
 
 ## 시작하기
 
-아니 실제로 문자를 보내는데 어떻게 무료냐? 바로 미국 기업 [Twilio](https://www.twilio.com/)의 인증 API를 사용하면 매우매우 쉽게 가능합니다. 한국어 번역은 지원되지 않습니다만 매우 쉽습니다.
+저희가 사용하려는 서비스는 [Twilio Verify](https://www.twilio.com/verify)라는 기능입니다. 인증 1개당 $0.05입니다. 그리고 가입시 약 $15정도를 무료로 사용할 수 있도록 제공해줍니다. 한국어 번역은 지원되지 않습니다만 매우 쉽습니다.
 
 [회원가입 페이지](https://www.twilio.com/try-twilio)로 접속하신 뒤 가입해주세요.
 
@@ -45,7 +45,7 @@ published: true
 
 ![Twilio-Required-Forms](https://user-images.githubusercontent.com/20244536/216744012-ad02f243-55da-4084-9d83-6479a43b55a0.png)
 
-서비스 이용을 위해 필수로 작성해야하는 설문조사를 해야합니다. 무료인데 뭐 이정도 정보는 쉽게 내어줍시다.
+서비스 이용을 위해 필수로 작성해야하는 설문조사를 해야합니다. 아무렇게나 작성하셔도 됩니다.
 
 ## 인증 시스템 구현하기
 
@@ -269,9 +269,3 @@ app.post('/verify', async (req, res) => {
 이제 비밀번호 수집 없이 연락처만 받고 최대한 가볍게 인증을 구현하는 것도 가능하겠죠?
 
 우리 모두 인증 때문에 스트레스 받지 맙시다.
-
-### 다른 평생 무료 시리즈
-
-- [평생 무료로 개인 블로그 운영하기](/github-pages-nuxtjs)
-- [평생 무료로 커스텀 이메일 사용하기](/custom-email-service-for-free-forever)
-- [평생 무료인 모니터링 도구 10분만에 만들기](/monitoring-tool-in-10-minutes)
