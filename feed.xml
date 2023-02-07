@@ -4,7 +4,7 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Sat, 04 Feb 2023 08:51:47 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Feb 2023 01:01:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -192,9 +192,9 @@ yarn && yarn dev -o
 이렇게 하면 개발 서버가 열리게 되고, nuxt3의 첫 화면이 보이게 됩니다.]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[평생 무료로 연락처 인증 시스템 구현하기]]></title>
-            <link>https://www.peterkimzz.com/phone-validation-service-for-free-forever</link>
-            <guid>https://www.peterkimzz.com/phone-validation-service-for-free-forever</guid>
+            <title><![CDATA[Twilio로 연락처 인증 서비스 5분만에 구현하기]]></title>
+            <link>https://www.peterkimzz.com/phone-validation-service-twilio-in-5-minutes</link>
+            <guid>https://www.peterkimzz.com/phone-validation-service-twilio-in-5-minutes</guid>
             <pubDate>Sat, 04 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[이번 포스팅에선 Twilio를 이용해 Node.js에서 핸드폰 번호 인증을 아주 쉽게 구현하는 방법에 대해 소개해드리겠습니다.]]></description>
             <content:encoded><![CDATA[이번 포스팅에선 Twilio를 이용해 Node.js에서 핸드폰 번호 인증을 아주 쉽게 구현하는 방법에 대해 소개해드리겠습니다.]]></content:encoded>
