@@ -1,13 +1,13 @@
 ---
 category: tech
-title: Twilio로 연락처 인증 서비스 5분만에 구현하기
+title: Twilio 번호 구매 없이 연락처 인증 서비스 5분만에 구현하기
 thumbnail: https://user-images.githubusercontent.com/20244536/217119347-a66255f7-f5cd-436c-ae11-63bed3bff016.png
 updated: 2023-02-07
 created: 2023-02-04
 published: true
 ---
 
-이번 포스팅에선 `Twilio`를 이용해 `Node.js`에서 핸드폰 번호 인증을 아주 쉽게 구현하는 방법에 대해 소개해드리겠습니다.
+이번 포스팅에선 `Twilio`를 이용해 `Node.js`에서 개인 번호를 발급받지 않고, 핸드폰 번호 인증을 매우 간단하게 구현하는 방법에 대해 소개해드리겠습니다.
 
 <!--more-->
 
