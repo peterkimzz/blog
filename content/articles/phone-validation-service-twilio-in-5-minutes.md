@@ -2,7 +2,7 @@
 category: tech
 title: Twilio 번호 구매 없이 연락처 인증 서비스 5분만에 구현하기
 thumbnail: https://user-images.githubusercontent.com/20244536/217119347-a66255f7-f5cd-436c-ae11-63bed3bff016.png
-updated: 2023-02-07
+updated: 2023-02-19
 created: 2023-02-04
 published: true
 ---
