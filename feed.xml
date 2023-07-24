@@ -4,9 +4,17 @@
         <title>기술과 예술을 담은 블로그</title>
         <link>https://www.peterkimzz.com</link>
         <description>개발자 peterkimzz의 개발과 예술, 그리고 일상을 정리하는 공간입니다.</description>
-        <lastBuildDate>Mon, 24 Jul 2023 13:12:50 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Jul 2023 13:33:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[[Nuxt 3] Composition API로 자동 스크롤링 기능 구현하기]]></title>
+            <link>https://www.peterkimzz.com/nuxt3-auto-scrolling-with-composition-api</link>
+            <guid>https://www.peterkimzz.com/nuxt3-auto-scrolling-with-composition-api</guid>
+            <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[이번 포스팅에서는 실시간 채팅 서비스에서 새로운 대화 내용이 추가되었을 때 자동으로 스크롤이 계속해서 아래로 내려가면서, 스크롤을 조작함에 따라 자동 스크롤이 활성화/비활성화되는 기능을 Vue 3에서 새로 추가된 Composition API를 통해 만들어볼겁니다.]]></description>
+            <content:encoded><![CDATA[이번 포스팅에서는 실시간 채팅 서비스에서 새로운 대화 내용이 추가되었을 때 자동으로 스크롤이 계속해서 아래로 내려가면서, 스크롤을 조작함에 따라 자동 스크롤이 활성화/비활성화되는 기능을 Vue 3에서 새로 추가된 Composition API를 통해 만들어볼겁니다.]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[2021년 회고]]></title>
             <link>https://www.peterkimzz.com/1-year-review-of-blog-operation-and-2021</link>
