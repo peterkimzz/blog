@@ -4,6 +4,7 @@ title: '[Nuxt 3] Composition API로 자동 스크롤링 기능 구현하기'
 updated: 2023-07-24
 created: 2023-07-24
 thumbnail: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
+published: true
 ---
 
 이번 포스팅에서는 실시간 채팅 서비스에서 새로운 대화 내용이 추가되었을 때 자동으로 스크롤이 계속해서 아래로 내려가면서, 스크롤을 조작함에 따라 자동 스크롤이 활성화/비활성화되는 기능을 Vue 3에서 새로 추가된 [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html#what-is-composition-api)를 통해 만들어볼겁니다.
