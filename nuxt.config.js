@@ -202,7 +202,9 @@ export default {
         .where({ published: true })
         .fetch()
 
-      return articles.map((article) => article.path.replace(/\/articles/gi, ''))
+      return articles.map(
+        (article) => article.path.replace(/\/articles/gi, '') + '/'
+      )
     },
   },
 }
