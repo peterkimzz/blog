@@ -1,0 +1,67 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+      ],
+      "~/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+      ],
+      "@": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+      ],
+      "@/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+      ],
+      "~~": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+      ],
+      "~~/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+      ],
+      "@@": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+      ],
+      "@@/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+      ],
+      "assets": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/assets"
+      ],
+      "assets/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/assets/*"
+      ],
+      "public": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/public"
+      ],
+      "public/*": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/public/*"
+      ],
+      "#content/server": [
+        "/Users/peterkimzz/Projects/@peterkimzz/blog/node_modules/@nuxt/content/dist/runtime/server/index"
+      ]
+    }
+  },
+  "include": [
+    "/Users/peterkimzz/Projects/@peterkimzz/blog/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}

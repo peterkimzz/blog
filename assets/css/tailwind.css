@@ -4,13 +4,10 @@
 
 @layer base {
   html {
-    word-break: keep-all;
-    @apply antialiased;
+    @apply antialiased bg-white leading-7;
+  }
 
-    @apply bg-gray-800;
-    @apply text-gray-300;
-
-    @apply text-base;
-    @apply leading-6 md:leading-7;
+  a {
+    @apply hover:underline underline-offset-4;
   }
 }

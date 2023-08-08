@@ -1,37 +1,29 @@
 {
-  "name": "peterkimzz",
-  "version": "0.0.1",
-  "main": "index.js",
-  "repository": "https://github.com/peterkimzz/blog.git",
-  "author": "Donghyun Kim <peterkimzz69@gmail.com>",
-  "license": "MIT",
+  "name": "peterkimzz-blog",
+  "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "clean": "nuxt clean",
+    "deploy": "gh-pages -d .output/public",
     "generate": "nuxt generate",
-    "start": "nuxt start"
-  },
-  "dependencies": {
-    "@nuxt/content": "1.15.1",
-    "@nuxtjs/dayjs": "1.4.1",
-    "@nuxtjs/feed": "2.0.0",
-    "@nuxtjs/sitemap": "2.4.0",
-    "@tailwindcss/forms": "0.5.3",
-    "@tailwindcss/line-clamp": "0.4.2",
-    "@tailwindcss/typography": "0.5.9",
-    "cheerio": "1.0.0-rc.10",
-    "clipboard": "2.0.11",
-    "cross-env": "^7.0.3",
-    "dotenv": "16.0.3",
-    "nuxt": "2.15.8",
-    "vue-gtag": "1.16.1"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/postcss8": "1.1.3",
-    "@nuxtjs/device": "2.1.0",
-    "autoprefixer": "10.4.13",
-    "postcss": "8.4.21",
-    "prettier": "2.8.3",
-    "prettier-plugin-tailwindcss": "0.2.2",
-    "tailwindcss": "3.2.4"
+    "@nuxt/content": "2.7.2",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/tailwindcss": "6.8.0",
+    "@tailwindcss/typography": "0.5.9",
+    "@types/node": "18.17.1",
+    "gh-pages": "5.0.0",
+    "nuxt": "3.6.5",
+    "sitemap": "7.1.1"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.0.18",
+    "dayjs-nuxt": "1.1.2",
+    "vue-gtag-next": "^1.14.0"
   }
 }
