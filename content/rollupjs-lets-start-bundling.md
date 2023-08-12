@@ -1,7 +1,7 @@
 ---
 category: tech
 title: Rollup.js - 번들링, 파일을 하나로 합쳐보자
-thumbnail: https://user-images.githubusercontent.com/20244536/107738251-a6002680-6d49-11eb-8708-dbe40704924e.png
+image: https://user-images.githubusercontent.com/20244536/107738251-a6002680-6d49-11eb-8708-dbe40704924e.png
 updated: 2021-02-09
 created: 2021-02-09
 published: true

@@ -1,9 +1,9 @@
 ---
 category: tech
-title: '[Nuxt 3] Composition API로 자동 스크롤링 기능 구현하기'
+title: "[Nuxt 3] Composition API로 자동 스크롤링 기능 구현하기"
 updated: 2023-07-24
 created: 2023-07-24
-thumbnail: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
+image: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
 published: true
 ---
 
@@ -27,22 +27,22 @@ export default {
   data() {
     return {
       count: 1,
-    }
+    };
   },
   computed: {
     getDoubleCount() {
-      return this.count * 2
+      return this.count * 2;
     },
   },
   methods: {
     addCount() {
-      this.count++
+      this.count++;
     },
   },
   mounted() {
-    console.log('mounted')
+    console.log("mounted");
   },
-}
+};
 </script>
 ```
 
@@ -60,28 +60,28 @@ export default {
 </template>
 
 <script setup>
-import { useCount } from './useCount'
+import { useCount } from "./useCount";
 
-const { count, getDoubleCount, addCount } = useCount()
+const { count, getDoubleCount, addCount } = useCount();
 </script>
 ```
 
 ```ts [useCount.ts]
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted } from "vue";
 
 export function useCount() {
-  const count = ref(1)
-  const getDoubleCount = computed(() => count.value)
+  const count = ref(1);
+  const getDoubleCount = computed(() => count.value);
 
   function addCount() {
-    count.value++
+    count.value++;
   }
 
   onMounted(() => {
-    console.log('useCount is mounted.')
-  })
+    console.log("useCount is mounted.");
+  });
 
-  return { count, getDoubleCount, addCount }
+  return { count, getDoubleCount, addCount };
 }
 ```
 
@@ -124,8 +124,8 @@ yarn i -D @nuxtjs/tailwindcss
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'],
-})
+  modules: ["@nuxtjs/tailwindcss"],
+});
 ```
 
 잘 적용이 됐는지 확인을 위해 HTML 코드를 수정해주겠습니다.
@@ -185,9 +185,9 @@ yarn add @faker-js/faker
 
 ```vue [app.vue]
 <script lang="ts" setup>
-import { fakerDE as faker } from '@faker-js/faker'
+import { fakerDE as faker } from "@faker-js/faker";
 
-type Chat = { id: string; name: string; message: string }
+type Chat = { id: string; name: string; message: string };
 
 function getChat(): Promise<Chat> {
   return new Promise((resolve) => {
@@ -199,8 +199,8 @@ function getChat(): Promise<Chat> {
           message: faker.lorem.sentence(),
         }),
       500 // 0.5 seconds to respond
-    )
-  })
+    );
+  });
 }
 </script>
 ```
@@ -211,17 +211,17 @@ function getChat(): Promise<Chat> {
 
 ```vue [app.vue]
 <script lang="ts" setup>
-const chats = ref<Chat[]>([])
+const chats = ref<Chat[]>([]);
 
 function pollingChats() {
-  const INTERVAL = 2000 // 2 seconds
+  const INTERVAL = 2000; // 2 seconds
   setInterval(async () => {
-    const chat = await getChat()
-    chats.value.push(chat)
-  }, INTERVAL)
+    const chat = await getChat();
+    chats.value.push(chat);
+  }, INTERVAL);
 }
 
-pollingChats()
+pollingChats();
 </script>
 
 <template>
@@ -293,15 +293,15 @@ css의 `overflow` 속성을 이용해 아주 쉽게 Header와 Footer는 고정�
 
 ```ts
 function pollingChats() {
-  const INTERVAL = 2000 // 2 seconds
+  const INTERVAL = 2000; // 2 seconds
   setInterval(async () => {
-    const chat = await getChat()
-    chats.value.push(chat)
+    const chat = await getChat();
+    chats.value.push(chat);
 
     if (chatContainer.value) {
-      chatContainer.value.scrollTo(0, chatContainer.value.scrollHeight)
+      chatContainer.value.scrollTo(0, chatContainer.value.scrollHeight);
     }
-  }, INTERVAL)
+  }, INTERVAL);
 }
 ```
 
@@ -315,17 +315,17 @@ function pollingChats() {
 
 ```ts
 function pollingChats() {
-  const INTERVAL = 2000 // 2 seconds
+  const INTERVAL = 2000; // 2 seconds
   setInterval(async () => {
-    const chat = await getChat()
-    chats.value.push(chat)
+    const chat = await getChat();
+    chats.value.push(chat);
 
     nextTick(() => {
       if (chatContainer.value) {
-        chatContainer.value.scrollTo(0, chatContainer.value.scrollHeight)
+        chatContainer.value.scrollTo(0, chatContainer.value.scrollHeight);
       }
-    })
-  }, INTERVAL)
+    });
+  }, INTERVAL);
 }
 ```
 
@@ -344,12 +344,12 @@ Nuxt 3에는 최상위 디렉토리에 `composables` 라는 폴더가 있으면�
 프로젝트 최상위 디렉토리에 `composables` 폴더를 만들고 그 안에 `useChat.ts` 파일을 만들어주세요.
 
 ```ts [composables/useChat.ts]
-import { fakerDE as faker } from '@faker-js/faker'
+import { fakerDE as faker } from "@faker-js/faker";
 
-type Chat = { id: string; name: string; message: string }
+type Chat = { id: string; name: string; message: string };
 
 export function useChat() {
-  const chats = ref<Chat[]>([])
+  const chats = ref<Chat[]>([]);
 
   function getChat(): Promise<Chat> {
     return new Promise((resolve) => {
@@ -361,19 +361,19 @@ export function useChat() {
             message: faker.lorem.sentence(),
           }),
         500 // 0.5 seconds to respond
-      )
-    })
+      );
+    });
   }
 
   function pollingChats() {
-    const INTERVAL = 2000 // 2 seconds
+    const INTERVAL = 2000; // 2 seconds
     setInterval(async () => {
-      const chat = await getChat()
-      chats.value.push(chat)
-    }, INTERVAL)
+      const chat = await getChat();
+      chats.value.push(chat);
+    }, INTERVAL);
   }
 
-  return { chats, getChat, pollingChats }
+  return { chats, getChat, pollingChats };
 }
 ```
 
@@ -381,11 +381,11 @@ export function useChat() {
 
 ```vue [app.vue]
 <script lang="ts" setup>
-const { chats, pollingChats } = useChat()
+const { chats, pollingChats } = useChat();
 
-const chatContainer = ref<HTMLElement>()
+const chatContainer = ref<HTMLElement>();
 
-pollingChats()
+pollingChats();
 </script>
 ```
 
@@ -400,14 +400,14 @@ export function useAutoScroll(container: Ref<HTMLElement | undefined>) {
   function scrollToBottom() {
     nextTick(() => {
       if (!container.value) {
-        return
+        return;
       }
 
-      container.value.scrollTo(0, container.value.scrollHeight)
-    })
+      container.value.scrollTo(0, container.value.scrollHeight);
+    });
   }
 
-  return { scrollToBottom }
+  return { scrollToBottom };
 }
 ```
 
@@ -415,19 +415,19 @@ export function useAutoScroll(container: Ref<HTMLElement | undefined>) {
 
 ```vue [app.vue]
 <script lang="ts" setup>
-const { chats, pollingChats } = useChat()
+const { chats, pollingChats } = useChat();
 
-const chatContainer = ref<HTMLElement>()
-const { scrollToBottom } = useAutoScroll(chatContainer)
+const chatContainer = ref<HTMLElement>();
+const { scrollToBottom } = useAutoScroll(chatContainer);
 
 watch(
   () => chats.value.length,
   () => {
-    scrollToBottom()
+    scrollToBottom();
   }
-)
+);
 
-pollingChats()
+pollingChats();
 </script>
 ```
 
@@ -449,40 +449,40 @@ pollingChats()
 
 ```ts [composables/useAutoScroll.ts]
 export function useAutoScroll(container: Ref<HTMLElement | undefined>) {
-  const isAutoScrolling = ref<boolean>(true)
+  const isAutoScrolling = ref<boolean>(true);
 
   watch(
     () => container.value,
     () => {
       if (container.value) {
-        container.value.addEventListener('scroll', () => {
-          const scrollTop = container.value!.scrollTop
-          const scrollHeight = container.value!.scrollHeight
-          const clientHeight = container.value!.clientHeight
+        container.value.addEventListener("scroll", () => {
+          const scrollTop = container.value!.scrollTop;
+          const scrollHeight = container.value!.scrollHeight;
+          const clientHeight = container.value!.clientHeight;
 
-          const reachBottom = scrollTop + clientHeight >= scrollHeight
+          const reachBottom = scrollTop + clientHeight >= scrollHeight;
 
           if (reachBottom) {
-            isAutoScrolling.value = true
+            isAutoScrolling.value = true;
           } else {
-            isAutoScrolling.value = false
+            isAutoScrolling.value = false;
           }
-        })
+        });
       }
     }
-  )
+  );
 
   function scrollToBottom() {
     nextTick(() => {
       if (!container.value || !isAutoScrolling.value) {
-        return
+        return;
       }
 
-      container.value.scrollTo(0, container.value.scrollHeight)
-    })
+      container.value.scrollTo(0, container.value.scrollHeight);
+    });
   }
 
-  return { scrollToBottom }
+  return { scrollToBottom };
 }
 ```
 

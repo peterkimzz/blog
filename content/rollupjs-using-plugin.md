@@ -1,7 +1,7 @@
 ---
 category: tech
 title: Rollup.js - 플러그인으로 완성도를 높이다
-thumbnail: https://user-images.githubusercontent.com/20244536/107738247-a4cef980-6d49-11eb-88a5-f7b8b6190a61.png
+image: https://user-images.githubusercontent.com/20244536/107738247-a4cef980-6d49-11eb-88a5-f7b8b6190a61.png
 updated: 2021-02-12
 created: 2021-02-12
 published: true
@@ -67,16 +67,16 @@ $ yarn add -D @rollup/plugin-node-resolve
 프로젝트에 플러그인 역할을 할 패키지를 설치 후, 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    dir: 'dist',
-    format: 'cjs'
+    dir: "dist",
+    format: "cjs",
   },
-  plugins: [nodeResolve()]
-}
+  plugins: [nodeResolve()],
+};
 ```
 
 이렇게 설정하고 번들링을 하면 예상되는 결과는 우리의 결과물에 `faker`의 `findName()` 함수에 대한 코드가 포함되어 있어야겠죠.
@@ -108,17 +108,17 @@ $ yarn add -D @rollup/plugin-commonjs
 패키지를 설치하고 설정 파일을 다시 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    dir: 'dist',
-    format: 'cjs'
+    dir: "dist",
+    format: "cjs",
   },
-  plugins: [nodeResolve(), commonjs()]
-}
+  plugins: [nodeResolve(), commonjs()],
+};
 ```
 
 다시 빌드 해봅시다.
@@ -203,22 +203,22 @@ $ yarn add -D @rollup/plugin-typescript
 다음 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    dir: 'dist',
-    format: 'cjs'
+    dir: "dist",
+    format: "cjs",
   },
   plugins: [
     nodeResolve(),
-    commonjs({ extensions: ['.js', '.ts'] }),
-    typescript()
-  ]
-}
+    commonjs({ extensions: [".js", ".ts"] }),
+    typescript(),
+  ],
+};
 ```
 
 플러그인에 `typescript` 를 추가하고, `commonjs`가 `.ts` 파일도 읽어들일 수 있도록 설정합니다.
@@ -245,23 +245,23 @@ created dist in 5.6s
 `rollup` 의 권장사항은 `named` 입니다. 애초에 코드를 작성할 때도 마지막에 `export default` 를 하지 않기를 권장합니다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    dir: 'dist',
-    format: 'cjs',
-    exports: 'named'
+    dir: "dist",
+    format: "cjs",
+    exports: "named",
   },
   plugins: [
     nodeResolve(),
-    commonjs({ extensions: ['.js', '.ts'] }),
-    typescript()
-  ]
-}
+    commonjs({ extensions: [".js", ".ts"] }),
+    typescript(),
+  ],
+};
 ```
 
 `exports` 를 추가하면 더 이상 경고 메시지는 나오지 않습니다.
@@ -277,25 +277,25 @@ $ yarn add -D rollup-plugin-terser
 다음은 설정 파일을 수정합시다.
 
 ```js [rollup.config.js]
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
-import { terser } from 'rollup-plugin-terser'
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import { terser } from "rollup-plugin-terser";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    dir: 'dist',
-    format: 'cjs',
-    exports: 'named'
+    dir: "dist",
+    format: "cjs",
+    exports: "named",
   },
   plugins: [
     nodeResolve(),
-    commonjs({ extensions: ['.js', '.ts'] }),
+    commonjs({ extensions: [".js", ".ts"] }),
     typescript(),
-    terser()
-  ]
-}
+    terser(),
+  ],
+};
 ```
 
 빌드 후 파일을 열어보면 공백이 모두 제거 되었고, 파일이 **1.8MB**에서 **1.3MB**까지 줄어들었습니다.

@@ -3,7 +3,7 @@ category: tech
 title: 평생 무료인 모니터링 도구 10분만에 만들기
 updated: 2021-09-14
 created: 2021-09-03
-thumbnail: https://user-images.githubusercontent.com/20244536/132088930-d2a8a3a0-8772-46c5-9815-87e671a20eae.png
+image: https://user-images.githubusercontent.com/20244536/132088930-d2a8a3a0-8772-46c5-9815-87e671a20eae.png
 published: true
 ---
 
@@ -160,7 +160,7 @@ status-website:
   # baseUrl: /your-repo-name
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
-  introTitle: '**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub.'
+  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   navbar:
     - title: Status
@@ -193,8 +193,8 @@ Header를 포함한 HTTP GET 요청
 - name: API endpoint
   url: https://example.com/get-user/3
   headers:
-    - 'Authorization: Bearer $SECRET_SITE_2' # Repository Secret을 이용하는 방법
-    - 'Content-Type: application/json'
+    - "Authorization: Bearer $SECRET_SITE_2" # Repository Secret을 이용하는 방법
+    - "Content-Type: application/json"
 ```
 
 Body를 포함한 HTTP POST 요청
@@ -204,7 +204,7 @@ Body를 포함한 HTTP POST 요청
   method: POST
   url: https://example.com/login
   headers:
-    - 'Content-Type: application/json'
+    - "Content-Type: application/json"
   body: '{ "password": "hello" }'
 ```
 

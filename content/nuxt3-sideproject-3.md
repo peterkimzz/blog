@@ -3,7 +3,7 @@ category: tech
 title: "[Nuxt 3] 사이드 프로젝트 만들기 - 인증"
 updated: 2022-04-17
 created: 2022-04-17
-thumbnail: https://user-images.githubusercontent.com/20244536/158020130-9fbf9873-9bdf-43ca-81a8-45cbe5ac900b.png
+image: https://user-images.githubusercontent.com/20244536/158020130-9fbf9873-9bdf-43ca-81a8-45cbe5ac900b.png
 published: false
 ---
 

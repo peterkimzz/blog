@@ -3,7 +3,7 @@ category: tech
 title: 평생 무료로 커스텀 이메일 사용하기
 updated: 2021-09-30
 created: 2021-09-30
-thumbnail: https://user-images.githubusercontent.com/20244536/135378482-9ac193f6-a6dd-42c1-91be-ebc83c8953dc.png
+image: https://user-images.githubusercontent.com/20244536/135378482-9ac193f6-a6dd-42c1-91be-ebc83c8953dc.png
 published: true
 ---
 

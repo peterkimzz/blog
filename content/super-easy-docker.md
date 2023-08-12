@@ -3,7 +3,7 @@ category: tech
 title: 정말 너무 쉬운 Docker
 updated: 2021-06-09
 created: 2021-06-09
-thumbnail: https://dynamisign.com/api/sign?t=%EC%A0%95%EB%A7%90%20%EB%84%88%EB%AC%B4%20%EC%89%AC%EC%9A%B4%20Docker&d=peterkimzz.com
+image: https://dynamisign.com/api/sign?t=%EC%A0%95%EB%A7%90%20%EB%84%88%EB%AC%B4%20%EC%89%AC%EC%9A%B4%20Docker&d=peterkimzz.com
 published: true
 ---
 

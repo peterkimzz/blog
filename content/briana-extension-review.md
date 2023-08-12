@@ -3,7 +3,7 @@ category: review
 title: 브라우저 확장 프로그램을 10개월동안 운영하면서 느낀 것들
 updated: 2021-10-10
 created: 2021-10-10
-thumbnail: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
+image: https://user-images.githubusercontent.com/20244536/136804762-1e64b59c-e60e-462b-99f8-a39131f4c507.png
 published: true
 ---
 

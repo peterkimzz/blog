@@ -3,7 +3,7 @@ category: life
 title: 블랙프라이데이를 맞아 마샬 액톤 2 스피커를 구매했습니다.
 updated: 2021-12-06
 created: 2021-12-06
-thumbnail: https://user-images.githubusercontent.com/20244536/144752818-3ce100b1-ae3d-47ec-ade0-239e9c4d55ba.jpeg
+image: https://user-images.githubusercontent.com/20244536/144752818-3ce100b1-ae3d-47ec-ade0-239e9c4d55ba.jpeg
 published: true
 ---
 

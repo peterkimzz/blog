@@ -1,7 +1,7 @@
 ---
 category: design
 title: 웹 폰트와 사이즈는 어떻게 결정해야할까?
-thumbnail: https://user-images.githubusercontent.com/20244536/102753419-964e0c80-43ae-11eb-837a-fd902643f37a.png
+image: https://user-images.githubusercontent.com/20244536/102753419-964e0c80-43ae-11eb-837a-fd902643f37a.png
 updated: 2020-12-21
 created: 2020-12-21
 published: true

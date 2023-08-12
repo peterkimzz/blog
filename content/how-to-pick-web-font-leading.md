@@ -3,7 +3,7 @@ category: design
 title: 웹 폰트의 행간과 자간은 어떻게 결정해야할까?
 updated: 2021-08-25
 created: 2021-08-25
-thumbnail:
+image:
 published: false
 ---
 

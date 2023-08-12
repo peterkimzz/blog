@@ -2,7 +2,7 @@
 category: tech
 title: 코인 시세 1초만에 보는 크롬 확장 프로그램 만들기
 description: 가상화폐 거래소 API를 활용해 브라우저에서 단축키로 빠르게 코인 시세를 확인할 수 있는 툴을 크롬 확장 프로그램으로 만들어보았다.
-thumbnail: https://user-images.githubusercontent.com/20244536/107003725-94aa9d80-67d0-11eb-8a27-9c68c45a3748.png
+image: https://user-images.githubusercontent.com/20244536/107003725-94aa9d80-67d0-11eb-8a27-9c68c45a3748.png
 updated: 2021-02-05
 created: 2021-02-05
 published: true

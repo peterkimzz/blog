@@ -3,7 +3,7 @@ category: tech
 title: 평생 무료로 반응형 이메일 템플릿 무한대로 만들기 - mjml.io
 updated: 2022-01-07
 created: 2022-01-07
-thumbnail:
+image:
 published: true
 ---
 
@@ -309,9 +309,9 @@ $ yarn add -D @types/mjml # typescript인 경우
 사실 이러면 끝입니다.
 
 ```ts [typescript]
-import mjml2html from 'mjml'
+import mjml2html from "mjml";
 
-const { html } = mjml2html(`아까 작성했던 mjml코드`)
+const { html } = mjml2html(`아까 작성했던 mjml코드`);
 ```
 
 이러면 `html` 변수 안에 반응형으로 변경된 순수 HTML이 담기게 됩니다. 엄청 좋죠? 중간에 대치할 내용이 있다면 함수로 빼서 템플릿 리터럴을 사용하면 되겠습니다.
@@ -319,21 +319,21 @@ const { html } = mjml2html(`아까 작성했던 mjml코드`)
 `Nodemailer`를 활용하면 아래처럼 작성 가능합니다.
 
 ```ts [typescript]
-import nodemailer from 'nodemailer'
-import mjml2html from 'mjml'
+import nodemailer from "nodemailer";
+import mjml2html from "mjml";
 
-const { html } = mjml2html(`아까 작성했던 mjml코드`)
+const { html } = mjml2html(`아까 작성했던 mjml코드`);
 
 const transporter = nodemailer.createTransport({
   /** */
-})
+});
 
 transporter.sendMail({
-  sender: 'petekimzz.com',
-  from: 'peterkimzz69@gmail.com',
-  to: '받는사람 이메일',
+  sender: "petekimzz.com",
+  from: "peterkimzz69@gmail.com",
+  to: "받는사람 이메일",
   html: html,
-})
+});
 ```
 
 자 완성입니다! 이러면 우리가 만든 반응형 이메일이 받는 사람에게 잘 전달됩니다.

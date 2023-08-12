@@ -3,7 +3,7 @@ category: review
 title: 용산 공유오피스 파이브스팟 1개월 이용 후기
 updated: 2021-12-26
 created: 2021-12-26
-thumbnail: https://user-images.githubusercontent.com/20244536/147403256-c67c0101-6463-4150-82f1-30400946e6a9.JPEG
+image: https://user-images.githubusercontent.com/20244536/147403256-c67c0101-6463-4150-82f1-30400946e6a9.JPEG
 published: true
 ---
 
