@@ -1,4 +1,4 @@
-import { reactive, hasInjectionContext, getCurrentInstance, toRef, isRef, inject, nextTick, shallowRef, shallowReactive, isReadonly, version, unref, ref, watchEffect, watch, isShallow, isReactive, toRaw, defineAsyncComponent, h, defineComponent, computed, Suspense, mergeProps, Transition, provide, withCtx, createVNode, useSSRContext, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, createApp } from "vue";
+import { reactive, hasInjectionContext, getCurrentInstance, toRef, isRef, inject, nextTick, shallowRef, shallowReactive, isReadonly, version, unref, ref, watchEffect, watch, isShallow, isReactive, toRaw, defineAsyncComponent, h, defineComponent, computed, Suspense, mergeProps, Transition, provide, useSSRContext, withCtx, createVNode, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, createApp } from "vue";
 import { $fetch } from "ofetch";
 import { useRuntimeConfig as useRuntimeConfig$1 } from "#internal/nitro";
 import { createHooks } from "hookable";
@@ -895,6 +895,41 @@ const LayoutProvider = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _sfc_main$3 = {
+  __name: "index",
+  __ssrInlineRender: true,
+  setup(__props) {
+    useHead({
+      script: [
+        {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=G-E7PSWP6P7T"
+        }
+      ]
+    });
+    console.log(process.env.NODE_ENV);
+    if (process.env.NODE_ENV === "production") {
+      let gtag = function() {
+        dataLayer.push(arguments);
+      };
+      window.dataLayer = window.dataLayer || [];
+      gtag("js", /* @__PURE__ */ new Date());
+      gtag("config", "G-E7PSWP6P7T");
+    }
+    return (_ctx, _push, _parent, _attrs) => {
+      {
+        _push(`<!---->`);
+      }
+    };
+  }
+};
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/GoogleAnalytics/index.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_1 = _sfc_main$3;
 const interpolatePath = (route, match) => {
   return match.path.replace(/(:\w+)\([^)]+\)/g, "$1").replace(/(:\w+)[?+*]/g, "$1").replace(/:\w+/g, (r) => {
     var _a;
@@ -942,7 +977,7 @@ const RouteProvider = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_2 = /* @__PURE__ */ defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1074,13 +1109,16 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLayout = __nuxt_component_0;
-      const _component_NuxtPage = __nuxt_component_1;
+      const _component_GoogleAnalytics = __nuxt_component_1;
+      const _component_NuxtPage = __nuxt_component_2;
       _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
+            _push2(ssrRenderComponent(_component_GoogleAnalytics, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_NuxtPage, null, null, _parent2, _scopeId));
           } else {
             return [
+              createVNode(_component_GoogleAnalytics),
               createVNode(_component_NuxtPage)
             ];
           }

@@ -7,7 +7,7 @@
     "clean": "nuxt clean",
     "deploy": "nuxt generate && gh-pages -d .output/public",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "npx serve .ouput/public",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {

@@ -45,6 +45,7 @@ useSeoMeta({
 
 <template>
   <NuxtLayout>
+    <GoogleAnalytics />
     <NuxtPage />
   </NuxtLayout>
 </template>
