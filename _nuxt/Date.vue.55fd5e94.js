@@ -1,1 +1,0 @@
-import{l as o,f as n,o as r,c,t as p,i as a}from"./entry.0d9a52ea.js";const i=()=>{const{$dayjs:t}=o();return t},d=["datetime"],_=n({__name:"Date",props:{date:{}},setup(t){const e=i();return(s,m)=>(r(),c("time",{datetime:a(e)(s.date).utc().toString()},p(a(e)(s.date).format("YYYY년 M월 D일")),9,d))}});export{_};
