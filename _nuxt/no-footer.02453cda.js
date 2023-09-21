@@ -1,1 +1,0 @@
-import{_ as t}from"./index.1ee858bf.js";import{_ as r}from"./_plugin-vue_export-helper.c27b6911.js";import{c as n,b as c,R as s,o as _}from"./entry.669a849b.js";import"./nuxt-link.c3009aa6.js";import"./index.519690f7.js";const a={};function m(o,p){const e=t;return _(),n("div",null,[c(e),s(o.$slots,"default")])}const x=r(a,[["render",m]]);export{x as default};
