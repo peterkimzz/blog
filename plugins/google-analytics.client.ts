@@ -7,7 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.vueApp.use(VueGtag, {
     property: { id: TRACKING_ID },
-    isEnabled: config.public.appEnv === "production",
+    // isEnabled: config.public.appEnv === "production",
   });
 
   return {
