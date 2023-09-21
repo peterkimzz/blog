@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import mediumZoom from "medium-zoom";
+
 useHead({
   htmlAttrs: {
     dir: "ltr",
@@ -33,12 +35,6 @@ useHead({
       href: "https://user-images.githubusercontent.com/20244536/132115763-2a9011f1-0336-4cb6-9a57-5e44def5c131.png",
     },
   ],
-  script: [
-    {
-      async: true,
-      src: "https://www.googletagmanager.com/gtag/js?id=G-E7PSWP6P7T",
-    },
-  ],
 });
 
 useSeoMeta({
@@ -46,6 +42,11 @@ useSeoMeta({
   ogSiteName: "peterkimzz",
   ogImage:
     "https://user-images.githubusercontent.com/20244536/132115770-59711547-4cb3-4a3a-abfe-12740b985441.png",
+});
+
+onMounted(() => {
+  // Activate Medium Style Image Zoom
+  mediumZoom("[data-zoomable]");
 });
 </script>
 

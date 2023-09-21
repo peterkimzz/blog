@@ -65,7 +65,7 @@ yarn && yarn dev -o
 
 그러면 라우팅이 잘 되는지 확인을 위해 로그인 페이지도 만들어보고, 라우팅을 위한 `a` 태그도 만들어보겠습니다.
 
-```diff-vue [pages/login/index.vue]
+```diff [pages/login/index.vue]
    <template>
      <div>
        <nav>
@@ -77,7 +77,7 @@ yarn && yarn dev -o
    </template>
 ```
 
-```diff-vue [pages/index.vue]
+```diff [pages/index.vue]
    <template>
      <div>
        <nav>
@@ -159,7 +159,7 @@ proejct/
 
 그리고 랜딩 페이지랑 로그인 페이지에서 방금 만든 네비게이션 바 컴포넌트를 불러주세요.
 
-```diff-vue [pages/index.vue]
+```diff [pages/index.vue]
    <template>
      <div>
 +      <NavigationBar />
@@ -169,7 +169,7 @@ proejct/
    </template>
 ```
 
-```diff-vue [pages/login/index.vue]
+```diff [pages/login/index.vue]
    <template>
      <div>
 +     <NavigationBar />
@@ -206,7 +206,7 @@ proejct/
 
 `layouts/` 폴더에서 네비게이션 바를 불러오고 있으니 이제 `pages/` 폴더 밑에 있는 파일에선 `<NavigationBar/>` 를 지워주세요.
 
-```diff-vue [pages/index.vue]
+```diff [pages/index.vue]
   <template>
     <div>
 -     <NavigationBar />
@@ -216,7 +216,7 @@ proejct/
   </template>
 ```
 
-```diff-vue [pages/login/index.vue]
+```diff [pages/login/index.vue]
   <template>
     <div>
 -     <NavigationBar />
@@ -412,7 +412,7 @@ export default (url: string) => {
 
 이렇게 해주고 프로젝트를 재시작하면 아래처럼 커스텀 `composition`을 전역에서 사용이 가능합니다.
 
-```diff-vue [nuxt3]
+```diff [nuxt3]
    <script setup lang="ts">
 +  const { data, pending, error, refresh } = await useApi('/todos/1')
 -  const { data, pending, error, refresh } = await useFetch(
@@ -457,7 +457,7 @@ export const useUserStore = defineStore("user", {
 
 이제는 타입스크립트를 통해 완벽한 자동완성을 지원받을 수 있고, 각 모듈화된 `store`를 개별적으로 가져오면 됩니다. 이건 정말 좋아진 것 같습니다.
 
-```diff-vue [pages/index.vue]
+```diff [pages/index.vue]
    <template>
      <div>
        <h1 class="font-bold text-3xl">Home</h1>
@@ -475,7 +475,7 @@ export const useUserStore = defineStore("user", {
    </template>
 ```
 
-```diff-vue [pages/index.vue]
+```diff [pages/index.vue]
    <script setup lang="ts">
 +  import { useUserStore } from '~~/stores/users'
 

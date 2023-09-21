@@ -60,7 +60,7 @@ $ npx tailwindcss init -p
 
 생성된 `tailwind.config.js` 의 파일을 수정해주세요.
 
-```diff-js [tailwind.config.js]
+```diff [tailwind.config.js]
 module.exports = {
 - purge: [],
 + purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -106,7 +106,7 @@ createApp(App).mount("#app");
 
 `src` 폴더에 `NavigationBar` 폴더를 만들고, 그 안에 `index.vue` 파일을 만들어주세요.
 
-```tree
+```zsh
 clipboard-to-url
 |- src/
 |-- components/
@@ -243,7 +243,7 @@ import ImageUploadZone from "~/components/Image/UploadZone.vue";
 
 사실 이 스타일은 `NavigationBar` 에도 이미 적용이 되어 있었습니다. 같이 수정해주도록 합시다.
 
-```diff-vue [NavigationBar/index.vue]
+```diff [NavigationBar/index.vue]
  <template>
   <nav class="border-b border-gray-200 shadow-sm">
 -    <div class="mx-auto max-w-4xl px-4">
@@ -263,7 +263,7 @@ import ImageUploadZone from "~/components/Image/UploadZone.vue";
 + </script>
 ```
 
-```diff-vue [App.vue]
+```diff [App.vue]
  <template>
   <div>
     <NavigationBar />
@@ -355,7 +355,7 @@ gif가 잘 안보이긴 하지만, 화면 캡쳐 후 붙여넣기하면 정상�
 
 여기서 링크를 누르지 않더라도 잘 저장이 됐다는 걸 바로 인지하기 위해 조금만 더 인터페이스를 개선해봅시다.
 
-```diff-vue [App.vue]
+```diff [App.vue]
  <template>
   <div>
     <NavigationBar />
@@ -432,7 +432,7 @@ $ yarn add vite-plugin-chrome-extension
 
 크롬 확장 프로그램은 `manifest.json` 파일만 있으면 작동합니다. 관련해서 개발을 좀 더 수월하게 도와주는 [`vite-plugin-chrome-extension`](https://www.npmjs.com/package/vite-plugin-chrome-extension) 패키지를 설치합시다.
 
-```diff-js [vite.config.js]
+```diff [vite.config.js]
   import path from 'path'
   import vue from '@vitejs/plugin-vue'
   import { defineConfig } from 'vite'
@@ -457,7 +457,7 @@ $ yarn add vite-plugin-chrome-extension
 
 `manifest.json` 파일을 `src` 폴더 아래에 만들어주고, 루트 폴더에 있던 `index.html` 파일을 `src` 폴더 아래로 옮겨주세요. 변경된 폴더 구조는 아래와 같아야 합니다.
 
-```tree
+```zsh
 clipboard-to-url/
 |- src/
 |-- components/
@@ -489,7 +489,7 @@ clipboard-to-url/
 
 다시 스타일링을 적용하기엔 먼 길을 와버렸으니 그냥 진행하도록 하겠습니다.
 
-```diff-vue [App.vue]
+```diff [App.vue]
   <template>
 -   <div>
 +   <div style="width: 15rem; height: 15rem">

@@ -7,9 +7,12 @@ const { data: article } = await useAsyncData(() =>
   queryContent().where({ _path: path }).findOne()
 );
 
+const { $gtag } = useNuxtApp();
 const leftPosition = ref<boolean>(false);
 function switchPosition() {
   leftPosition.value = !leftPosition.value;
+
+  $gtag("event", "click_switch_position");
 }
 </script>
 
@@ -25,7 +28,7 @@ function switchPosition() {
         <!-- Main Content -->
         <section
           v-if="article"
-          class="max-w-prose w-full mx-auto lg:flex-[1_0_0%] overflow-y-scroll py-10"
+          class="max-w-prose w-full mx-auto lg:flex-[1_0_0%] overflow-y-scroll py-10 pr-4"
         >
           <div class="pb-10 text-center">
             <h1
