@@ -23,6 +23,8 @@ published: true
 
 Github가 망하지 않는 이상 평생 무료이고, Github Pages는 정말 쉽게 커스텀 도메인과 HTTPS까지 연결할 수 있다. ~~평생 Github에 충성하자.~~
 
+:Serieis{:type="forever"}
+
 ## 리파지토리 만들기
 
 ![](https://user-images.githubusercontent.com/20244536/102364149-7f4b9b00-3ff9-11eb-82bc-80751707887c.png)

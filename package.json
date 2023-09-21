@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "2.0.18",
+    "@stackblitz/sdk": "^1.9.0",
     "dayjs-nuxt": "1.1.2",
     "medium-zoom": "1.0.8",
     "vue-gtag-next": "1.14.0"

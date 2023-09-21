@@ -17,6 +17,8 @@ published: true
 
 저번에 작성한 [평생 무료로 커스텀 이메일 사용하기](/custom-email-service-for-free-forever) 포스팅에서는 `Node.js` 에서 프로그래밍적으로 이메일을 보내는 방법을 알아보았습니다. 저번 포스팅과 시리즈처럼 이어지는 내용입니다.
 
+:Serieis{:type="forever"}
+
 ## [mjml.io](https://mjml.io)
 
 > The only framework that makes responsive email easy

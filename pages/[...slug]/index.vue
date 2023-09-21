@@ -5,7 +5,7 @@ definePageMeta({ layout: "no-footer" });
 
 const { contentPosition, toggleContentPosition } = useBlogSetting();
 
-useClickToImageZoom();
+useClickToZoomImage();
 
 const { path } = useRoute();
 const { data: article, error } = await useAsyncData(() =>
