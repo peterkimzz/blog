@@ -35,6 +35,21 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  app: {
+    head: {
+      script: [
+        {
+          children: `
+          console.log("as");
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-E7PSWP6P7T');`,
+        },
+      ],
+    },
+  },
   nitro: {
     prerender: {
       failOnError: false,

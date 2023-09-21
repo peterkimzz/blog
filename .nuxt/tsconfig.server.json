@@ -8,58 +8,59 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+        "./.."
       ],
       "~/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+        "../*"
       ],
       "@": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+        "./.."
       ],
       "@/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+        "../*"
       ],
       "~~": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+        "./.."
       ],
       "~~/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+        "../*"
       ],
       "@@": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog"
+        "./.."
       ],
       "@@/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/*"
+        "../*"
       ],
       "assets": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/public/*"
+        "../public/*"
       ],
       "#content/server": [
-        "/Users/peterkimzz/Projects/@peterkimzz/blog/node_modules/@nuxt/content/dist/runtime/server/index"
+        "../node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/Users/peterkimzz/Projects/@peterkimzz/blog/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"

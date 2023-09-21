@@ -175,6 +175,31 @@ rootDir: path.join(process.cwd(), '..')
 
 If you use the `sideEffects` property in the package.json, by default this is respected for files in the root package. Set to `true` to ignore the `sideEffects` configuration for the root package.
 
+### `allowExportsFolderMapping`
+
+Older Node versions supported exports mappings of folders like
+
+```json
+{
+  "exports": {
+    "./foo/": "./dist/foo/"
+  }
+}
+```
+
+This was deprecated with Node 14 and removed in Node 17, instead it is recommended to use exports patterns like
+
+```json
+{
+  "exports": {
+    "./foo/*": "./dist/foo/*"
+  }
+}
+```
+
+But for backwards compatibility this behavior is still supported by enabling the `allowExportsFolderMapping` (defaults to `true`).
+The default value might change in a futur major release.
+
 ## Preserving symlinks
 
 This plugin honours the rollup [`preserveSymlinks`](https://rollupjs.org/guide/en/#preservesymlinks) option.
@@ -233,6 +258,25 @@ this.resolve(importee, importer, {
   custom: { 'node-resolve': { isRequire: true } }
 });
 ```
+
+## Resolve Options
+
+After this plugin resolved an import id to its target file in `node_modules`, it will invoke `this.resolve` again with the resolved id. It will pass the following information in the resolve options:
+
+```js
+this.resolve(resolved.id, importer, {
+  custom: {
+    'node-resolve': {
+      resolved, // the object with information from node.js resolve
+      importee // the original import id
+    }
+  }
+});
+```
+
+Your plugin can use the `importee` information to map an original import to its resolved file in `node_modules`, in a plugin hook such as `resolveId`.
+
+The `resolved` object contains the resolved id, which is passed as the first parameter. It also has a property `moduleSideEffects`, which may contain the value from the npm `package.json` field `sideEffects` or `null`.
 
 ## Meta
 

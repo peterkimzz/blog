@@ -33,6 +33,12 @@ useHead({
       href: "https://user-images.githubusercontent.com/20244536/132115763-2a9011f1-0336-4cb6-9a57-5e44def5c131.png",
     },
   ],
+  script: [
+    {
+      async: true,
+      src: "https://www.googletagmanager.com/gtag/js?id=G-E7PSWP6P7T",
+    },
+  ],
 });
 
 useSeoMeta({
@@ -45,7 +51,8 @@ useSeoMeta({
 
 <template>
   <NuxtLayout>
-    <GoogleAnalytics />
+    <!-- <GoogleAnalytics /> -->
+
     <NuxtPage />
   </NuxtLayout>
 </template>
