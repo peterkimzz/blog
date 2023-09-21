@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import { ArrowsRightLeftIcon } from "@heroicons/vue/24/solid";
+
 definePageMeta({ layout: "no-footer" });
+
+const { contentPosition, toggleContentPosition } = useBlogSetting();
+
+useClickToImageZoom();
 
 const { path } = useRoute();
 const { data: article } = await useAsyncData(() =>
   queryContent().where({ _path: path }).findOne()
 );
-
-const { $gtag } = useNuxtApp();
-const leftPosition = ref<boolean>(false);
-function switchPosition() {
-  leftPosition.value = !leftPosition.value;
-
-  $gtag("event", "click_switch_position");
-}
 </script>
 
 <template>
@@ -22,7 +19,7 @@ function switchPosition() {
       <div
         :class="[
           'flex gap-10 flex-col transition-all h-full',
-          leftPosition ? 'lg:flex-row-reverse' : 'lg:flex-row',
+          contentPosition === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row',
         ]"
       >
         <!-- Main Content -->
@@ -54,7 +51,7 @@ function switchPosition() {
             <div>
               <button
                 class="py-1 px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition border inline-flex items-center gap-1.5"
-                @click="switchPosition"
+                @click="toggleContentPosition"
               >
                 <ArrowsRightLeftIcon class="w-4 h-4" />
                 좌우 반전

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import mediumZoom from "medium-zoom";
-
 useHead({
   htmlAttrs: {
     dir: "ltr",
@@ -43,17 +41,10 @@ useSeoMeta({
   ogImage:
     "https://user-images.githubusercontent.com/20244536/132115770-59711547-4cb3-4a3a-abfe-12740b985441.png",
 });
-
-onMounted(() => {
-  // Activate Medium Style Image Zoom
-  mediumZoom("[data-zoomable]");
-});
 </script>
 
 <template>
   <NuxtLayout>
-    <!-- <GoogleAnalytics /> -->
-
     <NuxtPage />
   </NuxtLayout>
 </template>
