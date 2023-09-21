@@ -8,9 +8,13 @@ const { contentPosition, toggleContentPosition } = useBlogSetting();
 useClickToImageZoom();
 
 const { path } = useRoute();
-const { data: article } = await useAsyncData(() =>
+const { data: article, error } = await useAsyncData(() =>
   queryContent().where({ _path: path }).findOne()
 );
+
+if (error.value) {
+  navigateTo("/error", { replace: true });
+}
 </script>
 
 <template>

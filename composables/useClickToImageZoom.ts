@@ -5,7 +5,5 @@ export function useClickToImageZoom() {
     mediumZoom("[data-zoomable]", {
       background: "#000000e6",
     });
-
-    console.log("mediumZoom activated", mediumZoom);
   });
 }
