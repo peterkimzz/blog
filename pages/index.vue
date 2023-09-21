@@ -14,7 +14,7 @@ const { data: articles, pending } = await useAsyncData(() =>
             :to="article._path"
             class="flex flex-col hover:no-underline group"
           >
-            <header class="h-[142px]">
+            <header class="sm:h-[142px]">
               <h3
                 class="text-xl text-gray-900 font-bold leading-tight pb-2 group-hover:underline tracking-[-0.01em]"
               >
