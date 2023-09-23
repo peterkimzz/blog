@@ -77,7 +77,7 @@ import mediumZoom from "medium-zoom";
 mediumZoom("[data-zoomable]");
 ```
 
-:Stackblitz{:src="https://stackblitz.com/edit/js-joozuo?embed=1&file=index.js&hideDevTools=1&theme=dark&view=preview"}
+:Stackblitz{:src="https://stackblitz.com/edit/js-joozuo?embed=1&file=index.js&hideDevTools=1&theme=dark&view=preview&ctl=1"}
 
 자 근데 여기서 제 블로그와 똑같이 확대되었을 경우, 배경을 투명한 검은색으로 설정하고 싶으시다면 아래 코드처럼 설정하시면 됩니다.
 
