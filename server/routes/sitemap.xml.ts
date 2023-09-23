@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import { serverQueryContent } from "#content/server";
 import { SitemapStream, streamToPromise } from "sitemap";
 
@@ -10,12 +11,15 @@ export default defineEventHandler(async (event) => {
     hostname: runtimeConfig.public.HOSTNAME,
   });
 
-  sitemap.write({ url: "/" });
+  sitemap.write({
+    url: "/",
+    lastmod: dayjs().subtract(1, "day").format(),
+  });
 
   for (const doc of docs) {
     sitemap.write({
       url: doc._path,
-      changefreq: "daily",
+      lastmod: dayjs(doc.created).format(),
     });
   }
   sitemap.end();
