@@ -1,12 +1,4 @@
 <script setup lang="ts">
-// 'data-repo': 'peterkimzz/blog',
-//               'data-repo-id': 'MDEwOlJlcG9zaXRvcnkzMjAyNTkyMTY=',
-//               'data-category': 'Blog Comments',
-//               'data-category-id': 'DIC_kwDOExbEkM4B-8Mf',
-//               'data-mapping': 'title',
-//               'data-reactions-enabled': 1,
-//               'data-emit-metadata': 0,
-//               'data-theme': 'dark',
 useHead({
   script: [
     {

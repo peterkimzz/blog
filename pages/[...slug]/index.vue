@@ -1,25 +1,30 @@
 <script setup lang="ts">
-import { ArrowsRightLeftIcon } from "@heroicons/vue/24/solid";
-
 const { contentPosition, toggleContentPosition } = useBlogSetting();
 
 useClickToZoomImage();
 
 const { path } = useRoute();
-const { data: article, error } = await useAsyncData(() =>
-  queryContent().where({ _path: path }).findOne()
+const { data: article, error } = await useAsyncData(
+  queryContent().where({ _path: path }).findOne
+);
+const { data: articles } = await useAsyncData(
+  queryContent().where({ category: article.value?.category }).find
 );
 
 if (error.value) {
   navigateTo("/error", { replace: true });
 }
+
+if (article?.value) {
+  useContentHead(article);
+}
 </script>
 
 <template>
-  <MaxWidthContainer>
+  <UContainer>
     <div
       :class="[
-        'flex gap-10 flex-col transition-all h-full',
+        'flex lg:gap-10 flex-col transition-all h-full',
         contentPosition === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row',
       ]"
     >
@@ -44,39 +49,50 @@ if (error.value) {
       </main>
 
       <!-- Action Sticky Panel -->
-      <aside
-        class="sticky top-10 h-fit max-w-prose w-full mx-auto lg:flex-1 lg:overflow-y-scroll py-10"
-      >
-        <div>
-          <h4 class="font-medium pb-2 text-sm">부가 기능</h4>
-          <div>
-            <button
-              class="py-1 px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition border inline-flex items-center gap-1.5"
-              @click="toggleContentPosition"
+      <aside class="sticky top-[53px] max-w-prose h-fit w-full mx-auto py-10">
+        <section class="hidden lg:block">
+          <h4 class="text-gray-600 text-sm font-semibold pb-0.5">목차</h4>
+          <ul v-if="article?.body?.toc?.links">
+            <li
+              v-for="link in article.body.toc.links"
+              class="text-gray-900 font-medium"
             >
-              <ArrowsRightLeftIcon class="w-4 h-4" />
-              좌우 반전
-            </button>
-          </div>
-        </div>
+              <NuxtLink :href="'#' + link.id">{{ link.text }}</NuxtLink>
+            </li>
+          </ul>
+        </section>
+        <!-- 
+          <div>
+            <h4 class="text-gray-600 text-sm font-semibold pb-1.5">편의기능</h4>
+            <div>
+              <UButton
+                color="gray"
+                leading-icon="i-lucide-arrow-right-left"
+                @click="toggleContentPosition"
+              >
+                좌우 반전
+              </UButton>
+            </div>
+          </div> -->
 
-        <hr class="my-10" />
-
-        <div>
-          <ArticleComment />
-        </div>
+        <ArticleComment />
       </aside>
     </div>
 
-    <section>
-      <!-- <div v-for="i in 10">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-        voluptatibus accusamus voluptatum quod commodi adipisci, fuga ipsum
-        perspiciatis. Soluta qui praesentium in facilis deleniti animi eius
-        similique rem vitae quas.
-      </div> -->
+    <section class="py-10">
+      <h3 class="text-2xl text-black font-bold">같은 카테고리의 다른 글</h3>
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 py-10">
+        <ArticleCard
+          v-for="article in articles"
+          :key="article._id"
+          :path="article._path ?? ''"
+          :title="article.title ?? ''"
+          :description="article.description"
+          :created="article.created"
+        />
+      </ul>
     </section>
-  </MaxWidthContainer>
+  </UContainer>
 </template>
 
 <style>

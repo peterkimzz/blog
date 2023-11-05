@@ -1,6 +1,6 @@
 <template>
   <header class="bg-white border-b top-0 sticky z-50">
-    <MaxWidthContainer>
+    <UContainer>
       <nav class="flex items-center justify-between">
         <NuxtLink to="/" class="font-bold text-xl italic tracking-wide">
           <span>PETERKIM</span>
@@ -28,6 +28,6 @@
           </li>
         </ul>
       </nav>
-    </MaxWidthContainer>
+    </UContainer>
   </header>
 </template>

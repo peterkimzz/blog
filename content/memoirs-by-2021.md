@@ -1,5 +1,5 @@
 ---
-category: review
+category: retrospective
 title: 2021년 회고
 updated: 2022-01-23
 created: 2022-01-23

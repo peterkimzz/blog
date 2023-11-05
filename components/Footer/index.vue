@@ -1,6 +1,6 @@
 <template>
   <footer class="border-t pt-3 pb-3">
-    <MaxWidthContainer>
+    <UContainer>
       <div
         class="flex flex-col-reverse sm:flex-row gap-2 items-center justify-between"
       >
@@ -23,6 +23,6 @@
           </ul>
         </nav>
       </div>
-    </MaxWidthContainer>
+    </UContainer>
   </footer>
 </template>

@@ -1,12 +1,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "dayjs-nuxt"],
+  modules: ["@nuxt/content", "@nuxt/ui", "dayjs-nuxt"],
   runtimeConfig: {
     public: {
       HOSTNAME: "https://www.peterkimzz.com",
     },
   },
+  colorMode: { preference: "light" },
   content: {
+    contentHead: false,
     highlight: {
       theme: "github-dark",
       preload: [
@@ -25,8 +27,9 @@ export default defineNuxtConfig({
       ],
     },
   },
-  tailwindcss: {
-    viewer: false,
+  tailwindcss: { viewer: false },
+  ui: {
+    icons: ["lucide"],
   },
   dayjs: {
     locales: ["ko"],

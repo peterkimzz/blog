@@ -1,5 +1,5 @@
 ---
-category: review
+category: retrospective
 title: 브라우저 확장 프로그램을 10개월동안 운영하면서 느낀 것들
 updated: 2021-10-10
 created: 2021-10-10

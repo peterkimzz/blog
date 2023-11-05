@@ -1,5 +1,5 @@
 ---
-category: review
+category: retrospective
 title: 2022년 회고
 image: https://user-images.githubusercontent.com/20244536/209142660-ab4f03d8-189b-48d4-8113-3f8e590c84a5.png
 updated: 2022-12-22

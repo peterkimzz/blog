@@ -37,7 +37,7 @@ npm을 사용할 수 없더라도 괜찮습니다. CDN이 있습니다.
 
 자 준비 끝났습니다. CSS import 그런거 필요 없습니다.
 
-## 활성화하기
+## 패키지 활성화하기
 
 npm을 사용했다면 `import mediumZoom from 'medium-zoom'` 이렇게 import 후 사용해주시면 되고, CDN인 경우엔 바로 `meidumZoom()` 을 호출하면 되겠습니다.
 

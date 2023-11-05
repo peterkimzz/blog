@@ -1,5 +1,5 @@
 ---
-category: review
+category: retrospective
 title: 용산 공유오피스 파이브스팟 1개월 이용 후기
 updated: 2021-12-26
 created: 2021-12-26
