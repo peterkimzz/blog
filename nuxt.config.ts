@@ -1,11 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    "@nuxt/content",
-    "dayjs-nuxt",
-    "nuxt-simple-sitemap",
-    "@nuxtjs/tailwindcss",
-  ],
+  modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "dayjs-nuxt"],
   runtimeConfig: {
     public: {
       HOSTNAME: "https://www.peterkimzz.com",
@@ -37,10 +32,13 @@ export default defineNuxtConfig({
     locales: ["ko"],
     defaultLocale: "ko",
   },
-  site: {
-    url: "https://www.peterkimzz.com",
+  experimental: {
+    payloadExtraction: false,
   },
-  sitemap: {
-    strictNuxtContentPaths: true, // this is for `@nuxt/content`
+  nitro: {
+    prerender: {
+      failOnError: false,
+      routes: ["/sitemap.xml"],
+    },
   },
 });
