@@ -1,0 +1,1 @@
+import{q as s,f as o,o as n,c as r,t as c,k as a}from"./entry.5ab68868.js";function i(){return s}const m=["datetime"],u=o({__name:"Date",props:{date:{}},setup(p){const t=i();return(e,d)=>(n(),r("time",{datetime:a(t)(e.date).utc().toString()},c(a(t)(e.date).format("YYYY년 M월 D일")),9,m))}});export{u as _};
