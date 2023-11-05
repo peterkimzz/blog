@@ -37,6 +37,11 @@ useHead({
 
 useSeoMeta({
   title: "peterkimzz: 기술과 예술을 담은 블로그",
+  ogTitle: "peterkimzz: 기술과 예술을 담은 블로그",
+  description:
+    "프론트엔드, 그로스 엔지니어링과 UI/UX 디자인을 좋아하는 개발자 김동현입니다.",
+  ogDescription:
+    "프론트엔드, 그로스 엔지니어링과 UI/UX 디자인을 좋아하는 개발자 김동현입니다.",
   ogSiteName: "peterkimzz",
   ogImage:
     "https://user-images.githubusercontent.com/20244536/132115770-59711547-4cb3-4a3a-abfe-12740b985441.png",
