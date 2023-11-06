@@ -8,7 +8,10 @@ const { data: article, error } = await useAsyncData(
   queryContent().where({ _path: path }).findOne
 );
 const { data: articles } = await useAsyncData(
-  queryContent().where({ category: article.value?.category }).find
+  queryContent().where({
+    category: article.value?.category,
+    _path: { $ne: path },
+  }).find
 );
 
 if (error.value) {
@@ -22,12 +25,7 @@ if (article?.value) {
 
 <template>
   <UContainer>
-    <div
-      :class="[
-        'flex lg:gap-10 flex-col transition-all h-full',
-        contentPosition === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row',
-      ]"
-    >
+    <div class="flex lg:gap-10 lg:flex-row flex-col transition-all h-full">
       <!-- Main Content -->
       <main
         v-if="article"
@@ -81,16 +79,19 @@ if (article?.value) {
 
     <section class="py-10">
       <h3 class="text-2xl text-black font-bold">같은 카테고리의 다른 글</h3>
-      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 py-10">
-        <ArticleCard
-          v-for="article in articles"
-          :key="article._id"
-          :path="article._path ?? ''"
-          :title="article.title ?? ''"
-          :description="article.description"
-          :created="article.created"
-        />
-      </ul>
+      <div class="py-10">
+        <div v-if="!articles?.length">다른 글이 없습니다.</div>
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <ArticleCard
+            v-for="article in articles"
+            :key="article._id"
+            :path="article._path ?? ''"
+            :title="article.title ?? ''"
+            :description="article.description"
+            :created="article.created"
+          />
+        </ul>
+      </div>
     </section>
   </UContainer>
 </template>
