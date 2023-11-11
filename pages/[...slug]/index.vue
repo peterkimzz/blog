@@ -29,7 +29,7 @@ if (article?.value) {
       <!-- Main Content -->
       <main
         v-if="article"
-        class="max-w-prose w-full mx-auto lg:flex-[1_0_0%] overflow-y-scroll py-10 pr-4"
+        class="max-w-prose w-full mx-auto lg:flex-1 overflow-y-scroll py-10 pr-4"
       >
         <div class="pb-10 text-center">
           <h1
