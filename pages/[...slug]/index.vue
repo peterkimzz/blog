@@ -1,10 +1,8 @@
 <script setup lang="ts">
-const { contentPosition, toggleContentPosition } = useBlogSetting();
-
 useClickToZoomImage();
 
 const { path } = useRoute();
-const { data: article, error } = await useAsyncData(
+const { data: article, pending } = await useAsyncData(
   queryContent().where({ _path: path }).findOne
 );
 const { data: articles } = await useAsyncData(
@@ -14,11 +12,10 @@ const { data: articles } = await useAsyncData(
   }).find
 );
 
-if (error.value) {
-  navigateTo("/error", { replace: true });
-}
+const articleNotFound = computed(() => !pending.value && !article.value);
 
 if (article?.value) {
+  // @ts-ignore
   useContentHead(article);
 }
 </script>
@@ -26,6 +23,7 @@ if (article?.value) {
 <template>
   <UContainer>
     <div class="flex lg:gap-10 lg:flex-row flex-col transition-all h-full">
+      <div v-if="articleNotFound">no</div>
       <!-- Main Content -->
       <main
         v-if="article"
@@ -48,7 +46,7 @@ if (article?.value) {
 
       <!-- Action Sticky Panel -->
       <aside class="sticky top-[53px] max-w-prose h-fit w-full mx-auto py-10">
-        <section class="hidden lg:block">
+        <section v-if="!articleNotFound" class="hidden lg:block">
           <h4 class="text-gray-600 text-sm font-semibold pb-0.5">목차</h4>
           <ul v-if="article?.body?.toc?.links">
             <li

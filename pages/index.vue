@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: articles, pending } = await useAsyncData(
-  queryContent().sort({ created: -1 }).find
+  queryContent().where({ _partial: false }).sort({ created: -1 }).find
 );
 </script>
 
