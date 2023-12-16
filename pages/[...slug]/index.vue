@@ -6,10 +6,12 @@ const { data: article, pending } = await useAsyncData(
   queryContent().where({ _path: path }).findOne
 );
 const { data: articles } = await useAsyncData(
-  queryContent().where({
-    category: article.value?.category,
-    _path: { $ne: path },
-  }).find
+  queryContent()
+    .where({
+      category: article.value?.category,
+      _path: { $ne: path },
+    })
+    .sort({ created: -1 }).find
 );
 
 const articleNotFound = computed(() => !pending.value && !article.value);
