@@ -38,7 +38,7 @@ Zoom 앱이라고 해봤자 웹사이트를 렌더링해주는 게 전부이기�
 
 그래서 마케팅에 돈 쓰지 않고 현재 8,000명이 가입했고, 지금도 이 채널을 통해 꾸준히 유저가 늘어나고 있다.
 
-앞으로도 대부분의 기능을 무료로 제공할 예정이니 사용해보고 싶은 분들은 아래 링크에서 사용해보세요.
+앞으로도 대부분의 기능을 무료로 제공할 예정이니, 사용해보고 싶은 분들은 아래 링크에서 사용해보시길.
 
 [EventCAT - Realtime Interpreation for Online Meetings](https://eventcat.com/meetings/open){:target="\_blank"}
 
