@@ -1,0 +1,1 @@
+.prose [id]:before{display:block;height:80px;margin-top:-80px;visibility:hidden;--tw-content:"";content:"";content:var(--tw-content)}
