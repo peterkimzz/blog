@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "dayjs-nuxt",
     "@nuxtjs/sitemap",
     "@nuxt/image",
+    "@nuxt/test-utils/module",
   ],
   colorMode: { preference: "light" },
   content: {
