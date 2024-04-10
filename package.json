@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/content": "2.12.1",
     "@nuxt/devtools": "1.1.5",
+    "@nuxt/image": "1.5.0",
     "@nuxtjs/feed": "2.0.0",
     "@nuxtjs/sitemap": "5.1.4",
     "@tailwindcss/typography": "0.5.12",

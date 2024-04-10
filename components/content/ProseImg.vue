@@ -1,11 +1,13 @@
 <template>
-  <img
+  <NuxtImg
     data-zoomable
     :src="refinedSrc"
     :alt="alt"
     :width="width"
     :height="height"
+    loading="lazy"
     class="mx-auto"
+    placeholder
   />
 </template>
 

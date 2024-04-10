@@ -2,7 +2,13 @@ import { bundledLanguages } from "shiki";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxt/ui", "dayjs-nuxt", "@nuxtjs/sitemap"],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/ui",
+    "dayjs-nuxt",
+    "@nuxtjs/sitemap",
+    "@nuxt/image",
+  ],
   colorMode: { preference: "light" },
   content: {
     contentHead: false,
@@ -18,6 +24,9 @@ export default defineNuxtConfig({
   dayjs: {
     locales: ["ko"],
     defaultLocale: "ko",
+  },
+  image: {
+    domains: ["githubusercontent.com"],
   },
   site: {
     url: "https://www.peterkimzz.com",
