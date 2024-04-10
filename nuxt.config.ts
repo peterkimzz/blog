@@ -1,33 +1,17 @@
+import { bundledLanguages } from "shiki";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxt/ui", "dayjs-nuxt"],
-  runtimeConfig: {
-    public: {
-      HOSTNAME: "https://www.peterkimzz.com",
-    },
-  },
+  modules: ["@nuxt/content", "@nuxt/ui", "dayjs-nuxt", "@nuxtjs/sitemap"],
   colorMode: { preference: "light" },
   content: {
     contentHead: false,
     highlight: {
       theme: "github-dark",
-      preload: [
-        "diff",
-        "json",
-        "js",
-        "ts",
-        "css",
-        "shell",
-        "html",
-        "md",
-        "yaml",
-        "vue",
-        "vue-html",
-        "tsx",
-      ],
+      // @ts-ignore
+      langs: Object.keys(bundledLanguages),
     },
   },
-  tailwindcss: { viewer: false },
   ui: {
     icons: ["lucide"],
   },
@@ -35,13 +19,16 @@ export default defineNuxtConfig({
     locales: ["ko"],
     defaultLocale: "ko",
   },
-  experimental: {
-    payloadExtraction: false,
+  site: {
+    url: "https://www.peterkimzz.com",
+  },
+  sitemap: {
+    strictNuxtContentPaths: true,
   },
   nitro: {
     prerender: {
       failOnError: false,
-      routes: ["/sitemap.xml"],
     },
   },
+  runtimeConfig: {},
 });
