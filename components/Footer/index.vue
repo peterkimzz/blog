@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const CalendarLink = 'https://dub.sh/peter-30m'
+</script>
+
 <template>
   <footer class="border-t pt-3 pb-3">
     <UContainer>
@@ -16,7 +20,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="https://whattime.co.kr/peterkimzz">
+              <NuxtLink :to="CalendarLink" target="_blank">
                 화상미팅 요청하기
               </NuxtLink>
             </li>
